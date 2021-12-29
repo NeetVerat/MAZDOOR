@@ -478,6 +478,7 @@ a {
 
   .above-tint {
     transform: translate(1rem, 4rem);
+    animation: none;
   }
 
   .above-tint p {
@@ -495,6 +496,7 @@ a {
     width: 100vw;
     height: 25vh;
     padding-top: 1rem;
+    background: none;
   }
   .container-2 header {
     font-size: 1rem;
