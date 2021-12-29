@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/how_it_works.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap"
+      rel="stylesheet"
+    />
+    <title>MAZDOOR</title>
+  </head>
+  <body>
+    <div class="container">
+      <!-- -------------- Start of Navbar ---------------- -->
+
+      <nav class="navbar">
+        <div class="logo">
+          <a href="index.html" class="logo_link">MAZDOOR</a>
+          <ul>
+            <li><a href="how_it_works.html">How it Works</a></li>
+            <li><a href="worker.php">Browse Jobs</a></li>
+          </ul>
+        </div>
+        <div class="navigation">
+          <ul>
+            <li>
+              <a class="landing-login" href="login.php">Log In</a>
+            </li>
+            <li>
+              <a class="landing-signup" href="register.php">Sign Up</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <!-- -------------- End of Navbar ---------------- -->
+
+      <div class="container-1">
+        <img
+          class="how_it_works_land_img"
+          src="images/hard-hat-4388518_1920.jpg"
+          alt=""
+        />
+        <h1 class="how_it_works_land_text">HOW IT WORKS</h1>
+        <div class="buttons">
+          <button
+            id="howHireAWorkerBtn"
+            onclick="howItWorksSwitchingWorkToWorker()"
+            class="how_hire_a_worker_btn"
+          >
+            How hire a worker
+          </button>
+          <button
+            id="howToFindWorkBtn"
+            onclick="howItWorksSwitchingWorkerToWork()"
+            class="how_to_find_job_btn"
+          >
+            How to find work
+          </button>
+        </div>
+      </div>
+
+      <div id="howHireWorkerMainDiv" class="howHireWorkerMainDiv">
+        <!-- -------------- 01---------------- -->
+
+        <div class="container-2">
+          <div class="row-01">
+            <div class="inner-row-01">
+              <p class="p01">01</p>
+              <p class="d01">
+                First of all user has to register<br />
+                and then login as client or worker
+              </p>
+            </div>
+            <img class="img-01" src="images/Woman Digital Login.png" alt="" />
+          </div>
+        </div>
+
+        <!-- -------------- 02---------------- -->
+
+        <div class="container-3">
+          <div class="row-02">
+            <img
+              class="img-02"
+              src="images/Portfolio.svg"
+              style="height: 20rem; width: 30rem"
+              alt=""
+            />
+            <div class="inner-row-01">
+              <p class="p02">02</p>
+              <p class="d02">
+                First of all user has to register<br />
+                and then login as client or worker
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- -------------- 03 ---------------- -->
+
+        <div class="container-2">
+          <div class="row-01">
+            <div class="inner-row-01">
+              <p class="p01">03</p>
+              <p class="d01">
+                First of all user has to register<br />
+                and then login as client or worker
+              </p>
+            </div>
+            <img class="img-01" src="images/Woman Digital Login.png" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <div id="howToFindWork" class="howToFindWork">
+        <!-- -------------- 01---------------- -->
+
+        <div class="container-2">
+          <div class="row-01">
+            <div class="inner-row-01">
+              <p class="p01">01</p>
+              <p class="d01">
+                First of all user has to register<br />
+                and then login as client or worker
+              </p>
+            </div>
+            <img class="img-01" src="images/Woman Digital Login.png" alt="" />
+          </div>
+        </div>
+
+        <!-- -------------- 02---------------- -->
+
+        <!-- <div class="container-3">
+          <div class="row-02">
+            <img class="img-02" src="images/Woman Digital Login.png" alt="" />
+            <div class="inner-row-01">
+              <p class="p02">02</p>
+              <div class="p02-blur"></div>
+              <p class="d02">
+                First of all user has to register<br />
+                and then login as client or worker
+              </p>
+            </div>
+          </div>
+        </div> -->
+      </div>
+    </div>
+
+    <script>
+      function howItWorksSwitchingWorkerToWork() {
+        document.getElementById("howHireWorkerMainDiv").style.display = "none";
+        document.getElementById("howToFindWork").style.display = "block";
+        document.getElementById("howHireAWorkerBtn").style.background =
+          "#FFFFFF";
+        document.getElementById("howToFindWorkBtn").style.background =
+          "#ffa034";
+      }
+
+      function howItWorksSwitchingWorkToWorker() {
+        document.getElementById("howHireWorkerMainDiv").style.display = "block";
+        document.getElementById("howToFindWork").style.display = "none";
+        document.getElementById("howToFindWorkBtn").style.background =
+          "#FFFFFF";
+        document.getElementById("howHireAWorkerBtn").style.background =
+          "#ffa034";
+      }
+    </script>
+
+    <!-- <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <lottie-player src="https://assets6.lottiefiles.com/private_files/lf30_y9czxcb9.json"  background="transparent"  speed="1"  style="width: 900px; height: 820px;"  loop  autoplay></lottie-player>
+    <h1 style="transform: translateY(-7rem); font-size: 4rem; ">COMING SOON........</h1> -->
+  </body>
+</html>

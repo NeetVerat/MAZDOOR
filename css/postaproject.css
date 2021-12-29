@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  font-family: "Playfair Display", serif;
+  background: #edc0bf;
+  background: linear-gradient(90deg, #edc0bf 0, #c4caef 58%);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 50rem;
+  height: 80rem;
+  color: black;
+  border-radius: 1rem;
+  margin-top: 5rem;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.493);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+
+h2 {
+  margin-top: 5rem;
+  margin-bottom: 3rem;
+  font-size: 3rem;
+}
+
+form label {
+  margin: 1rem 1.5rem 1rem 1rem;
+  font-size: 1.2rem;
+}
+
+form input,
+select {
+  margin: 0 1rem;
+}
+
+form input {
+  height: 3rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  padding-left: 0.5rem;
+}
+
+form button {
+  width: 5rem;
+  margin: 1rem;
+  padding: 0.5rem;
+  background: #000;
+  color: #fff;
+  border-radius: 0.5rem;
+}
+
+form select {
+  width: 10rem;
+}
+
+.money {
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.52);
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+}
+
+.money input {
+  width: 10rem;
+}
+
+.money label {
+  margin-right: 2.8rem;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.money h2 {
+  font-size: 1.5rem;
+  font-weight: 200;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.form-descrip {
+  display: flex;
+  align-content: center;
+}
+
+.form-big-descrip {
+  display: flex;
+  align-content: center;
+}
+
+textarea {
+  border-radius: 0.5rem;
+  font-size: 1.2rem;
+  padding: 0.5rem;
+}
+
+.lbl_descrip {
+  width: 17rem;
+}

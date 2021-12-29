@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Fjalla One", sans-serif;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.navbar {
+  display: flex;
+  position: relative;
+  justify-content: space-around;
+  padding: 0.5rem 0 0.5rem 0;
+  align-items: center;
+  background: #000000;
+  z-index: 2;
+}
+
+.logo_link {
+  font-size: 2rem;
+  margin-right: 8rem;
+  color: #ffffff;
+}
+
+.logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  transform: translateX(-7rem);
+}
+
+.logo ul {
+  display: flex;
+  margin-right: 2rem;
+}
+
+.logo ul li {
+  font-size: 1.2rem;
+  justify-content: space-between;
+  padding: 1rem 1rem 0.5rem 1rem;
+}
+
+.logo ul li a {
+  color: #ffffff;
+}
+
+.landing-login {
+  color: #fff;
+  font-size: 1.2rem;
+  padding: 0.7rem 1rem;
+  border: 0.2rem solid #ffffff;
+  border-radius: 0.3rem;
+}
+
+.landing-login:hover {
+  background: #ffa034;
+  color: #000;
+  border-color: #000;
+}
+
+.client_land {
+  display: flex;
+  flex-direction: column;
+}
+
+.cdashboard {
+  display: flex;
+  justify-content: center;
+  margin-top: 5rem;
+}
+
+.cdashboard li {
+  background: #000000;
+  padding: 5rem;
+  margin: 1rem;
+  width: 20rem;
+  border-radius: 1rem;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.welcome-client {
+  display: flex;
+  background: #e43f5a;
+  justify-content: space-between;
+  padding: 1rem 2rem 1rem 2rem;
+  font-variant-caps: all-petite-caps;
+  font-size: 1.5rem;
+  align-content: center;
+}
+
+.welcome-client a {
+  text-align: center;
+  color: #fff;
+  font-size: 2.5rem;
+  background: #000000;
+  padding: 0 1rem;
+  border-radius: 0.5rem;
+}
+
+.welcome-client a:hover {
+  background: #ffffff;
+  color: #000;
+}
+
+.cdashboard a {
+  color: #ffffff;
+}
+
+.cdashboard li:hover {
+  border: solid #e43f5a;
+}

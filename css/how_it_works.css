@@ -1,0 +1,207 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Fjalla One", sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 99vw;
+  height: 80vh;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  padding: 0.5rem 0 0.5rem 0;
+  align-items: center;
+  background: rgb(255, 255, 255);
+}
+
+.logo_link {
+  font-size: 2rem;
+  margin-right: 8rem;
+  color: #000;
+}
+
+.logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  transform: translateX(-8rem);
+}
+
+.logo ul {
+  display: flex;
+  margin-right: 2rem;
+}
+
+.logo ul li {
+  font-size: 1.2rem;
+  justify-content: space-between;
+  padding: 1rem 1rem 0.5rem 1rem;
+}
+
+.logo ul li a {
+  color: #000;
+}
+
+.navigation ul {
+  display: flex;
+  margin-right: 2rem;
+  transform: translateX(9rem);
+}
+
+.navigation ul li {
+  font-size: 1.2rem;
+  justify-content: space-between;
+  padding: 1rem 1rem 0.5rem 1rem;
+}
+
+.navigation ul li a {
+  color: #fff;
+}
+
+.landing-login {
+  background: #000;
+  padding: 0.4rem 1rem;
+}
+
+.landing-signup {
+  color: #fff;
+  padding: 0.4rem 1rem;
+  background: #ffa034;
+}
+
+/* ----------------------------------------- Landing ----------------------------------------- */
+
+.container-1 {
+  display: flex;
+  height: 100vh;
+  width: 99vw;
+}
+
+.how_it_works_land_img {
+  height: 85vh;
+  width: 100vw;
+}
+
+.how_it_works_land_text {
+  position: absolute;
+  font-size: 3rem;
+  transform: translate(82rem, 10rem);
+}
+
+.buttons {
+  position: absolute;
+  transform: translate(43rem, 47.72rem);
+}
+
+.how_hire_a_worker_btn,
+.how_to_find_job_btn {
+  padding: 1rem 4rem 1rem 4rem;
+  font-size: 1.4rem;
+  border: none;
+  background: #fff;
+  border-radius: 0.6rem 0.6rem 0 0;
+  transform: translateY(-1.6rem);
+}
+
+.how_to_find_job_btn {
+  background: #ffffff;
+  margin-left: 0.3rem;
+}
+
+.how_hire_a_worker_btn {
+  /* border-top: solid #000 0.2rem; */
+  background: #ffa034;
+}
+
+/* ------------------------------------- 01 ----------------------------------------- */
+
+.container-2 {
+  display: flex;
+  margin-top: 10rem;
+  margin-left: 17rem;
+}
+
+.p01 {
+  font-size: 6rem;
+  z-index: 0;
+  color: #fccf0941;
+}
+
+.d01 {
+  z-index: 2;
+  font-size: 2rem;
+  transform: translateY(5rem);
+}
+
+.img-01 {
+  width: 20vw;
+  height: 30vh;
+  margin: 5rem;
+}
+
+.inner-row-01 {
+  margin: 10rem;
+}
+
+.row-01 {
+  display: flex;
+  align-items: center;
+}
+
+/* ------------------------------------- 02 ----------------------------------------- */
+
+.container-3 {
+  display: flex;
+  margin-left: 17rem;
+  transform: translateY(0rem);
+}
+
+.p02 {
+  font-size: 6rem;
+  z-index: 0;
+  color: #fccf0941;
+}
+
+.d02 {
+  z-index: 2;
+  font-size: 2rem;
+  transform: translateY(5rem);
+}
+
+.img-02 {
+  width: 20vw;
+  height: 30vh;
+  margin: 5rem;
+}
+
+.inner-row-02 {
+  margin: 10rem;
+}
+
+.row-02 {
+  display: flex;
+  align-items: center;
+}
+
+/* --------------------------------- howToFindWork -------------------------- */
+
+.howToFindWork {
+  display: none;
+}

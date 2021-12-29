@@ -1,0 +1,567 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Fjalla One", sans-serif;
+}
+
+.container {
+  width: 99vw;
+  height: 100vh;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.navbar {
+  display: flex;
+  position: relative;
+  justify-content: space-around;
+  padding: 0.5rem 0 0.5rem 0;
+  align-items: center;
+  background: #e0e5ee00;
+  z-index: 2;
+}
+
+.logo_link {
+  font-size: 2rem;
+  margin-right: 8rem;
+  color: #ffffff;
+}
+
+.logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  transform: translateX(-7rem);
+}
+
+.logo ul {
+  display: flex;
+  margin-right: 2rem;
+}
+
+.logo ul li {
+  font-size: 1.2rem;
+  justify-content: space-between;
+  padding: 1rem 1rem 0.5rem 1rem;
+}
+
+.logo ul li a {
+  color: #ffffff;
+}
+
+.landing-login {
+  color: #fff;
+  font-size: 1.2rem;
+  padding: 0.7rem 1rem;
+  border: 0.2rem solid #ffffff;
+  border-radius: 0.3rem;
+}
+
+.landing-login:hover {
+  background: #ffa034;
+  color: #000;
+  border-color: #000;
+}
+
+/* --------------------------------------------------- Landing Page ---------------------------------------------------------------- */
+
+.img-landing {
+  display: flex;
+  width: 99vw;
+  height: 100vh;
+  transform: translateY(-4rem);
+  z-index: 2;
+}
+
+.img-landing video {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.landing-tint {
+  position: absolute;
+  width: 99vw;
+  height: 100vh;
+  z-index: 1;
+  transform: translateY(-4rem);
+  opacity: 0.5;
+  background: #000;
+}
+
+.above-tint {
+  position: absolute;
+  z-index: 2;
+  animation: slideup 2s;
+  transition: ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transform: translate(20rem, 25rem);
+}
+
+.above-tint p {
+  color: #ffffff;
+  font-size: 6rem;
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+.above-tint a {
+  color: #fff;
+  padding: 1rem;
+  font-size: 1.2rem;
+  border-radius: 0.3rem;
+  border: 0.2rem solid #ffffff;
+}
+
+.above-tint :last-child {
+  color: #fff;
+  margin-left: 1rem;
+}
+
+.above-tint a:hover {
+  background: #ffa034;
+  color: #000;
+  border-color: #000;
+}
+
+/* --------------------------------------------- Need something done -------------------------------------------------- */
+
+.container-2 {
+  width: 99vw;
+  height: 35vh;
+  padding-top: 4rem;
+  align-items: center;
+  background: #fea82f;
+}
+
+.row {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.row p {
+  font-size: 1.3rem;
+}
+
+.postajob {
+  display: flex;
+  flex-direction: column;
+  animation: slideLeftToRight 3s;
+  transition: ease-in-out;
+}
+.postajob-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.postajob-row img {
+  height: 4rem;
+  width: 4rem;
+  margin-right: 2rem;
+}
+
+.postajob-row h2 {
+  font-size: 3rem;
+}
+
+.chooseworker {
+  display: flex;
+  flex-direction: column;
+  animation: slideLeftToRight 2.5s;
+  transition: ease-in-out;
+}
+
+.chooseworker-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.chooseworker-row img {
+  margin-right: 2rem;
+  height: 4rem;
+  width: 4rem;
+}
+
+.chooseworker-row h2 {
+  font-size: 3rem;
+}
+
+.paysafely {
+  display: flex;
+  flex-direction: column;
+  animation: slideLeftToRight 2s;
+  transition: ease-in-out;
+}
+
+.paysafely-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.paysafely-row img {
+  height: 4rem;
+  width: 4rem;
+  margin-right: 2rem;
+}
+
+.paysafely-row h2 {
+  font-size: 3rem;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------- */
+
+.container-3 {
+  height: 80vh;
+  width: 99vw;
+  background: #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.image-back {
+  background: #fff;
+  padding: 1rem;
+  padding-bottom: 3rem;
+  width: 46rem;
+  margin-top: 10rem;
+  margin-left: 15rem;
+  margin-bottom: 10rem;
+  transform: rotateZ(-10deg);
+  border-radius: 1rem;
+}
+
+.landing-worker1 {
+  height: 50vh;
+  border-radius: 1rem;
+}
+
+.landing-worker {
+  height: 50vh;
+}
+
+.img-pin1 {
+  position: absolute;
+  height: 5rem;
+  transform: translate(-22rem, -3rem);
+}
+
+.row-2 {
+  color: #fff;
+  margin-right: 20rem;
+}
+
+.row-2 header {
+  font-size: 5rem;
+  margin-bottom: 2rem;
+}
+
+.row-2 p {
+  font-size: 1.2rem;
+  margin-bottom: 3rem;
+}
+
+.row-2 a {
+  color: black;
+  padding: 1rem;
+  font-size: 1.2rem;
+  background: #ffa034;
+  border-radius: 0.3rem;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------- */
+
+.container-4 {
+  height: 80vh;
+  width: 99vw;
+  background: #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.image-back1 {
+  background: #fff;
+  padding: 1rem;
+  width: 21.5rem;
+  margin-top: 10rem;
+  margin-right: 15rem;
+  margin-bottom: 10rem;
+  transform: rotateZ(10deg);
+}
+
+.landing-worker {
+  height: 50vh;
+}
+
+.img-pin {
+  position: absolute;
+  height: 5rem;
+  transform: translate(10rem, -32.8rem);
+}
+
+.row-3 {
+  color: #fff;
+  margin-left: 20rem;
+}
+
+.row-3 header {
+  font-size: 5rem;
+  margin-bottom: 2rem;
+}
+
+.row-3 p {
+  font-size: 1.2rem;
+  margin-bottom: 3rem;
+}
+
+.row-3 a {
+  color: black;
+  padding: 1rem;
+  font-size: 1.2rem;
+  background: #ffa034;
+  border-radius: 0.3rem;
+}
+
+/* --------------------------------------------------------------------------------------- */
+
+/* .row-4-1, .row-4-2, .row-4-3, .row-4-4, .row-4-5{
+    height: 10rem;
+    width: 10rem;
+    border-radius: 5rem;
+    background-color: #000;
+    transform: translateY(4rem);
+    margin-top: 5rem;
+    margin-left: 55rem;
+} */
+
+/* ----------------------------------------------------------------------------------------- */
+
+.container-5 {
+  height: 50vh;
+  width: 99vw;
+  background: #ffa034;
+}
+
+/* --------------------------------- Scrollbar ----------------------------------------- */
+
+/* width */
+::-webkit-scrollbar {
+  width: 18px;
+}
+
+/* Track */
+/* ::-webkit-scrollbar-track {
+} */
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #ffa034;
+}
+
+/* ---------------------------- Animations ------------------------------ */
+
+@keyframes slideup {
+  0% {
+    transform: translate(10rem, 50rem);
+    opacity: 0;
+  }
+
+  30% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideLeftToRight {
+  0% {
+    transform: translateX(-100rem);
+  }
+
+  100% {
+  }
+}
+
+/*----------------------------------------- Media Queries ---------------------------------------------*/
+
+/* ------------------------- small mobile -------------------------------- */
+
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  /* <!-- -------------- Start of Navbar ---------------- --> */
+  .logo ul {
+    display: none;
+  }
+
+  .logo {
+    justify-content: center;
+    transform: translateX(0);
+  }
+
+  .logo h1 {
+    font-size: 1rem;
+    margin-right: 0;
+  }
+
+  .navigation {
+    display: none;
+  }
+
+  .navbar {
+    background: none;
+  }
+
+  /* <!-- -------------- Start of Landing Page ---------------- --> */
+
+  .above-tint {
+    transform: translate(0, 0);
+  }
+
+  .above-tint p {
+    font-size: 2rem;
+  }
+
+  .img-landing {
+    width: 100vw;
+    height: 54vh;
+    background-image: url(images/mobile_landing.svg);
+    transform: translateY(-26.8rem);
+  }
+
+  .video_back {
+    height: 25vh;
+  }
+
+  .video_back_rect {
+    width: 100vw;
+    height: 50vh;
+    background: #ffa034;
+    transform: translateY(-7rem);
+  }
+
+  .img-landing video {
+    position: relative;
+  }
+
+  .landing-tint {
+    width: 100vw;
+    height: 32vh;
+    transform: translateY(-2.3rem);
+    background-image: linear-gradient(#ffffff00, #ffa03460, #ffa034);
+  }
+
+  .above-tint {
+    transform: translate(1rem, 4rem);
+  }
+
+  .above-tint p {
+    font-size: 1.5rem;
+  }
+
+  .above-tint a {
+    padding: 0.3rem;
+    font-size: 0.8rem;
+  }
+
+  /* -------------- Start of Need something done ---------------- */
+
+  .container-2 header {
+    font-size: 1rem;
+    padding: 0;
+    transform: translateY(0);
+  }
+
+  .row {
+    margin-top: 0;
+    flex-direction: column;
+  }
+
+  .postajob-row h2 {
+    font-size: 1rem;
+  }
+
+  .chooseworker h2 {
+    font-size: 1rem;
+  }
+
+  .paysafely h2 {
+    font-size: 1rem;
+  }
+
+  .postajob-row img {
+    height: 2rem;
+    width: 2rem;
+  }
+
+  .chooseworker img {
+    height: 2rem;
+    width: 2rem;
+  }
+
+  .paysafely img {
+    height: 2rem;
+    width: 2rem;
+  }
+
+  .row p {
+    font-size: 0.6rem;
+  }
+
+  /* <!-- -------------- Start of Hire a Worker ---------------- --> */
+
+  .image-back {
+    margin: 0;
+  }
+
+  .row-2 header {
+    font-size: 1.5rem;
+  }
+
+  .row-3 {
+    margin-left: 0;
+  }
+
+  .row-3 header {
+    font-size: 1rem;
+  }
+}
+
+/* ------------------------- big mobile -------------------------------- */
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+}
+
+/* ------------------------- laptop -------------------------------- */
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+}
+
+/* ------------------------- desktop -------------------------------- */
+
+@media only screen and (min-width: 1025px) and (max-width: 1200px) {
+}
+
+/* ------------------------- extra large screen -------------------------------- */
+
+@media only screen and (min-width: 2100px) {
+}
