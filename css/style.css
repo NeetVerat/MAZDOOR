@@ -493,7 +493,8 @@ a {
 
   .container-2 {
     width: 100vw;
-    height: 50vh;
+    height: 25vh;
+    padding-top: 1rem;
   }
   .container-2 header {
     font-size: 1rem;
@@ -503,8 +504,20 @@ a {
 
   .row {
     margin-top: 0;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
+  }
+
+  .postajob {
+    animation: none;
+  }
+
+  .chooseworker {
+    animation: none;
+  }
+
+  .paysafely {
+    animation: none;
   }
 
   .postajob-row h2 {
@@ -519,41 +532,143 @@ a {
     font-size: 1rem;
   }
 
-  .postajob-row img {
-    height: 2rem;
-    width: 2rem;
-  }
-
-  .chooseworker img {
-    height: 2rem;
-    width: 2rem;
-  }
-
+  .postajob-row img,
+  .chooseworker img,
   .paysafely img {
     height: 2rem;
     width: 2rem;
+    margin-right: 0;
+    margin-bottom: 0.5rem;
   }
 
   .row p {
     font-size: 0.6rem;
   }
 
+  .postajob-row,
+  .chooseworker-row,
+  .paysafely-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+
+  .postajob p,
+  .chooseworker p,
+  .paysafely p {
+    padding: 0 0.5rem;
+    text-align: center;
+  }
+
   /* <!-- -------------- Start of Hire a Worker ---------------- --> */
+
+  .container-3 {
+    width: 100vw;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
 
   .image-back {
     margin: 0;
+    width: 69.6vw;
+    padding: 0.5rem 0.5rem 1rem;
+    transform: rotateZ(360deg);
+    transform: translateY(2rem);
+  }
+
+  .img-pin1 {
+    position: absolute;
+    height: 2rem;
+    transform: translate(-7rem, -1rem);
+  }
+
+  .landing-worker1 {
+    height: 20vh;
+  }
+
+  .row-2 {
+    margin-right: 0;
+    transform: translateY(5rem);
   }
 
   .row-2 header {
-    font-size: 1.5rem;
+    font-size: 2rem;
+    width: 100vw;
+    text-align: center;
+  }
+
+  .row-2 p {
+    font-size: 0.8rem;
+    width: 100vw;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .row-2 a {
+    font-size: 1rem;
+    margin: 0 0 0 8.5rem;
+  }
+
+  /* <!-- -------------- Start of Earn Money Working ---------------- --> */
+
+  .container-4 {
+    width: 100vw;
+    height: 70vh;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+  }
+
+  .image-back1 {
+    margin: 0;
+    width: 33.4vw;
+    padding: 0.5rem 0.5rem 1rem;
+    transform: rotateZ(360deg);
+    transform: translateY(-8rem);
+  }
+
+  .img-pin {
+    position: absolute;
+    height: 2rem;
+    transform: translate(-3rem, -1rem);
+  }
+
+  .landing-worker {
+    height: 20vh;
+  }
+
+  .row-3 {
+    margin-right: 0;
+    transform: translateY(-5rem);
+  }
+
+  .row-3 header {
+    font-size: 2rem;
+    width: 100vw;
+    text-align: center;
+  }
+
+  .row-3 p {
+    font-size: 0.8rem;
+    width: 100vw;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .row-3 a {
+    font-size: 1rem;
+    margin: 0 0 0 8.5rem;
   }
 
   .row-3 {
     margin-left: 0;
   }
 
-  .row-3 header {
-    font-size: 1rem;
+  .container-5 {
+    width: 100vw;
   }
 }
 
