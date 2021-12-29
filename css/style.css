@@ -409,13 +409,16 @@ a {
 
 @media only screen and (min-width: 320px) and (max-width: 480px) {
   /* <!-- -------------- Start of Navbar ---------------- --> */
+  .container {
+    height: 33vh;
+  }
   .logo ul {
     display: none;
   }
 
   .logo {
     justify-content: center;
-    transform: translateX(0);
+    transform: translateX(4rem);
   }
 
   .logo h1 {
@@ -428,24 +431,27 @@ a {
   }
 
   .navbar {
-    background: none;
+    width: 100vw;
+    background: black;
   }
 
   /* <!-- -------------- Start of Landing Page ---------------- --> */
 
   .above-tint {
     transform: translate(0, 0);
+    margin-left: 1rem;
   }
 
   .above-tint p {
     font-size: 2rem;
+    margin-bottom: 3rem;
   }
 
   .img-landing {
     width: 100vw;
-    height: 54vh;
+    height: 26vh;
     background-image: url(images/mobile_landing.svg);
-    transform: translateY(-26.8rem);
+    transform: translateY(-20.3rem);
   }
 
   .video_back {
@@ -454,7 +460,7 @@ a {
 
   .video_back_rect {
     width: 100vw;
-    height: 50vh;
+    height: 40vh;
     background: #ffa034;
     transform: translateY(-7rem);
   }
@@ -465,7 +471,7 @@ a {
 
   .landing-tint {
     width: 100vw;
-    height: 32vh;
+    height: 30.5vh;
     transform: translateY(-2.3rem);
     background-image: linear-gradient(#ffffff00, #ffa03460, #ffa034);
   }
@@ -485,6 +491,10 @@ a {
 
   /* -------------- Start of Need something done ---------------- */
 
+  .container-2 {
+    width: 100vw;
+    height: 50vh;
+  }
   .container-2 header {
     font-size: 1rem;
     padding: 0;
@@ -494,6 +504,7 @@ a {
   .row {
     margin-top: 0;
     flex-direction: column;
+    align-items: center;
   }
 
   .postajob-row h2 {
