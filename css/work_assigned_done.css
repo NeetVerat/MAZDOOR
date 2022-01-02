@@ -96,3 +96,97 @@ header {
   margin-left: 0;
   margin-right: 0;
 }
+
+#img_done {
+  width: 2rem;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  /* <!-- -------------- Start of Navbar ---------------- --> */
+  .container {
+    height: 33vh;
+  }
+  .logo ul {
+    display: none;
+  }
+
+  .logo {
+    justify-content: center;
+    transform: translateX(4rem);
+  }
+
+  .logo h1 {
+    font-size: 1rem;
+    margin-right: 0;
+  }
+
+  .navigation {
+    display: none;
+  }
+
+  .navbar {
+    width: 100vw;
+    background: black;
+  }
+
+  /* <!-- -------------- Start of Landing Page ---------------- --> */
+
+  header {
+    width: 100vw;
+    font-size: 1rem;
+    text-align: center;
+    margin: 2rem 0;
+  }
+
+  .row {
+    display: flex;
+    width: 93vw;
+    background: #f6f2f2;
+    margin: 0 0 0.5rem 0.8rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    /* border: solid orangered 0.1rem; */
+    box-shadow: 5px 5px 5px #bebebe;
+  }
+
+  .row h1 {
+    font-size: 1rem;
+  }
+
+  .row h2 {
+    font-size: 0.5rem;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 40vw;
+  }
+
+  .row p {
+    font-size: 0.5rem;
+    display: none;
+  }
+
+  .row img {
+    margin: 0 1rem 0 0;
+    height: 2rem;
+    width: 2rem;
+    margin-right: 0.5rem;
+  }
+
+  .row h3 {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    font-size: 0.5rem;
+    text-align: center;
+    padding-top: 0.6rem;
+  }
+
+  .row h3:last-child {
+    color: #21c28c;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  #img_done {
+    width: 1rem;
+  }
+}
