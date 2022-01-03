@@ -6,6 +6,7 @@
 
 html {
   font-family: "Fjalla One", sans-serif;
+  background: #e6e6f2;
 }
 
 .container {
@@ -27,8 +28,8 @@ a {
   justify-content: space-around;
   padding: 0.5rem 0 0.5rem 0;
   align-items: center;
-  background: #000000;
   z-index: 2;
+  background: black;
 }
 
 .logo_link {
@@ -62,19 +63,21 @@ a {
 header {
   width: 99vw;
   font-size: 3rem;
-  text-align: center;
+  padding-left: 2.3rem;
+  font-weight: bold;
   margin: 2rem 0;
 }
 
 .row {
   display: flex;
   width: 96vw;
-  background: #f6f2f2;
+  background: #ffffff;
   margin: 0 0 0.5rem 2rem;
   padding: 1rem;
   border-radius: 1rem;
-  /* border: solid orangered 0.1rem; */
+  border: solid #747474 0.1rem;
   box-shadow: 5px 5px 5px #bebebe;
+  color: #15111f;
 }
 
 .row img {
@@ -95,6 +98,10 @@ header {
   color: #21c28c;
   margin-left: 0;
   margin-right: 0;
+}
+
+.row:hover {
+  background: #f3f3f8;
 }
 
 #img_done {
