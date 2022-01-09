@@ -2,7 +2,7 @@
 
 session_start();
 
-if (!isset($_SESSION['username'])) {
+if (!isset($_SESSION['clientusername'])) {
     header("Location: index.php");
 }
 
@@ -37,7 +37,7 @@ if (!isset($_SESSION['username'])) {
     <!-- -------------- End of Navbar ---------------- -->
     <div class="client_land">
       <div class="welcome-client">
-        <?php echo "<h1>Welcome, " . $_SESSION['username'] . "</h1>"; ?>
+        <?php echo "<h1>Welcome, " . $_SESSION['clientusername'] . "</h1>"; ?>
         <a href="logout.php">Logout</a>
       </div>
       <ul class="cdashboard">
