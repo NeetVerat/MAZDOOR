@@ -61,75 +61,79 @@ if (isset($_POST['submit'])) {
 
 <!DOCTYPE html>
 <html>
+
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto&display=swap"
-      rel="stylesheet"
-    />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto&display=swap" rel="stylesheet" />
 
-	<link rel="stylesheet" type="text/css" href="css/register.css">
+  <link rel="stylesheet" type="text/css" href="css/register.css">
 
-	<title>Register Form</title>
+  <title>Register Form</title>
 </head>
+
 <body>
-	<div class="container">
-		<form action="" method="POST" class="login-email">
+  <div class="container">
+    <form action="" method="POST" class="login-email">
       <p class="login-text" style="font-size: 2rem; font-weight: 800;">Register</p>
-			<div class="reg-in">
-				<div class="reg1">
-						<div class="input-group">
-							<input type="text" placeholder="Username" name="username" value="<?php echo $username; ?>" required>
-						</div>
-						<div class="input-group">
-							<input type="email" placeholder="Email" name="email" value="<?php echo $email; ?>" required>
-						</div>
-						<div class="input-group">
-							<input type="password" placeholder="Password" name="password" value="<?php echo $_POST['password']; ?>" required>
-						</div>
-						<div class="input-group">
-							<input type="password" placeholder="Confirm Password" name="cpassword" value="<?php echo $_POST['cpassword']; ?>" required>
-						</div>
-						<div class="input-group">
-							<input type="number" placeholder="Mobile Number" name="mobilenum" value="<?php echo $mobilenum; ?>" required>
-						</div>
-						<div class="input-group">
-							<input type="number" placeholder="Aadhar Number" name="aadharnum" value="<?php echo $aadharnum; ?>" required>
-						</div>
-				</div>
+      <div class="reg-in">
+        <div class="reg1">
+          <div class="input-group">
+            <input type="text" placeholder="Username" name="username" value="<?php echo $username; ?>" required>
+          </div>
+          <div class="input-group">
+            <input type="email" placeholder="Email" name="email" value="<?php echo $email; ?>" required>
+          </div>
+          <div class="input-group">
+            <input type="password" placeholder="Password" name="password" value="<?php echo $_POST['password']; ?>"
+              required>
+          </div>
+          <div class="input-group">
+            <input type="password" placeholder="Confirm Password" name="cpassword"
+              value="<?php echo $_POST['cpassword']; ?>" required>
+          </div>
+          <div class="input-group">
+            <input type="number" placeholder="Mobile Number" name="mobilenum" value="<?php echo $mobilenum; ?>"
+              required>
+          </div>
+          <div class="input-group">
+            <input type="number" placeholder="Aadhar Number" name="aadharnum" value="<?php echo $aadharnum; ?>"
+              required>
+          </div>
+        </div>
 
-				<!-- -------------------------------------  -------------------------------------- -->
+        <!-- -------------------------------------  -------------------------------------- -->
 
 
-				<div class="reg2">
-						<div class="input-group">
-							<input type="text" placeholder="Pan number" name="pannum" value="<?php echo $pannum; ?>" required>
-						</div>
-						<div class="input-group">
-							<input type="text" placeholder="Address Line 1" name="adrsline1" value="<?php echo $adrsline1; ?>" required>
-						</div>
-						<div class="input-group">
-							<input type="text" placeholder="Address Line 2" name="adrsline2" value="<?php echo $adrsline2; ?>" required>
-						</div>
-						<div class="input-group">
-							<input type="text" placeholder="City" name="city" value="<?php echo $city; ?>" required>
-						</div>
-						<div class="input-group">
-							<input type="text" placeholder="state" name="sstate" value="<?php echo $sstate; ?>" required>
-						</div>
-						<div class="input-group">
-							<input type="number" placeholder="Pin Code" name="pincode" value="<?php echo $pincode; ?>" required>
-						</div>
-				</div>
-			</div>
-			<div class="input-group">
-				<button name="submit" class="btn">Register</button>
-			</div>
-			<p class="login-register-text">Have an account? <a href="login.php">Login Here</a>.</p>
-		</form>
-	</div>
+        <div class="reg2">
+          <div class="input-group">
+            <input type="text" placeholder="Pan number" name="pannum" value="<?php echo $pannum; ?>" required>
+          </div>
+          <div class="input-group">
+            <input type="text" placeholder="Address Line 1" name="adrsline1" value="<?php echo $adrsline1; ?>" required>
+          </div>
+          <div class="input-group">
+            <input type="text" placeholder="Address Line 2" name="adrsline2" value="<?php echo $adrsline2; ?>" required>
+          </div>
+          <div class="input-group">
+            <input type="text" placeholder="City" name="city" value="<?php echo $city; ?>" required>
+          </div>
+          <div class="input-group">
+            <input type="text" placeholder="state" name="sstate" value="<?php echo $sstate; ?>" required>
+          </div>
+          <div class="input-group">
+            <input type="number" placeholder="Pin Code" name="pincode" value="<?php echo $pincode; ?>" required>
+          </div>
+        </div>
+      </div>
+      <div class="input-group">
+        <button name="submit" class="btn">Register</button>
+      </div>
+      <p class="login-register-text">Have an account? <a href="login.php">Login Here</a>.</p>
+    </form>
+  </div>
 </body>
+
 </html>
