@@ -34,7 +34,7 @@ $ddescimg4 = $rows['descimg4'];
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="css/bidding_page.css">
-  <!-- <style>
+  <style>
   * {
     margin: 0;
     padding: 0;
@@ -177,7 +177,7 @@ $ddescimg4 = $rows['descimg4'];
     border-radius: 1rem;
     margin: 1rem 0.6rem 0 1rem;
   }
-  </style> -->
+  </style>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto&display=swap" rel="stylesheet" />
@@ -216,7 +216,9 @@ $ddescimg4 = $rows['descimg4'];
       <div class="details_container">
         <p><?php echo $bigdesc; ?></p>
         <div class="imgdesc">
-          <img src="uploads/upload1/<?php echo $ddescimg1; ?>" alt="img1" />
+          <?php echo $ddescimg1; ?>
+          <img src="localhost/MAZDOOR-main/uploads/upload1/<?php echo $ddescimg1; ?>" alt="img1" />
+
           <img src="uploads/upload2/<?php echo $ddescimg2; ?>" alt="img2" />
           <img src="uploads/upload3/<?php echo $ddescimg3; ?>" alt="img3" />
           <img src="uploads/upload4/<?php echo $ddescimg4; ?>" alt="img4" />

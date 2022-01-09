@@ -2,7 +2,7 @@
 
 include 'config.php';
 
-error_reporting(0);
+// error_reporting(0);
 
 session_start();
 
@@ -11,31 +11,31 @@ if (isset($_SESSION['username'])) {
 }
 
 if (isset($_POST['submit'])) {
-	$username = $_POST['username'];
-	$email = $_POST['email'];
-	$password = md5($_POST['password']);
+	$username = $_POST['clientusername'];
+	$email = $_POST['clientemail'];
+	$password = md5($_POST['clientpassword']);
 	$cpassword = md5($_POST['cpassword']);
-	$mobilenum = $_POST['mobilenum'];
-	$aadharnum = $_POST['aadharnum'];
-	$pannum = $_POST['pannum'];
-	$adrsline1 = $_POST['adrsline1'];
-	$adrsline2 = $_POST['adrsline2'];
-	$city = $_POST['city'];
-	$sstate = $_POST['sstate'];
-	$pincode = $_POST['pincode'];
+	$mobilenum = $_POST['clientmobilenum'];
+	$aadharnum = $_POST['clientaadharnum'];
+	$pannum = $_POST['clientpannum'];
+	$adrsline1 = $_POST['clientadrsline1'];
+	$adrsline2 = $_POST['clientadrsline2'];
+	$city = $_POST['clientcity'];
+	$sstate = $_POST['clientsstate'];
+	$pincode = $_POST['clientpincode'];
 
 
 	if ($password == $cpassword) {
-		$sql = "SELECT * FROM logindetails WHERE email= '$email'";
+		$sql = "SELECT * FROM logindetails WHERE email= '$clientemail'";
 		$result = mysqli_query($conn, $sql);
 		if (!$result->num_rows > 0) {
-			$sql = "INSERT INTO logindetails (username, email, password, mobilenum, aadharnum, pannum, adrsline1, adrsline2, city, sstate, pincode) VALUES ( '$username','$email','$password','$mobilenum','$aadharnum','$pannum','$adrsline1','$adrsline2', '$city', '$sstate', '$pincode')";
+			$sql = "INSERT INTO logindetails (username, email, password, mobilenum, aadharnum, pannum, adrsline1, adrsline2, city, sstate, pincode) VALUES ( '$clientusername','$clientemail','$clientpassword','$clientmobilenum','$clientaadharnum','$clientpannum','$clientadrsline1','$clientadrsline2', '$clientcity', '$clientsstate', '$clientpincode')";
 			$result = mysqli_query($conn, $sql);
 			if ($result) {
 				echo "<script>alert('Wow! User Registration Completed.')</script>";
 				$username = "";
 				$email = "";
-				$_POST['password'] = "";
+				$_POST['clientpassword'] = "";
 				$_POST['cpassword'] = "";
 				$mobilenum = "";
 				$aadharnum = "";
@@ -82,22 +82,22 @@ if (isset($_POST['submit'])) {
 			<div class="reg-in">
 				<div class="reg1">
 						<div class="input-group">
-							<input type="text" placeholder="Username" name="username" value="<?php echo $username; ?>" required>
+							<input type="text" placeholder="Username" name="username" value="<?php echo $clientusername; ?>" required>
 						</div>
 						<div class="input-group">
-							<input type="email" placeholder="Email" name="email" value="<?php echo $email; ?>" required>
+							<input type="email" placeholder="Email" name="email" value="<?php echo $clientemail; ?>" required>
 						</div>
 						<div class="input-group">
-							<input type="password" placeholder="Password" name="password" value="<?php echo $_POST['password']; ?>" required>
+							<input type="password" placeholder="Password" name="password" value="<?php echo $_POST['clientpassword']; ?>" required>
 						</div>
 						<div class="input-group">
 							<input type="password" placeholder="Confirm Password" name="cpassword" value="<?php echo $_POST['cpassword']; ?>" required>
 						</div>
 						<div class="input-group">
-							<input type="number" placeholder="Mobile Number" name="mobilenum" value="<?php echo $mobilenum; ?>" required>
+							<input type="number" placeholder="Mobile Number" name="mobilenum" value="<?php echo $clientmobilenum; ?>" required>
 						</div>
 						<div class="input-group">
-							<input type="number" placeholder="Aadhar Number" name="aadharnum" value="<?php echo $aadharnum; ?>" required>
+							<input type="number" placeholder="Aadhar Number" name="aadharnum" value="<?php echo $clientaadharnum; ?>" required>
 						</div>
 				</div>
 
@@ -106,22 +106,22 @@ if (isset($_POST['submit'])) {
 
 				<div class="reg2">
 						<div class="input-group">
-							<input type="text" placeholder="Pan number" name="pannum" value="<?php echo $pannum; ?>" required>
+							<input type="text" placeholder="Pan number" name="pannum" value="<?php echo $clientpannum; ?>" required>
 						</div>
 						<div class="input-group">
-							<input type="text" placeholder="Address Line 1" name="adrsline1" value="<?php echo $adrsline1; ?>" required>
+							<input type="text" placeholder="Address Line 1" name="adrsline1" value="<?php echo $clientadrsline1; ?>" required>
 						</div>
 						<div class="input-group">
-							<input type="text" placeholder="Address Line 2" name="adrsline2" value="<?php echo $adrsline2; ?>" required>
+							<input type="text" placeholder="Address Line 2" name="adrsline2" value="<?php echo $clientadrsline2; ?>" required>
 						</div>
 						<div class="input-group">
-							<input type="text" placeholder="City" name="city" value="<?php echo $city; ?>" required>
+							<input type="text" placeholder="City" name="city" value="<?php echo $clientcity; ?>" required>
 						</div>
 						<div class="input-group">
-							<input type="text" placeholder="state" name="sstate" value="<?php echo $sstate; ?>" required>
+							<input type="text" placeholder="state" name="sstate" value="<?php echo $clientsstate; ?>" required>
 						</div>
 						<div class="input-group">
-							<input type="number" placeholder="Pin Code" name="pincode" value="<?php echo $pincode; ?>" required>
+							<input type="number" placeholder="Pin Code" name="pincode" value="<?php echo $clientpincode; ?>" required>
 						</div>
 				</div>
 			</div>
