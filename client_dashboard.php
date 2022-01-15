@@ -1,3 +1,12 @@
+<?php
+
+session_start();
+
+if (!isset($_SESSION['clientusername'])) {
+    header("Location: index.html");
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -21,6 +30,10 @@
       </nav>
 
       <!-- -------------- End of Navbar ---------------- -->
+      <div class="welcome-client">
+        <?php echo "<h1>Welcome, " . $_SESSION['clientusername'] . "</h1>"; ?>
+        <a href="logout.php">Logout</a>
+      </div>
 
       <!-- ----------------- Start of Statistics ---------------------- -->
 

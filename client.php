@@ -3,7 +3,7 @@
 session_start();
 
 if (!isset($_SESSION['clientusername'])) {
-    header("Location: index.php");
+    header("Location: index.html");
 }
 
 ?>

@@ -5,7 +5,7 @@ require 'config.php';
 $url = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 
 preg_match('/(token=.+)/', $url, $key_match);
-$tokraw = $key_match[0];
+$tokraw =$key_match[0];
 $token = preg_replace("/(token=)/", '', $tokraw);
 
 
@@ -14,7 +14,7 @@ $data = mysqli_query($conn, $query);
 $rows = mysqli_fetch_assoc($data);
 
 $projname = $rows['projectname'];
-$projdes = $rows['description'];
+$projdes =$rows['description'];
 $bigdesc = $rows['bigdescription'];
 $from = $rows['frommoney'];
 $tomon = $rows['tomoney'];
@@ -27,7 +27,6 @@ $ddescimg4 = $rows['descimg4'];
 
 <!DOCTYPE html>
 <html lang="en">
-<html lan>
 
 <head>
   <meta charset="UTF-8" />
@@ -44,7 +43,7 @@ $ddescimg4 = $rows['descimg4'];
   html {
     font-family: "Playfair Display", serif;
 
-    background: #cdf2ca;
+    background: #171717;
   }
 
   .container {
@@ -65,14 +64,14 @@ $ddescimg4 = $rows['descimg4'];
     display: flex;
     justify-content: start;
     padding: 0.5rem 0 0.5rem 0;
-    background: #cdf2ca;
+    background: #171717;
     z-index: 2;
   }
 
   .logo_link {
     font-size: 2rem;
     margin-right: 8rem;
-    color: #000;
+    color: #fff;
     margin-left: 20rem;
   }
 
@@ -95,19 +94,20 @@ $ddescimg4 = $rows['descimg4'];
   }
 
   .logo ul li a {
-    color: #000;
+    color: #fff;
   }
 
   header {
     display: flex;
-    justify-content: space-around;
-    background: #06442f;
+    justify-content: space-between;
+    background: #171717;
     padding: 1rem 0 1rem 0;
     align-items: center;
   }
 
   header h1 {
     max-width: 50rem;
+    margin-left: 2rem;
   }
 
   .heading_text {
@@ -119,6 +119,7 @@ $ddescimg4 = $rows['descimg4'];
     background: #dddddd;
     border-radius: 1rem;
     padding: 1rem;
+    margin-right: 2rem;
   }
 
   .budget_section h1 {
@@ -165,17 +166,29 @@ $ddescimg4 = $rows['descimg4'];
   }
 
   .imgdesc img {
-    height: 20rem;
-    width: 20rem;
+    height: 10rem;
+    width: 10rem;
   }
 
   .bids_container {
     display: flex;
     width: 50vw;
     height: 73vh;
-    background: #000;
+    background: #171717;
     border-radius: 1rem;
     margin: 1rem 0.6rem 0 1rem;
+  }
+
+  .row {
+    display: flex;
+    color: #fff;
+    background: #FFD369;
+    width: 54rem;
+    border-radius: 1rem;
+    margin: 1rem;
+    padding: 1rem;
+    align-items: center;
+    justify-content: space-between;
   }
   </style>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -217,19 +230,29 @@ $ddescimg4 = $rows['descimg4'];
         <p><?php echo $bigdesc; ?></p>
         <div class="imgdesc">
           <?php echo $ddescimg1; ?>
-          <img src="localhost/MAZDOOR-main/uploads/upload1/<?php echo $ddescimg1; ?>" alt="img1" />
+          <img src="localhost/mazdoor/uploads/upload1/<?php echo $ddescimg1; ?>" alt="img1" />
 
           <img src="uploads/upload2/<?php echo $ddescimg2; ?>" alt="img2" />
           <img src="uploads/upload3/<?php echo $ddescimg3; ?>" alt="img3" />
-          <img src="uploads/upload4/<?php echo $ddescimg4; ?>" alt="img4" />
+          <img src="uploads/upload4/<?php echo $rows['descimg4']; ?>" alt="img4" />
+          <img src="images/card-images/mark-potterton-sNVkn3507Oo-unsplash.jpg" alt="">
         </div>
       </div>
 
       <div class="bids_container">
         <ul>
           <li>
-            <div>
-              <div>
+            <div class="row">
+              <div class="column">
+                <h2>Bidder's Name</h2>
+                <p>Description over here</p>
+              </div>
+              <p>Budget</p>
+            </div>
+          </li>
+          <li>
+            <div class="row">
+              <div class="column">
                 <h2>Bidder's Name</h2>
                 <p>Description over here</p>
               </div>
