@@ -32,169 +32,11 @@ $ddescimg4 = $rows['descimg4'];
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="css/bidding_page.css">
-  <style>
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-
-  html {
-    font-family: "Playfair Display", serif;
-
-    background: #171717;
-  }
-
-  .container {
-    width: 99vw;
-    height: 100vh;
-  }
-
-  li {
-    list-style: none;
-  }
-
-  a {
-    text-decoration: none;
-  }
-
-  .navbar {
-    font-family: "Roboto", sans-serif;
-    display: flex;
-    justify-content: start;
-    padding: 0.5rem 0 0.5rem 0;
-    background: #171717;
-    z-index: 2;
-  }
-
-  .logo_link {
-    font-size: 2rem;
-    margin-right: 8rem;
-    color: #fff;
-    margin-left: 20rem;
-  }
-
-  .logo {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    transform: translateX(-7rem);
-  }
-
-  .logo ul {
-    display: flex;
-    margin-right: 2rem;
-  }
-
-  .logo ul li {
-    font-size: 1.2rem;
-    justify-content: space-between;
-    padding: 1rem 1rem 0.5rem 1rem;
-  }
-
-  .logo ul li a {
-    color: #fff;
-  }
-
-  header {
-    display: flex;
-    justify-content: space-between;
-    background: #171717;
-    padding: 1rem 0 1rem 0;
-    align-items: center;
-  }
-
-  header h1 {
-    max-width: 50rem;
-    margin-left: 2rem;
-  }
-
-  .heading_text {
-    color: #fff;
-  }
-
-  .budget_section {
-    font-family: "Roboto", sans-serif;
-    background: #dddddd;
-    border-radius: 1rem;
-    padding: 1rem;
-    margin-right: 2rem;
-  }
-
-  .budget_section h1 {
-    margin-bottom: 1rem;
-  }
-
-  .budget_values {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .budget_from,
-  .budget_to {
-    background: #fff;
-    border-radius: 0.4rem;
-    padding: 0.8rem;
-  }
-
-  .budget_to {
-    margin-left: 1rem;
-  }
-
-  /* ------------------------ Details section ------------------------------- */
-
-  section {
-    display: flex;
-  }
-
-  .details_container {
-    display: flex;
-    width: 50vw;
-    height: 73vh;
-    background: #faf1e6;
-    border-radius: 1rem;
-    margin: 1rem 0 1rem 1rem;
-  }
-
-  .details_container p {
-    width: 60rem;
-    height: 30rem;
-    margin-top: 3rem;
-    margin-left: 1rem;
-    overflow: scroll;
-  }
-
-  .imgdesc img {
-    height: 10rem;
-    width: 10rem;
-  }
-
-  .bids_container {
-    display: flex;
-    width: 50vw;
-    height: 73vh;
-    background: #171717;
-    border-radius: 1rem;
-    margin: 1rem 0.6rem 0 1rem;
-  }
-
-  .row {
-    display: flex;
-    color: #fff;
-    background: #FFD369;
-    width: 54rem;
-    border-radius: 1rem;
-    margin: 1rem;
-    padding: 1rem;
-    align-items: center;
-    justify-content: space-between;
-  }
-  </style>
+  <link rel="stylesheet" href="../css/bidding_page.css">
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto&display=swap" rel="stylesheet" />
-  <title>Document</title>
+  <title>Bidding Page</title>
 </head>
 
 <body>
@@ -204,8 +46,7 @@ $ddescimg4 = $rows['descimg4'];
       <div class="logo">
         <a href="index.html" class="logo_link">MAZDOOR</a>
         <ul>
-          <li><a href="how_it_works.html">How it Works</a></li>
-          <li><a href="bidding_page.php">Browse Jobs</a></li>
+          <li><a href="../how_it_works.html">How it Works</a></li>
         </ul>
       </div>
     </nav>
@@ -229,13 +70,10 @@ $ddescimg4 = $rows['descimg4'];
       <div class="details_container">
         <p><?php echo $bigdesc; ?></p>
         <div class="imgdesc">
-          <?php echo $ddescimg1; ?>
-          <img src="localhost/mazdoor/uploads/upload1/<?php echo $ddescimg1; ?>" alt="img1" />
-
-          <img src="uploads/upload2/<?php echo $ddescimg2; ?>" alt="img2" />
-          <img src="uploads/upload3/<?php echo $ddescimg3; ?>" alt="img3" />
-          <img src="uploads/upload4/<?php echo $rows['descimg4']; ?>" alt="img4" />
-          <img src="images/card-images/mark-potterton-sNVkn3507Oo-unsplash.jpg" alt="">
+          <img src="../uploads/upload1/<?php echo $ddescimg1; ?>" alt="img1" />
+          <img src="../uploads/upload2/<?php echo $ddescimg2; ?>" alt="img2" />
+          <img src="../uploads/upload3/<?php echo $ddescimg3; ?>" alt="img3" />
+          <img src="../uploads/upload4/<?php echo $ddescimg4; ?>" alt="img4" />
         </div>
       </div>
 
@@ -260,9 +98,54 @@ $ddescimg4 = $rows['descimg4'];
             </div>
           </li>
         </ul>
+        <button id="myBtn">BID</button>
       </div>
+
+      <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <label for="">Description</label>
+          <input type="text">
+          <label for="">Budget</label>
+          <input type="number">
+          <label for="">Upload Tender</label>
+          <input type="file">
+          <button>SUBMIT</button>
+        </div>
+
+      </div>
+
     </section>
   </div>
+  <script>
+  // Get the modal
+  var modal = document.getElementById("myModal");
+
+  // Get the button that opens the modal
+  var btn = document.getElementById("myBtn");
+
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close")[0];
+
+  // When the user clicks on the button, open the modal
+  btn.onclick = function() {
+    modal.style.display = "block";
+  }
+
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
+
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+  </script>
 </body>
 
 </html>

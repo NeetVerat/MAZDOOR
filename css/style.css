@@ -369,12 +369,14 @@ a {
 }
 
 /* Track */
-/* ::-webkit-scrollbar-track {
-} */
+::-webkit-scrollbar-track {
+  border-radius: 0.5rem;
+}
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background: #ffa034;
+  border-radius: 0.5rem;
 }
 
 /* ---------------------------- Animations ------------------------------ */

@@ -7,7 +7,7 @@
 html {
   font-family: "Playfair Display", serif;
 
-  background: #cdf2ca;
+  background: #171717;
 }
 
 .container {
@@ -28,14 +28,14 @@ a {
   display: flex;
   justify-content: start;
   padding: 0.5rem 0 0.5rem 0;
-  background: #cdf2ca;
+  background: #171717;
   z-index: 2;
 }
 
 .logo_link {
   font-size: 2rem;
   margin-right: 8rem;
-  color: #000;
+  color: #fff;
   margin-left: 20rem;
 }
 
@@ -58,19 +58,20 @@ a {
 }
 
 .logo ul li a {
-  color: #000;
+  color: #fff;
 }
 
 header {
   display: flex;
-  justify-content: space-around;
-  background: #064420;
+  justify-content: space-between;
+  background: #171717;
   padding: 1rem 0 1rem 0;
   align-items: center;
 }
 
 header h1 {
   max-width: 50rem;
+  margin-left: 2rem;
 }
 
 .heading_text {
@@ -82,6 +83,7 @@ header h1 {
   background: #dddddd;
   border-radius: 1rem;
   padding: 1rem;
+  margin-right: 2rem;
 }
 
 .budget_section h1 {
@@ -112,18 +114,148 @@ section {
 
 .details_container {
   display: flex;
+  flex-direction: column;
   width: 50vw;
-  height: 73vh;
+  height: 71.8vh;
   background: #faf1e6;
   border-radius: 1rem;
   margin: 1rem 0 1rem 1rem;
 }
 
+.details_container p {
+  width: 58rem;
+  height: 30rem;
+  margin-top: 2rem;
+  margin-left: 1rem;
+  overflow: scroll;
+  word-wrap: break-word;
+}
+
+.imgdesc {
+  background: #000000;
+  border-radius: 1rem;
+}
+
+.imgdesc img {
+  height: 8rem;
+  width: 13rem;
+  margin: 0.9rem 0 0.9rem 1.22rem;
+  border-radius: 1rem;
+}
+
 .bids_container {
   display: flex;
+  flex-direction: column;
   width: 50vw;
-  height: 73vh;
-  background: #000;
+  height: 71.5vh;
+  background: #faf1e6;
   border-radius: 1rem;
   margin: 1rem 0.6rem 0 1rem;
+}
+
+.row {
+  display: flex;
+  color: #000;
+  background: #ffd369;
+  /* width: 54rem; */
+  border-radius: 1rem;
+  margin: 1rem;
+  padding: 1rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.bids_container button {
+  height: 3rem;
+  background: #4ebd73;
+  border: none;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  transform: translateY(25.25rem);
+  font-size: 1rem;
+}
+
+.bids_container button:hover {
+  background: #8f8f8f;
+}
+
+/* --------------------------------- Scrollbar ----------------------------------------- */
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 0.5rem;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #ffa034;
+  border-radius: 0.5rem;
+}
+
+/* --------------------------------------------         -------------------------------------- */
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 20%; /* Could be more or less, depending on screen size */
+  border-radius: 1rem;
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-content input {
+  height: 3rem;
+}
+
+.modal-content button {
+  height: 3rem;
+  padding: 0.8rem 0;
+  background: #4ebd73;
+  border: none;
+  border-radius: 1.5rem;
+}
+
+.modal-content label,
+input {
+  margin-bottom: 1rem;
 }
