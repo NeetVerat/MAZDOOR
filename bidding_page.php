@@ -1,6 +1,7 @@
 <?php
 
 require 'config.php';
+//error_reporting(0);
 
 $url = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 
@@ -23,11 +24,47 @@ $ddescimg1 = $rows['descimg1'];
 $ddescimg2 = $rows['descimg2'];
 $ddescimg3 = $rows['descimg3'];
 $ddescimg4 = $rows['descimg4'];
+
+?>
+<?php
+
+$link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] 
+          === 'on' ? "https" : "http") . 
+          "://" . $_SERVER['HTTP_HOST'] . 
+          $_SERVER['REQUEST_URI'];     
+$url_components = parse_url($link);
+parse_str($url_components['query'], $params);         
+ //echo $params['token'];
+
+if (isset($_POST['submit'])) 
+{
+  $biddersname = $_POST['biddersname'];
+  $biddersdics = $_POST['biddersdics'];
+  $bidderbudget = $_POST['bidderbudget'];
+  $tenderpdf = $_FILES['tenderpdf']['name'];
+  $token = $_POST['token'];
+
+$sql = "SELECT * FROM projectbids ";
+        $result = mysqli_query($conn, $sql);
+if (!$result->num_rows > 0) 
+{
+ $sql = "INSERT INTO projectbids(biddersname, biddersdics, bidderbudget, tenderpdf, token ) VALUES ('$biddersname','$biddersdics','$bidderbudget','$tenderpdf','$token')";
+$result = mysqli_query($conn, $sql);
+if ($result) 
+{
+echo "<script>alert('Wow! Your BID Submitted.')</script>";
+$biddersname = " ";
+$biddersdics = " ";
+$bidderbudget = " ";
+$tenderpdf = " ";
+$token = " ";
+}
+}
+}
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -103,17 +140,21 @@ $ddescimg4 = $rows['descimg4'];
 
       <div id="myModal" class="modal">
 
-        <!-- Modal content -->
-        <div class="modal-content">
-          <span class="close">&times;</span>
-          <label for="">Description</label>
-          <input type="text">
-          <label for="">Budget</label>
-          <input type="number">
-          <label for="">Upload Tender</label>
-          <input type="file">
-          <button>SUBMIT</button>
-        </div>
+      <!-- Modal content -->
+      <div class="modal-content">
+        <form action="" method="POST" enctype="multipart/form-data">
+        <span class="close">&times;</span>
+        <label for="">Name</label>
+        <input type="text" placeholder=" Bidder's Name" name="biddersname" value="<?php echo $biddersname ?>"/>
+        <label for="">Description</label>
+        <input type="text" placeholder="Description" name="biddersdics" value="<?php echo $biddersdics ?>"/>
+        <label for="">Budget</label>
+        <input type="number" placeholder="You budget" name="bidderbudget" value="<?php echo $bidderbudget ?>"/>
+        <label for="">Upload Tender</label>
+        <input type="file" placeholder="Upload your Tendure" name="tenderpdf" value="<?php echo $tenderpdf ?>"/>
+        <input type="text" placeholder="Description" name="token" value="<?php echo $params['token'] ?>"/>
+        <button name="submit">Submit</button>
+      </div>
 
       </div>
 
