@@ -11,6 +11,7 @@ html {
 .container {
   width: 99vw;
   height: 100vh;
+  background: #000000;
 }
 
 li {
@@ -59,6 +60,36 @@ a {
   color: #ffffff;
 }
 
+.welcome-client {
+  display: flex;
+  width: 25rem;
+  height: 4rem;
+  padding-top: 0.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.welcome-client h1 {
+  color: #fff;
+}
+
+.welcome-client a {
+  height: 3rem;
+  width: 6rem;
+  text-align: center;
+  color: #fff;
+  font-size: 1rem;
+  padding: 0.7rem 0;
+  border-radius: 0.5rem;
+  border: solid white 0.2rem;
+  margin-left: 4rem;
+}
+
+.welcome-client a:hover {
+  background: whitesmoke;
+  color: #000;
+}
+
 /* ----------------------- Start of Statistics -------------------------- */
 
 header {
@@ -66,14 +97,16 @@ header {
   font-size: 4rem;
   text-align: center;
   margin: 1rem 0;
+  color: rgb(255, 255, 255);
 }
 
 .row {
-  height: 20vh;
+  height: 28vh;
   width: 99vw;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 5rem;
 }
 
 .works_done,
@@ -81,41 +114,99 @@ header {
 .work_done_worth,
 .dislike {
   display: flex;
-  height: 10rem;
+  height: 15rem;
   width: 20rem;
-  background: #e9e9e9;
+  background: #181b23;
   align-items: center;
   justify-content: center;
   margin: 0 2rem;
-  border-radius: 1rem;
-  border: solid #c8c8c8;
+  border-radius: 1.5rem;
+  flex-direction: column;
 }
+
+.works_done a,
+.Loyalty_Badge a,
+.work_done_worth a,
+.dislike a {
+  font-size: 5rem;
+  text-align: center;
+  color: #000;
+  font-weight: bold;
+  width: 100%;
+  height: 100%;
+  padding-top: 3rem;
+}
+
+/* .works_done a:hover,
+.Loyalty_Badge a:hover,
+.work_done_worth a:hover,
+.dislike a:hover {
+  background: #181b23d2;
+  border-radius: 1.3rem;
+} */
 
 .works_done h2,
 .Loyalty_Badge h2,
 .work_done_worth h2,
 .dislike h2 {
-  font-size: 5rem;
-  text-align: center;
+  padding-bottom: 1rem;
+}
+
+.works_done {
+  background: linear-gradient(to bottom right, #00bf8f, #8dc26f);
+}
+
+.Loyalty_Badge {
+  background: linear-gradient(to bottom right, #eb3349, #f45c43);
+}
+
+.work_done_worth {
+  background: linear-gradient(to bottom right, #ff8008, #ffc837);
+}
+
+.dislike {
+  background: linear-gradient(to bottom right, #4776e6, #8e54e9);
+}
+
+.postdiv {
+  height: 23rem;
+  width: 44.5rem;
+  background: whitesmoke;
+  border-radius: 1rem;
+  display: flex;
+  margin-left: 13rem;
+  align-items: center;
+  padding-top: 3rem;
+}
+
+.postdiv img {
+  height: 15rem;
+  width: 15rem;
+  margin-bottom: 1rem;
+  margin-left: 2rem;
+}
+
+.postdiv a {
+  height: 8rem;
+  width: 100%;
+  font-size: 3rem;
+  color: #000000;
+  font-weight: 900;
+  margin-top: 2rem;
 }
 
 .row1 {
-  width: 99vw;
   display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin-left: 2rem;
+  margin-right: 2rem;
 }
 
-.works_done_txt {
-  margin: 0 0 0 19rem;
-}
-
-.Loyalty_Badge_txt {
-  margin: 0 0 0 15rem;
-}
-
-.work_done_worth_txt {
-  margin: 0 0 0 12rem;
-}
-
-.dislike_txt {
-  margin: 0 0 0 16rem;
+.works_done:hover,
+.Loyalty_Badge:hover,
+.work_done_worth:hover,
+.dislike:hover,
+.postdiv:hover {
+  filter: blur(0.15rem);
 }

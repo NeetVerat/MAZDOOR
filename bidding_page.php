@@ -5,7 +5,7 @@ require 'config.php';
 $url = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 
 preg_match('/(token=.+)/', $url, $key_match);
-$tokraw =$key_match[0];
+$tokraw = $key_match[0];
 $token = preg_replace("/(token=)/", '', $tokraw);
 
 
@@ -14,7 +14,7 @@ $data = mysqli_query($conn, $query);
 $rows = mysqli_fetch_assoc($data);
 
 $projname = $rows['projectname'];
-$projdes =$rows['description'];
+$projdes = $rows['description'];
 $bigdesc = $rows['bigdescription'];
 $from = $rows['frommoney'];
 $tomon = $rows['tomoney'];
@@ -44,7 +44,7 @@ $ddescimg4 = $rows['descimg4'];
     <!-- -------------- Start of Navbar ---------------- -->
     <nav class="navbar">
       <div class="logo">
-        <a href="index.html" class="logo_link">MAZDOOR</a>
+        <a href="index.php" class="logo_link">MAZDOOR</a>
         <ul>
           <li><a href="../how_it_works.html">How it Works</a></li>
         </ul>
