@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 08, 2022 at 04:20 PM
+-- Generation Time: Jan 31, 2022 at 09:23 PM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 7.3.31
 
@@ -64,7 +64,9 @@ INSERT INTO `logindetails` (`id`, `clientemail`, `clientusername`, `clientpasswo
 (3, 'QWERTY@GMAIL.COM', 'QWERTY', '81dc9bdb52d04dc20036dbd8313ed055', 2147483647, 1343243241, 'DFDSAF123', 'bldg no 24, regency sarwam, titwala, east', 'uoahsdlkjffheowh', 'titwala', 'Maharashtra', 421605, 0, '', '', '', '', '', '', '', '', '0000-00-00', '', ''),
 (4, 'a@h.i', 'a', '123', 4, 4, '4', '4a', 'a', 'a', 'a', 154879, 4, 'upload check.jp', 'upload check.jp', '2021-08-11', 'upload check.jp', 'a', 'a', 'a', 'a', '0000-00-00', 'upload check.jpg', 'upload check.jpg'),
 (5, 'ad@m.b', 'as', '202cb962ac59075b964b07152d234b70', 3, 3, '3', '3', '3', '3', '3', 7, 3, '', '', '2021-08-11', '', '3', 'a', 'a', 'a', '0000-00-00', '', ''),
-(6, 'sdfkjb@gsubdfn.com', 'adminboi', '550a141f12de6341fba65b0ad0433500', 0, 0, '', '', '', '', '', 0, 0, '', '', '', '', '', '', '', '', '0000-00-00', '', '');
+(6, 'sdfkjb@gsubdfn.com', 'adminboi', '550a141f12de6341fba65b0ad0433500', 0, 0, '', '', '', '', '', 0, 0, '', '', '', '', '', '', '', '', '0000-00-00', '', ''),
+(7, '', '', '202cb962ac59075b964b07152d234b70', 0, 0, '', '', '', '', '', 0, 0, '', '', '', '', '', '', '', '', '0000-00-00', '', ''),
+(8, 'udfgin@g.hoi', 'sfgsdhfb', '698d51a19d8a121ce581499d7b701668', 0, 0, '', '', '', '', '', 0, 0, '', '', '2021-02-11', '', '', '', '', '', '0000-00-00', '', '');
 
 -- --------------------------------------------------------
 
@@ -83,17 +85,21 @@ CREATE TABLE `projects` (
   `descimg1` varchar(255) NOT NULL,
   `descimg2` varchar(255) NOT NULL,
   `descimg3` varchar(255) NOT NULL,
-  `descimg4` varchar(255) NOT NULL
+  `descimg4` varchar(255) NOT NULL,
+  `biddersname` varchar(255) NOT NULL,
+  `biddersdics` varchar(255) NOT NULL,
+  `bidderbudget` int(255) NOT NULL,
+  `tenderpdf` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `projects`
 --
 
-INSERT INTO `projects` (`token`, `projectname`, `description`, `bigdescription`, `frommoney`, `tomoney`, `cardimage`, `descimg1`, `descimg2`, `descimg3`, `descimg4`) VALUES
-('GCvCGS2TGAVfADSn', 'q', 'q', 'q', 1, 2, 'upload check.jpg', 'uploadcheck.jpg', 'upload check.jpg', 'upload check.jpg', 'upload check.jpg'),
-('v17q9siyrUQZ1TKP', 'charms height', 'sadfasd', 'ewrwefds', 435, 123435, 'ben-allan-BIeC4YK2MTA-unsplash.jpg', 'billy-freeman-V38rMuljw2Y-unsplash.jpg', 'brett-jordan-nz-cBSChvUw-unsplash.jpg', 'clay-leconey-J9AgM47fVDU-unsplash.jpg', 'l-steward-masweneng-KnB--1wimeA-unsplash.jpg'),
-('v8Tg9iliUyA90DK3', 'QWERTY', 'ASDFASF', 'A DSFVVVVVVVVVVVVVVVEWQ DASSSSSSSSSSSSSS AWEEEEEEEEEEEEEEEEEEE', 1234132, 4352345, 'ben-allan-BIeC4YK2MTA-unsplash.jpg', 'billy-freeman-V38rMuljw2Y-unsplash.jpg', 'clay-leconey-J9AgM47fVDU-unsplash.jpg', 'mark-potterton-sNVkn3507Oo-unsplash.jpg', 'scott-blake-x-ghf9LjrVg-unsplash.jpg');
+INSERT INTO `projects` (`token`, `projectname`, `description`, `bigdescription`, `frommoney`, `tomoney`, `cardimage`, `descimg1`, `descimg2`, `descimg3`, `descimg4`, `biddersname`, `biddersdics`, `bidderbudget`, `tenderpdf`) VALUES
+('GCvCGS2TGAVfADSn', 'q', 'q', 'q', 1, 2, 'upload check.jpg', 'uploadcheck.jpg', 'upload check.jpg', 'upload check.jpg', 'upload check.jpg', '', '', 0, ''),
+('v17q9siyrUQZ1TKP', 'charms height', 'sadfasd', 'ewrwefds', 435, 123435, 'ben-allan-BIeC4YK2MTA-unsplash.jpg', 'billy-freeman-V38rMuljw2Y-unsplash.jpg', 'brett-jordan-nz-cBSChvUw-unsplash.jpg', 'clay-leconey-J9AgM47fVDU-unsplash.jpg', 'l-steward-masweneng-KnB--1wimeA-unsplash.jpg', '', '', 0, ''),
+('v8Tg9iliUyA90DK3', 'QWERTY', 'ASDFASF', 'A DSFVVVVVVVVVVVVVVVEWQ DASSSSSSSSSSSSSS AWEEEEEEEEEEEEEEEEEEE', 1234132, 4352345, 'ben-allan-BIeC4YK2MTA-unsplash.jpg', 'billy-freeman-V38rMuljw2Y-unsplash.jpg', 'clay-leconey-J9AgM47fVDU-unsplash.jpg', 'mark-potterton-sNVkn3507Oo-unsplash.jpg', 'scott-blake-x-ghf9LjrVg-unsplash.jpg', '', '', 0, '');
 
 -- --------------------------------------------------------
 
@@ -158,7 +164,10 @@ CREATE TABLE `workerlogin` (
 INSERT INTO `workerlogin` (`email`, `username`, `password`, `bdate`, `add1`, `add2`, `add3`, `city`, `state`, `phoneno`, `altno`, `aadharcard`, `aadharfront`, `aadharback`, `workerpanno`, `panfront`, `panback`, `addfront`, `addback`, `id`, `firstname`, `lastname`, `middlename`, `pincode`) VALUES
 ('a@a.in', 'as', '81dc9bdb52d04dc20036dbd8313ed055', '2022-01-04', 'a', 'a', 'a', '', 'a', 956230147, 956230147, 956230147, 'upload check.jpg', 'upload check.jpg', '956230147', 'upload check.jpg', 'upload check.jpg', 'upload check.jpg', 'upload check.jpg', 1, 'a', 'a', 'a', 956874),
 ('aaaa@a.i', 'a', '202cb962ac59075b964b07152d234b70', '2022-01-06', '3', '3', '3', '', '3', 3, 3, 3, 'upload check.jpg', 'upload check.jpg', '3', 'upload check.jpg', 'upload check.jpg', 'upload check.jpg', 'upload check.jpg', 2, 'a', 'a', 'a', 3),
-('q@q.i', 'q', '81dc9bdb52d04dc20036dbd8313ed055', '0000-00-00', '', '', '', '', '', 0, 0, 0, '', '', '', '', '', '', '', 3, '', '', '', 0);
+('q@q.i', 'q', '81dc9bdb52d04dc20036dbd8313ed055', '0000-00-00', '', '', '', '', '', 0, 0, 0, '', '', '', '', '', '', '', 3, '', '', '', 0),
+('a@u.i', 'a', '202cb962ac59075b964b07152d234b70', '0000-00-00', '', '', '', '', '', 0, 0, 0, '', '', '', '', '', '', '', 4, '', '', '', 0),
+('asrsgs@k.i', 'rfseftsf', '698d51a19d8a121ce581499d7b701668', '2022-05-12', '', '', '', '', '', 0, 0, 0, '', '', '', '', '', '', '', 5, '', '', '', 0),
+('fdsfsdf@gisjb.ub', 'fsdf', '698d51a19d8a121ce581499d7b701668', '2021-08-11', '', '', '', '', '', 0, 0, 0, '', '', '', '', '', '', '', 6, '', '', '', 0);
 
 --
 -- Indexes for dumped tables
@@ -196,7 +205,7 @@ ALTER TABLE `workerlogin`
 -- AUTO_INCREMENT for table `logindetails`
 --
 ALTER TABLE `logindetails`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `users`
@@ -208,7 +217,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `workerlogin`
 --
 ALTER TABLE `workerlogin`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

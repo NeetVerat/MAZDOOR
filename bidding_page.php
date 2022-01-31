@@ -1,7 +1,7 @@
 <?php
 
 require 'config.php';
-//error_reporting(0);
+error_reporting(0);
 
 $url = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 
@@ -28,6 +28,9 @@ $ddescimg4 = $rows['descimg4'];
 ?>
 <?php
 
+require 'config.php';
+error_reporting(0);
+
 $link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] 
           === 'on' ? "https" : "http") . 
           "://" . $_SERVER['HTTP_HOST'] . 
@@ -41,7 +44,7 @@ if (isset($_POST['submit']))
   $biddersname = $_POST['biddersname'];
   $biddersdics = $_POST['biddersdics'];
   $bidderbudget = $_POST['bidderbudget'];
-  $tenderpdf = $_FILES['tenderpdf']['name'];
+  $tenderpdf = $_FILES['tenderpdf'];
   $token = $_POST['token'];
 
 $sql = "SELECT * FROM projectbids ";
@@ -59,7 +62,19 @@ $bidderbudget = " ";
 $tenderpdf = " ";
 $token = " ";
 }
+else 
+{
+  echo "<script>alert('Result vala mai error.')</script>";
 }
+}
+else 
+{
+  echo "<script>alert('Insert vala mai error.')</script>";
+}
+}
+else 
+{
+  echo "<script>alert('isset vale mai error.')</script>";
 }
 ?>
 
