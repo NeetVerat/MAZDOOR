@@ -6,7 +6,7 @@ session_start();
 
 error_reporting(0);
 
-if (isset($_SESSION['username'])) {
+if (isset($_SESSION['clientusername'])) {
     header("Location: client_dashboard.php");
 }
 

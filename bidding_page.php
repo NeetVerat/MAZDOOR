@@ -169,10 +169,9 @@ else
         <input type="file" placeholder="Upload your Tendure" name="tenderpdf" value="<?php echo $tenderpdf ?>"/>
         <input type="text" placeholder="Description" name="token" value="<?php echo $params['token'] ?>"/>
         <button name="submit">Submit</button>
+        </form>
       </div>
-
       </div>
-
     </section>
   </div>
   <script>
