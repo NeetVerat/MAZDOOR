@@ -31,55 +31,47 @@ $ddescimg4 = $rows['descimg4'];
 require 'config.php';
 error_reporting(0);
 
-$link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] 
-          === 'on' ? "https" : "http") . 
-          "://" . $_SERVER['HTTP_HOST'] . 
-          $_SERVER['REQUEST_URI'];     
+$link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS']
+  === 'on' ? "https" : "http") .
+  "://" . $_SERVER['HTTP_HOST'] .
+  $_SERVER['REQUEST_URI'];
 $url_components = parse_url($link);
-parse_str($url_components['query'], $params);         
- //echo $params['token'];
+parse_str($url_components['query'], $params);
+//echo $params['token'];
 
-if (isset($_POST['submit'])) 
-{
+if (isset($_POST['submit'])) {
   $biddersname = $_POST['biddersname'];
   $biddersdics = $_POST['biddersdics'];
   $bidderbudget = $_POST['bidderbudget'];
   $tenderpdf = $_FILES['tenderpdf'];
   $token = $_POST['token'];
 
-$sql = "SELECT * FROM projectbids ";
-        $result = mysqli_query($conn, $sql);
-if (!$result->num_rows > 0) 
-{
- $sql = "INSERT INTO projectbids(biddersname, biddersdics, bidderbudget, tenderpdf, token ) VALUES ('$biddersname','$biddersdics','$bidderbudget','$tenderpdf','$token')";
-$result = mysqli_query($conn, $sql);
-if ($result) 
-{
-echo "<script>alert('Wow! Your BID Submitted.')</script>";
-$biddersname = " ";
-$biddersdics = " ";
-$bidderbudget = " ";
-$tenderpdf = " ";
-$token = " ";
-}
-else 
-{
-  echo "<script>alert('Result vala mai error.')</script>";
-}
-}
-else 
-{
-  echo "<script>alert('Insert vala mai error.')</script>";
-}
-}
-else 
-{
+  $sql = "SELECT * FROM projectbids ";
+  $result = mysqli_query($conn, $sql);
+  if (!$result->num_rows > 0) {
+    $sql = "INSERT INTO projectbids(biddersname, biddersdics, bidderbudget, tenderpdf, token ) VALUES ('$biddersname','$biddersdics','$bidderbudget','$tenderpdf','$token')";
+    $result = mysqli_query($conn, $sql);
+    if ($result) {
+      echo "<script>alert('Wow! Your BID Submitted.')</script>";
+      $biddersname = " ";
+      $biddersdics = " ";
+      $bidderbudget = " ";
+      $tenderpdf = " ";
+      $token = " ";
+    } else {
+      echo "<script>alert('Result vala mai error.')</script>";
+    }
+  } else {
+    echo "<script>alert('Insert vala mai error.')</script>";
+  }
+} else {
   echo "<script>alert('isset vale mai error.')</script>";
 }
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -155,51 +147,51 @@ else
 
       <div id="myModal" class="modal">
 
-      <!-- Modal content -->
-      <div class="modal-content">
-        <form action="" method="POST" enctype="multipart/form-data">
-        <span class="close">&times;</span>
-        <label for="">Name</label>
-        <input type="text" placeholder=" Bidder's Name" name="biddersname" value="<?php echo $biddersname ?>"/>
-        <label for="">Description</label>
-        <input type="text" placeholder="Description" name="biddersdics" value="<?php echo $biddersdics ?>"/>
-        <label for="">Budget</label>
-        <input type="number" placeholder="You budget" name="bidderbudget" value="<?php echo $bidderbudget ?>"/>
-        <label for="">Upload Tender</label>
-        <input type="file" placeholder="Upload your Tendure" name="tenderpdf" value="<?php echo $tenderpdf ?>"/>
-        <input type="text" placeholder="Description" name="token" value="<?php echo $params['token'] ?>"/>
-        <button name="submit">Submit</button>
-        </form>
-      </div>
+        <!-- Modal content -->
+        <div class="modal-content">
+          <form action="" method="POST" enctype="multipart/form-data">
+            <span class="close">&times;</span>
+            <label for="">Name</label>
+            <input type="text" placeholder=" Bidder's Name" name="biddersname" value="<?php echo $biddersname ?>" />
+            <label for="">Description</label>
+            <input type="text" placeholder="Description" name="biddersdics" value="<?php echo $biddersdics ?>" />
+            <label for="">Budget</label>
+            <input type="number" placeholder="You budget" name="bidderbudget" value="<?php echo $bidderbudget ?>" />
+            <label for="">Upload Tender</label>
+            <input type="file" placeholder="Upload your Tendure" name="tenderpdf" value="<?php echo $tenderpdf ?>" />
+            <input type="text" placeholder="Description" name="token" value="<?php echo $params['token'] ?>" />
+            <button name="submit">Submit</button>
+          </form>
+        </div>
       </div>
     </section>
   </div>
   <script>
-  // Get the modal
-  var modal = document.getElementById("myModal");
+    // Get the modal
+    var modal = document.getElementById("myModal");
 
-  // Get the button that opens the modal
-  var btn = document.getElementById("myBtn");
+    // Get the button that opens the modal
+    var btn = document.getElementById("myBtn");
 
-  // Get the <span> element that closes the modal
-  var span = document.getElementsByClassName("close")[0];
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
 
-  // When the user clicks on the button, open the modal
-  btn.onclick = function() {
-    modal.style.display = "block";
-  }
+    // When the user clicks on the button, open the modal
+    btn.onclick = function() {
+      modal.style.display = "block";
+    }
 
-  // When the user clicks on <span> (x), close the modal
-  span.onclick = function() {
-    modal.style.display = "none";
-  }
-
-  // When the user clicks anywhere outside of the modal, close it
-  window.onclick = function(event) {
-    if (event.target == modal) {
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
       modal.style.display = "none";
     }
-  }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
   </script>
 </body>
 
