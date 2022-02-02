@@ -7,12 +7,10 @@ error_reporting(0);
 session_start();
 
 
-if (isset($_SESSION['clientusername'])) 
-{
+if (isset($_SESSION['clientusername'])) {
   header("Location: login.php");
 }
-if (isset($_POST['submit'])) 
-{
+if (isset($_POST['submit'])) {
   $clientusername = $_POST['clientusername'];
   $clientemail = $_POST['clientemail'];
   $clientpassword = md5($_POST['clientpassword']);
@@ -34,52 +32,49 @@ if (isset($_POST['submit']))
   $clientfirst = $_POST['clientfirst'];
   $clientlast = $_POST['clientlast'];
   $clientmiddle = $_POST['clientmiddle'];
-  $clientbday =  date('Y-m-d',strtotime($_POST['clientbday']));;
+  $clientbday =  date('Y-m-d', strtotime($_POST['clientbday']));;
   $clientaddfront = $_FILES['clientaddfront']['name'];
   $clientaddback = $_FILES['clientaddback']['name'];
 
-      if ($clientpassword == $cpassword) 
-      {
-        $sql = "SELECT * FROM logindetails WHERE clientemail = '$clientemail'";
-        $result = mysqli_query($conn, $sql);
+  if ($clientpassword == $cpassword) {
+    $sql = "SELECT * FROM logindetails WHERE clientemail = '$clientemail'";
+    $result = mysqli_query($conn, $sql);
 
-        if (!$result->num_rows > 0) {
-          $sql = "INSERT INTO logindetails (clientemail, clientusername, clientpassword, clientmobilenum, clientaadharnum, clientpannum, clientadrsline1, clientadrsline2, clientcity, clientsstate, clientpincode, clientaltno, caadharfront, caadharback, cpancardfront, cpancardback, clientadrsline3, clientfirst, clientlast, clientmiddle, clientbday, clientaddfront, clientaddback) VALUES ('$clientemail','$clientusername','$clientpassword','$clientmobilenum','$clientaadharnum','$clientpannum','$clientadrsline1','$clientadrsline2','$clientcity','$clientsstate','$clientpincode','$clientaltno','$caadharfront','$caadharback','$clientbday','$cpancardfront','$clientadrsline3','$clientfirst','$clientlast','$clientmiddle','$cpancardback','$clientaddfront','$clientaddback')";
-          $result = mysqli_query($conn, $sql);
-          if ($result) {
-            echo "<script>alert('Wow! User Registration Completed.')</script>";
-            $clientusername = "";
-            $clientemail = "";
-            $_POST['clientpassword'] = "";
-            $_POST['cpassword'] = "";
-						$clientmobilenum = "";
-            $clientaadharnum = "";
-            $clientpannum = "";
-            $clientadrsline1 = "";
-            $clientadrsline2 = "";
-            $clientcity = "";
-            $clientsstate = "";
-            $clientpincode = "";
-            $clientaltno = "";
-						$caadharfront = "";
-            $cpancardback = "";
-            $cpancardfront = "";
-            $cpancardback = "";            
-            $clientadrsline3 = "";           
-            $clientfirst = "";
-            $clientlast = "";
-            $clientmiddle = "";
-            $clientaddfront = "";
-            $clientaddback = "";
-          } else {
-            echo "<script>alert('Woops! Something Wrong Went.')</script>";
-          }
-        } else {
-          echo "<script>alert('Woops! Email Already Exists.')</script>";
-        }
-
+    if (!$result->num_rows > 0) {
+      $sql = "INSERT INTO logindetails (clientemail, clientusername, clientpassword, clientmobilenum, clientaadharnum, clientpannum, clientadrsline1, clientadrsline2, clientcity, clientsstate, clientpincode, clientaltno, caadharfront, caadharback, cpancardfront, cpancardback, clientadrsline3, clientfirst, clientlast, clientmiddle, clientbday, clientaddfront, clientaddback) VALUES ('$clientemail','$clientusername','$clientpassword','$clientmobilenum','$clientaadharnum','$clientpannum','$clientadrsline1','$clientadrsline2','$clientcity','$clientsstate','$clientpincode','$clientaltno','$caadharfront','$caadharback','$clientbday','$cpancardfront','$clientadrsline3','$clientfirst','$clientlast','$clientmiddle','$cpancardback','$clientaddfront','$clientaddback')";
+      $result = mysqli_query($conn, $sql);
+      if ($result) {
+        echo "<script>alert('Wow! User Registration Completed.')</script>";
+        $clientusername = "";
+        $clientemail = "";
+        $_POST['clientpassword'] = "";
+        $_POST['cpassword'] = "";
+        $clientmobilenum = "";
+        $clientaadharnum = "";
+        $clientpannum = "";
+        $clientadrsline1 = "";
+        $clientadrsline2 = "";
+        $clientcity = "";
+        $clientsstate = "";
+        $clientpincode = "";
+        $clientaltno = "";
+        $caadharfront = "";
+        $cpancardback = "";
+        $cpancardfront = "";
+        $cpancardback = "";
+        $clientadrsline3 = "";
+        $clientfirst = "";
+        $clientlast = "";
+        $clientmiddle = "";
+        $clientaddfront = "";
+        $clientaddback = "";
       } else {
-        echo "<script>alert('Password Not Matched.')</script>";
+        echo "<script>alert('Woops! Something Wrong Went.')</script>";
       }
+    } else {
+      echo "<script>alert('Woops! Email Already Exists.')</script>";
     }
-?>
+  } else {
+    echo "<script>alert('Password Not Matched.')</script>";
+  }
+}

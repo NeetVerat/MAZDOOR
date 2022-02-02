@@ -6,7 +6,7 @@
 
 html {
   font-family: "Fjalla One", sans-serif;
-  background: #e6e6f2;
+  background: #121212;
 }
 
 .container {
@@ -29,7 +29,7 @@ a {
   padding: 0.5rem 0 0.5rem 0;
   align-items: center;
   z-index: 2;
-  background: black;
+  background: #121212;
 }
 
 .logo_link {
@@ -66,24 +66,34 @@ header {
   padding-left: 2.3rem;
   font-weight: bold;
   margin: 2rem 0;
+  color: #21c28c;
 }
 
 .row {
   display: flex;
   width: 96vw;
-  background: #ffffff;
+  background: #2d2c2c;
   margin: 0 0 0.5rem 2rem;
   padding: 1rem;
   border-radius: 1rem;
-  border: solid #747474 0.1rem;
-  box-shadow: 5px 5px 5px #bebebe;
-  color: #15111f;
+  /* border: solid #747474 0.1rem; */
+  /* box-shadow: 5px 5px 5px #bebebe; */
+  color: #ffffffcc;
 }
 
 .row img {
   margin: 0 1rem 0 0;
   height: 7rem;
   width: 7rem;
+}
+
+.row h1 {
+  width: 70vw;
+  color: #21c28c;
+}
+
+.row h2 {
+  font-size: small;
 }
 
 .row h3 {
@@ -101,7 +111,8 @@ header {
 }
 
 .row:hover {
-  background: #f3f3f8;
+  background: #f3f3f836;
+  border: solid #21c28c 0.1rem;
 }
 
 #img_done {
