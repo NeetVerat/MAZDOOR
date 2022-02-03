@@ -164,6 +164,14 @@
   </div> -->
 
   <div class="container-5"></div>
+   <script type="text/javascript">
+ var vsid = "kc22926b9595c8e";
+ (function() { 
+ var vsjs = document.createElement('script'); vsjs.type = 'text/javascript'; vsjs.async = true; vsjs.setAttribute('defer', 'defer');
+  vsjs.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'www.leadchatbot.com/vsa/chat.js';
+   var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(vsjs, s);
+ })();
+</script>
 </body>
 
 </html>
