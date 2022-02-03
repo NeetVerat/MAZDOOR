@@ -80,7 +80,7 @@ header h1 {
 
 .budget_section {
   font-family: "Roboto", sans-serif;
-  background: #dddddd;
+  background: #292424;
   border-radius: 1rem;
   padding: 1rem;
   margin-right: 2rem;
@@ -88,6 +88,7 @@ header h1 {
 
 .budget_section h1 {
   margin-bottom: 1rem;
+  color: floralwhite;
 }
 
 .budget_values {
@@ -97,9 +98,12 @@ header h1 {
 
 .budget_from,
 .budget_to {
-  background: #fff;
+  background: rgb(104, 103, 103);
   border-radius: 0.4rem;
   padding: 0.8rem;
+  color: #4ebd73;
+  font-weight: 700;
+  font-size: 1.2rem;
 }
 
 .budget_to {
@@ -245,17 +249,56 @@ section {
 
 .modal-content input {
   height: 3rem;
+  width: 21.2rem;
+}
+
+.down {
+  margin-top: 3rem;
 }
 
 .modal-content button {
   height: 3rem;
+  width: 5rem;
   padding: 0.8rem 0;
   background: #4ebd73;
   border: none;
-  border-radius: 1.5rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
 }
 
 .modal-content label,
 input {
   margin-bottom: 1rem;
+}
+
+/* ------------------- Custom Input Field ----------------------- */
+
+.textfield {
+  position: relative;
+  padding: 10px 15px;
+  border: 1px solid #8f8f8f;
+  border-radius: 5px;
+  box-shadow: none;
+}
+.placeholder {
+  position: absolute;
+  z-index: 1;
+  background-color: #fff;
+  transform: translate(-20rem, 0.7rem);
+  color: #a9a9a9;
+  padding: 0 5px;
+}
+
+input:focus ~ span,
+input:not(:focus):valid ~ span {
+  /* top: -8px; */
+  transform: translate(-20rem, -0.7rem);
+  color: #000000;
+}
+.textfield,
+span {
+  transition: ease-in-out 0.2s all;
+  -webkit-transition: ease-in-out 0.2s all;
+  -moz-transition: ease-in-out 0.2s all;
+  -o-transition: ease-in-out 0.2s all;
 }

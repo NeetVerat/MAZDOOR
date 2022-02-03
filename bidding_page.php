@@ -151,48 +151,55 @@ if (isset($_POST['submit'])) {
         <div class="modal-content">
           <form action="" method="POST" enctype="multipart/form-data">
             <span class="close">&times;</span>
-            <label for="">Name</label>
-            <input type="text" placeholder=" Bidder's Name" name="biddersname" value="<?php echo $biddersname ?>" />
-            <label for="">Description</label>
-            <input type="text" placeholder="Description" name="biddersdics" value="<?php echo $biddersdics ?>" />
-            <label for="">Budget</label>
-            <input type="number" placeholder="You budget" name="bidderbudget" value="<?php echo $bidderbudget ?>" />
-            <label for="">Upload Tender</label>
-            <input type="file" placeholder="Upload your Tendure" name="tenderpdf" value="<?php echo $tenderpdf ?>" />
-            <input type="text" placeholder="Description" name="token" value="<?php echo $params['token'] ?>" />
-            <button name="submit">Submit</button>
+            <div class="down">
+              <label><input type="text" class="textfield" name="biddersname" value="<?php echo $biddersname ?>"
+                  required><span class="placeholder">Bidder's Name</span></label><br>
+
+              <label><input type="text" class="textfield" name="biddersdics" value="<?php echo $biddersdics ?>"
+                  required><span class="placeholder">Description</span></label><br>
+
+              <label><input type="number" class="textfield" name="bidderbudget" value="<?php echo $bidderbudget ?>"
+                  required><span class="placeholder">Your budget</span></label><br>
+
+              <input type="file" placeholder="Upload your Tendure" name="tenderpdf" class="tender"
+                value="<?php echo $tenderpdf ?>" />
+              <input type="text" placeholder="Description" name="token" value="<?php echo $params['token'] ?>"
+                style="display: none;" />
+              <br><button name="submit">Submit</button>
+            </div>
           </form>
         </div>
       </div>
     </section>
   </div>
   <script>
-    // Get the modal
-    var modal = document.getElementById("myModal");
+  // Get the modal
+  var modal = document.getElementById("myModal");
 
-    // Get the button that opens the modal
-    var btn = document.getElementById("myBtn");
+  // Get the button that opens the modal
+  var btn = document.getElementById("myBtn");
 
-    // Get the <span> element that closes the modal
-    var span = document.getElementsByClassName("close")[0];
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close")[0];
 
-    // When the user clicks on the button, open the modal
-    btn.onclick = function() {
-      modal.style.display = "block";
-    }
+  // When the user clicks on the button, open the modal
+  btn.onclick = function() {
+    modal.style.display = "block";
+  }
 
-    // When the user clicks on <span> (x), close the modal
-    span.onclick = function() {
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
+
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == modal) {
       modal.style.display = "none";
     }
-
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function(event) {
-      if (event.target == modal) {
-        modal.style.display = "none";
-      }
-    }
+  }
   </script>
+
 </body>
 
 </html>

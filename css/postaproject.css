@@ -18,8 +18,8 @@ body {
 form {
   display: flex;
   flex-direction: column;
-  width: 80rem;
-  height: 80rem;
+  width: 60rem;
+  height: 45rem;
   color: black;
   border-radius: 1rem;
   margin-top: 5rem;
@@ -66,9 +66,21 @@ form select {
   width: 10rem;
 }
 
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.proj_name {
+  margin-left: 0;
+  width: 17rem;
+}
+
 .money {
   display: flex;
   flex-direction: column;
+  width: 24rem;
   background: rgba(255, 255, 255, 0.52);
   border-radius: 1rem;
   margin-bottom: 2rem;
@@ -99,22 +111,126 @@ form select {
   flex-direction: row;
 }
 
-.form-descrip {
-  display: flex;
-  align-content: center;
-}
-
-.form-big-descrip {
-  display: flex;
-  align-content: center;
-}
-
 textarea {
   border-radius: 0.5rem;
   font-size: 1.2rem;
   padding: 0.5rem;
+  max-width: 17rem;
 }
 
-.lbl_descrip {
-  width: 17rem;
+.left {
+  display: flex;
+  flex-direction: column;
+}
+
+.right {
+}
+
+.left_right {
+  display: flex;
+}
+
+#myBtn {
+  width: 24rem;
+  height: 8rem;
+  margin-top: 0;
+  margin-left: 0;
+  font-size: 1.2rem;
+}
+
+.submit_proj {
+  width: 7rem;
+  height: 4rem;
+  font-size: 1.2rem;
+  margin-top: 5rem;
+}
+
+/* --------------------------------------------         -------------------------------------- */
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  display: flex;
+  align-items: center;
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 40%; /* Could be more or less, depending on screen size */
+  border-radius: 1rem;
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-content input {
+  height: 3rem;
+  width: 21.2rem;
+}
+
+.down {
+  display: flex;
+  flex-direction: column;
+  margin-top: 3rem;
+  align-items: center;
+}
+
+.modal-content button {
+  height: 3rem;
+  width: 5rem;
+  padding: 0.8rem 0;
+  background: #4ebd73;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+}
+
+.modal-content label,
+input {
+  margin-bottom: 1rem;
+}
+
+label {
+  background-color: #000000;
+  color: white;
+  padding: 0.5rem;
+  font-family: sans-serif;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+#file-chosen {
+  margin-left: 0.3rem;
+  font-family: sans-serif;
 }

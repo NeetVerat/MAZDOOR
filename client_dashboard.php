@@ -1,9 +1,18 @@
 <?php
 
+include 'config.php';
+
 session_start();
 
 if (!isset($_SESSION['clientusername'])) {
   header("Location: index.php");
+}
+
+$sql = "SELECT * from projects";
+
+if ($result = mysqli_query($conn, $sql)) {
+
+  $rowcount = mysqli_num_rows($result);
 }
 
 ?>
@@ -55,7 +64,7 @@ if (!isset($_SESSION['clientusername'])) {
         <h2>Total Expenses</h2>
       </div>
       <div class="dislike">
-        <a href="works_listed.php">5</a>
+        <a href="works_listed.php"><?php echo $rowcount; ?></a>
         <h2>work listed</h2>
       </div>
     </div>
