@@ -59,13 +59,13 @@ if (isset($_POST['submit'])) {
       $tenderpdf = " ";
       $token = " ";
     } else {
-      echo "<script>alert('Result vala mai error.')</script>";
+      //echo "<script>alert('Result vala mai error.')</script>";
     }
   } else {
-    echo "<script>alert('Insert vala mai error.')</script>";
+    //echo "<script>alert('Insert vala mai error.')</script>";
   }
 } else {
-  echo "<script>alert('isset vale mai error.')</script>";
+  //echo "<script>alert('isset vale mai error.')</script>";
 }
 ?>
 
@@ -121,29 +121,47 @@ if (isset($_POST['submit'])) {
         </div>
       </div>
 
-      <div class="bids_container">
-        <ul>
-          <li>
-            <div class="row">
-              <div class="column">
-                <h2>Bidder's Name</h2>
-                <p>Description over here</p>
-              </div>
-              <p>Budget</p>
-            </div>
-          </li>
-          <li>
-            <div class="row">
-              <div class="column">
-                <h2>Bidder's Name</h2>
-                <p>Description over here</p>
-              </div>
-              <p>Budget</p>
-            </div>
-          </li>
-        </ul>
-        <button id="myBtn">BID</button>
-      </div>
+<div class="bids_container">
+  <ul>
+          <?php
+          require 'config.php';
+
+            $query = "SELECT * FROM projects";
+            $query_run = mysqli_query($conn, $query);
+            $check_empty = mysqli_num_rows($query_run) > 0;
+            if ($check_empty) {
+            while ($row = mysqli_fetch_assoc($query_run)) {
+            ?>
+            <?php
+            for ($row['id'] = 0; $row['id'] < 1; $row['id']++) {
+            echo "<li>";
+            echo '<div class="row">';
+            echo '<div class="column">';
+            echo "<h2>";
+            echo $row['projectname'];
+            echo "</h2>";
+            echo "<p>";
+            echo $row['description'];
+            echo "</p>";
+            echo "</div>";
+            echo "<p> ₹ ";
+            echo $row['tomoney'];
+            echo "</p>";
+            echo "</div>";
+            echo "</li>";
+          }
+
+          ?>
+          <?php
+        }
+      } else {
+        echo "SeD!!! no one here";
+      }
+      ?>
+    </li>
+  </ul>
+  <button id="myBtn">BID</button>
+</div>
 
       <div id="myModal" class="modal">
 
