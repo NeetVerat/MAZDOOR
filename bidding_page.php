@@ -126,7 +126,7 @@ if (isset($_POST['submit'])) {
           <?php
           require 'config.php';
 
-            $query = "SELECT * FROM projects";
+            $query = "SELECT * FROM projectbids";
             $query_run = mysqli_query($conn, $query);
             $check_empty = mysqli_num_rows($query_run) > 0;
             if ($check_empty) {
@@ -138,14 +138,14 @@ if (isset($_POST['submit'])) {
             echo '<div class="row">';
             echo '<div class="column">';
             echo "<h2>";
-            echo $row['projectname'];
+            echo $row['biddersname'];
             echo "</h2>";
             echo "<p>";
-            echo $row['description'];
+            echo $row['biddersdics'];
             echo "</p>";
             echo "</div>";
             echo "<p> ₹ ";
-            echo $row['tomoney'];
+            echo $row['bidderbudget'];
             echo "</p>";
             echo "</div>";
             echo "</li>";
