@@ -70,6 +70,7 @@ if (!isset($_SESSION['username'])) {
         <h2>Dislike</h2>
       </div>
     </div>
+    <a href="worker.php">Browse Job</a>
   </div>
 </body>
 
