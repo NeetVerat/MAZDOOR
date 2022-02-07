@@ -19,7 +19,7 @@
         <a href="index.php" class="logo_link">MAZDOOR</a>
         <ul>
           <li><a href="how_it_works.html">How it Works</a></li>
-          <li><a href="worker.php">Browse Jobs</a></li>
+          <li><a href="projects.php">Browse Jobs</a></li>
         </ul>
       </div>
       <div class="navigation">
@@ -39,7 +39,7 @@
       </p>
       <div>
         <a href="browse_jobs.html">Hire a Worker</a>
-        <a href="worker.php">Earn Money Working</a>
+        <a href="projects.php">Earn Money Working</a>
       </div>
     </div>
     <div class="landing-tint"></div>
@@ -164,14 +164,18 @@
   </div> -->
 
   <div class="container-5"></div>
-   <script type="text/javascript">
- var vsid = "kc22926b9595c8e";
- (function() { 
- var vsjs = document.createElement('script'); vsjs.type = 'text/javascript'; vsjs.async = true; vsjs.setAttribute('defer', 'defer');
-  vsjs.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'www.leadchatbot.com/vsa/chat.js';
-   var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(vsjs, s);
- })();
-</script>
+  <script type="text/javascript">
+  var vsid = "kc22926b9595c8e";
+  (function() {
+    var vsjs = document.createElement('script');
+    vsjs.type = 'text/javascript';
+    vsjs.async = true;
+    vsjs.setAttribute('defer', 'defer');
+    vsjs.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'www.leadchatbot.com/vsa/chat.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(vsjs, s);
+  })();
+  </script>
 </body>
 
 </html>

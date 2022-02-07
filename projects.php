@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="css/worker.css" />
+  <link rel="stylesheet" href="css/projects.css" />
   <title>MAZDOOR - USER DASHBOARD</title>
 </head>
 
@@ -17,6 +17,7 @@
         <a class="logo_link" href="index.php">MAZDOOR</a>
         <ul>
           <li><a href="how_it_works.html">How it Works</a></li>
+          <li><a href="worker.php">Browse Jobs</a></li>
         </ul>
       </div>
       <div class="navigation">
@@ -35,18 +36,18 @@
 
     <div class="main-container2">
       <!-- -------------------- Search box Container ------------------ -->
-      <!-- <div class="search-container">
+      <div class="search-container">
         <form action="/action_page.php">
           <input type="text" placeholder="Search.." name="search" />
           <button type="submit">Search</button>
         </form>
-      </div> -->
+      </div>
 
       <!-- ------------------------ Filter Conatiner--------------------- -->
 
-      <!-- <div class="filter-container"> -->
-      <!-- -------- Category -------------- -->
-      <!-- <select class="filter-category">
+      <div class="filter-container">
+        <!-- -------- Category -------------- -->
+        <select class="filter-category">
           <option value="0">Category</option>
           <option value="1">Plumbing</option>
           <option value="2">Electrical</option>
@@ -58,7 +59,7 @@
           <option value="8">Construction</option>
           <option value="9">Agriculture</option>
         </select>
-      </div> -->
+      </div>
 
       <!-- ------------------- card section ------------------------->
       <div class="card-exterior">
@@ -77,7 +78,7 @@
             <div class="card1_text">
               <h1> <?php echo $row['projectname']; ?> </h1>
               <h2>Budget</h2>
-              <h2>&#8377;<?php echo $row['frommoney']; ?> </h2>
+              <h2>&#8377;<?php echo $row['frommoney']; ?> - &#8377;<?php echo $row['tomoney']; ?> </h2>
             </div>
             <a href="bidding_page.php/?token=<?php echo $row['token']; ?>" target="_blank">BID</a>
           </div>

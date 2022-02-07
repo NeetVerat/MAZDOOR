@@ -35,7 +35,6 @@ if ($result = mysqli_query($conn, $sql)) {
         <a href="index.html" class="logo_link">MAZDOOR</a>
         <ul>
           <li><a href="how_it_works.html">How it Works</a></li>
-          <li><a href="bidding_page.html">Browse Jobs</a></li>
         </ul>
       </div>
       <div class="welcome-client">
@@ -49,7 +48,6 @@ if ($result = mysqli_query($conn, $sql)) {
 
     <!-- ----------------- Start of Statistics ---------------------- -->
 
-    <header>Statistics</header>
     <div class="row">
       <div class="works_done">
         <a href="works_assigned_done.html">5</a>
@@ -70,12 +68,26 @@ if ($result = mysqli_query($conn, $sql)) {
     </div>
 
 
-    <div class="postdiv">
-      <img src="images/new-post.png" alt="">
-      <div class="row1">
-        <a class="postprojbtn" href="postaproject.php">Post Project</a>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. A eveniet cupiditate illo maiores facilis similique
-          quam dolorem? Odio, quos ea.</p>
+    <div class="contain">
+      <div class="postdiv">
+        <img src="images/new-post.png" alt="">
+        <div class="row1">
+          <a class="postprojbtn" href="postaproject.php">Post Project</a>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. A eveniet cupiditate illo maiores facilis
+            similique
+            quam dolorem? Odio, quos ea.</p>
+        </div>
+      </div>
+
+
+      <div class="hirediv">
+        <img src="images/headhunter.png" alt="">
+        <div class="row1">
+          <a class="postprojbtn" href="worker.php">Hire Worker</a>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. A eveniet cupiditate illo maiores facilis
+            similique
+            quam dolorem? Odio, quos ea.</p>
+        </div>
       </div>
     </div>
   </div>

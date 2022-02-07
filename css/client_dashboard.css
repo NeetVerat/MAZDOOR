@@ -92,14 +92,6 @@ a {
 
 /* ----------------------- Start of Statistics -------------------------- */
 
-header {
-  width: 99vw;
-  font-size: 4rem;
-  text-align: center;
-  margin: 1rem 0;
-  color: rgb(255, 255, 255);
-}
-
 .row {
   height: 28vh;
   width: 99vw;
@@ -107,6 +99,7 @@ header {
   align-items: center;
   justify-content: center;
   margin-bottom: 5rem;
+  margin-top: 5rem;
 }
 
 .works_done,
@@ -171,7 +164,7 @@ header {
 .postdiv {
   height: 23rem;
   width: 44.5rem;
-  background: whitesmoke;
+  background: linear-gradient(to bottom right, #1cd8d2, #93edc7);
   border-radius: 1rem;
   display: flex;
   margin-left: 13rem;
@@ -207,6 +200,40 @@ header {
 .Loyalty_Badge:hover,
 .work_done_worth:hover,
 .dislike:hover,
-.postdiv:hover {
-  filter: blur(0.15rem);
+.postdiv:hover,
+.hirediv:hover {
+  filter: blur(0.1rem);
+}
+
+.contain {
+  display: flex;
+  align-items: center;
+  width: 99vw;
+}
+
+.hirediv {
+  height: 23rem;
+  width: 44.5rem;
+  background: linear-gradient(to bottom right, #f2709c, #ff9472);
+  border-radius: 1rem;
+  display: flex;
+  margin-left: 4rem;
+  align-items: center;
+  padding-top: 3rem;
+}
+
+.hirediv img {
+  height: 15rem;
+  width: 15rem;
+  margin-bottom: 1rem;
+  margin-left: 2rem;
+}
+
+.hirediv a {
+  height: 8rem;
+  width: 100%;
+  font-size: 3rem;
+  color: #000000;
+  font-weight: 900;
+  margin-top: 2rem;
 }

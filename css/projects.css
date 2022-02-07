@@ -1,0 +1,218 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Fjalla One", sans-serif;
+  background: #d9ccc5;
+}
+
+.main-container {
+  width: 99vw;
+  height: 100vh;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.navbar {
+  display: flex;
+  position: relative;
+  justify-content: space-around;
+  padding: 0.5rem 0 0.5rem 0;
+  align-items: center;
+  background: #000000;
+  z-index: 2;
+}
+
+.logo_link {
+  font-size: 2rem;
+  margin-right: 8rem;
+  color: #ffffff;
+}
+
+.logo h1::selection {
+  text-shadow: 0.1rem 0.1rem crimson;
+}
+
+.logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  transform: translateX(-7rem);
+}
+
+.logo ul {
+  display: flex;
+  margin-right: 2rem;
+}
+
+.logo ul li {
+  font-size: 1.2rem;
+  justify-content: space-between;
+  padding: 1rem 1rem 0.5rem 1rem;
+}
+
+.logo ul li a {
+  color: #ffffff;
+}
+
+.navigation ul {
+  display: flex;
+  margin-right: 2rem;
+  transform: translateX(9rem);
+}
+
+.navigation ul li {
+  font-size: 1.2rem;
+  justify-content: space-between;
+  padding: 1rem 1rem 0.5rem 1rem;
+}
+
+.navigation ul li a {
+  color: #fff;
+}
+
+.landing-login {
+  background: rgba(0, 0, 0, 0);
+  padding: 0.4rem 1rem;
+}
+
+.landing-signup {
+  color: #fff;
+  padding: 0.4rem 1rem;
+  background: #ffa03400;
+}
+
+/* -----------------------------------Search Container---------------------------------------- */
+
+.search-container input {
+  height: 5rem;
+  width: 80rem;
+  font-size: 1.5rem;
+  border-radius: 1rem;
+  padding: 2rem;
+  transform: translate(18rem, 5rem);
+  outline: none;
+}
+
+.search-container button {
+  height: 4rem;
+  width: 10rem;
+  border: none;
+  border-radius: 0.8rem;
+  transform: translate(7.2rem, 4.95rem);
+  font-size: 1.3rem;
+  background: #000000;
+  color: #ffffff;
+}
+
+/* ------------ filter category ---------------------- */
+
+.filter-container {
+  display: flex;
+  height: 3rem;
+  width: 80rem;
+  background-color: #000000;
+  transform: translate(18rem, 8rem);
+  border-radius: 1rem;
+  align-items: center;
+}
+
+.filter-category {
+  height: 2rem;
+  border-radius: 0.8rem;
+  background-color: #f4f4f4;
+  outline: none;
+  padding: 0.2rem 0.8rem;
+  margin-left: 1rem;
+}
+
+/* --------------- price range ------------------- */
+
+/* ----------------------- card section ------------------ */
+
+.cards {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-template-rows: 17.5rem 21.4rem;
+  row-gap: 9rem;
+  width: 83rem;
+  transform: translate(18rem, 10rem);
+}
+
+.card-1 {
+  height: 21.4rem;
+  width: 17.5rem;
+  background: #f4f4f4;
+  border-radius: 1rem 1rem 0 0;
+  margin-bottom: 3rem;
+  box-shadow: 0.2rem 0.2rem 0.5rem #00000063;
+  min-height: 21.4rem;
+}
+
+.card-1 img {
+  height: 10rem;
+  width: 17.5rem;
+  border-radius: 1rem 1rem 0 0;
+}
+
+.card1_text {
+  padding: 0.5rem 1rem 1rem;
+}
+
+.card-1 h1 {
+  overflow: hidden;
+  font-size: 1.5rem;
+  padding-bottom: 1rem;
+}
+
+.card1_text h2 {
+  text-align: center;
+  font-size: 1rem;
+}
+
+.card1_text h2:nth-child(2) {
+  padding-bottom: 0.5rem;
+}
+
+.card1_text h2:nth-child(3) {
+  background: #aaf0bc;
+  border-radius: 0.3rem;
+  border: solid 0.2rem #2d9948;
+  padding: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.card-1 a {
+  padding: 1rem 7.96rem;
+  border-radius: 0 0 1rem 1rem;
+  border: none;
+  background: #d8917a;
+  color: #000000;
+  box-shadow: 0.2rem 0.2rem 0.5rem #00000063;
+  cursor: pointer;
+}
+
+/* --------------------------------- Scrollbar ----------------------------------------- */
+
+/* width */
+::-webkit-scrollbar {
+  width: 18px;
+}
+
+/* Track */
+/* ::-webkit-scrollbar-track {
+} */
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #000000;
+}

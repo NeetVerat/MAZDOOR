@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 02, 2022 at 09:29 AM
+-- Generation Time: Feb 06, 2022 at 08:04 PM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 7.3.31
 
@@ -71,6 +71,28 @@ INSERT INTO `logindetails` (`id`, `clientemail`, `clientusername`, `clientpasswo
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `projectbids`
+--
+
+CREATE TABLE `projectbids` (
+  `biddersname` varchar(255) NOT NULL,
+  `biddersdics` varchar(255) NOT NULL,
+  `bidderbudget` int(69) NOT NULL,
+  `tenderpdf` varchar(255) NOT NULL,
+  `token` varchar(255) NOT NULL,
+  `projectidofbids` int(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `projectbids`
+--
+
+INSERT INTO `projectbids` (`biddersname`, `biddersdics`, `bidderbudget`, `tenderpdf`, `token`, `projectidofbids`) VALUES
+('fgdfg', 'gdg', 564564, 'Array', 'v8Tg9iliUyA90DK3', 8);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `projects`
 --
 
@@ -124,6 +146,20 @@ INSERT INTO `users` (`id`, `username`, `email`, `password`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `workerlisted`
+--
+
+CREATE TABLE `workerlisted` (
+  `projectlister` varchar(65) NOT NULL,
+  `amount` int(11) NOT NULL,
+  `ddescription` varchar(255) NOT NULL,
+  `tokenn` varchar(65) NOT NULL,
+  `ied` int(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `workerlogin`
 --
 
@@ -160,11 +196,7 @@ CREATE TABLE `workerlogin` (
 
 INSERT INTO `workerlogin` (`email`, `username`, `password`, `bdate`, `add1`, `add2`, `add3`, `city`, `state`, `phoneno`, `altno`, `aadharcard`, `aadharfront`, `aadharback`, `workerpanno`, `panfront`, `panback`, `addfront`, `addback`, `id`, `firstname`, `lastname`, `middlename`, `pincode`) VALUES
 ('a@a.in', 'as', '81dc9bdb52d04dc20036dbd8313ed055', '2022-01-04', 'a', 'a', 'a', '', 'a', 956230147, 956230147, 956230147, 'upload check.jpg', 'upload check.jpg', '956230147', 'upload check.jpg', 'upload check.jpg', 'upload check.jpg', 'upload check.jpg', 1, 'a', 'a', 'a', 956874),
-('aaaa@a.i', 'a', '202cb962ac59075b964b07152d234b70', '2022-01-06', '3', '3', '3', '', '3', 3, 3, 3, 'upload check.jpg', 'upload check.jpg', '3', 'upload check.jpg', 'upload check.jpg', 'upload check.jpg', 'upload check.jpg', 2, 'a', 'a', 'a', 3),
-('q@q.i', 'q', '81dc9bdb52d04dc20036dbd8313ed055', '0000-00-00', '', '', '', '', '', 0, 0, 0, '', '', '', '', '', '', '', 3, '', '', '', 0),
-('a@u.i', 'a', '202cb962ac59075b964b07152d234b70', '0000-00-00', '', '', '', '', '', 0, 0, 0, '', '', '', '', '', '', '', 4, '', '', '', 0),
-('asrsgs@k.i', 'rfseftsf', '698d51a19d8a121ce581499d7b701668', '2022-05-12', '', '', '', '', '', 0, 0, 0, '', '', '', '', '', '', '', 5, '', '', '', 0),
-('fdsfsdf@gisjb.ub', 'fsdf', '698d51a19d8a121ce581499d7b701668', '2021-08-11', '', '', '', '', '', 0, 0, 0, '', '', '', '', '', '', '', 6, '', '', '', 0);
+('aaaa@a.i', 'a', '202cb962ac59075b964b07152d234b70', '2022-01-06', '3', '3', '3', '', '3', 3, 3, 3, 'upload check.jpg', 'upload check.jpg', '3', 'upload check.jpg', 'upload check.jpg', 'upload check.jpg', 'upload check.jpg', 2, 'a', 'a', 'a', 3);
 
 --
 -- Indexes for dumped tables
@@ -175,6 +207,13 @@ INSERT INTO `workerlogin` (`email`, `username`, `password`, `bdate`, `add1`, `ad
 --
 ALTER TABLE `logindetails`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `projectbids`
+--
+ALTER TABLE `projectbids`
+  ADD PRIMARY KEY (`projectidofbids`),
+  ADD UNIQUE KEY `projectidofbids` (`projectidofbids`);
 
 --
 -- Indexes for table `projects`
@@ -204,6 +243,12 @@ ALTER TABLE `workerlogin`
 --
 ALTER TABLE `logindetails`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
+-- AUTO_INCREMENT for table `projectbids`
+--
+ALTER TABLE `projectbids`
+  MODIFY `projectidofbids` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `projects`
