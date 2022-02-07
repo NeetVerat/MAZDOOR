@@ -66,20 +66,20 @@
           <?php
           require 'config.php';
 
-          $query = "SELECT * FROM projects";
+          $query = "SELECT * FROM requesthire";
           $query_run = mysqli_query($conn, $query);
           $check_empty = mysqli_num_rows($query_run) > 0;
           if ($check_empty) {
             while ($row = mysqli_fetch_assoc($query_run)) {
           ?>
           <div class="card-1">
-            <img src="uploads/<?php echo $row['cardimage']; ?>" alt="SeD" />
+            <img src="../uploads/upload5<?php echo $row['descimg1']; ?>" alt="SeD" />
             <div class="card1_text">
-              <h1> <?php echo $row['projectname']; ?> </h1>
+              <h1> <?php echo $row['holdername']; ?> </h1>
               <h2>Budget</h2>
-              <h2>&#8377;<?php echo $row['frommoney']; ?> </h2>
+              <h2>&#8377;<?php echo $row['maxtotal']; ?> </h2>
             </div>
-            <a href="bidding_page.php/?token=<?php echo $row['token']; ?>" target="_blank">BID</a>
+            <a href="bidding_page.php/?token=<?php echo $row['requesthireid ']; ?>" target="_blank">Hire</a>
           </div>
 
           <?php

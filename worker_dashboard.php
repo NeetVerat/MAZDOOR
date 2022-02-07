@@ -12,10 +12,11 @@ $sql = "SELECT * from projects";
 
 if ($result = mysqli_query($conn, $sql)) {
 
-  $rowcount = mysqli_num_rows($result);
+  $row = mysqli_num_rows($result);
 }
 
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -24,7 +25,7 @@ if ($result = mysqli_query($conn, $sql)) {
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="css/client_dashboard.css" />
-  <title>Client Dashboard</title>
+  <title>Worker Dashboard</title>
 </head>
 
 <body>
@@ -38,7 +39,7 @@ if ($result = mysqli_query($conn, $sql)) {
         </ul>
       </div>
       <div class="welcome-client">
-        <?php echo "<h1>" . $_SESSION['clientusername'] . "</h1>"; ?>
+        <?php echo "<h1>" . $_SESSION['username'] . "</h1>"; ?>
         <a href="logout.php">Logout</a>
       </div>
     </nav>
@@ -62,7 +63,7 @@ if ($result = mysqli_query($conn, $sql)) {
         <h2>Work Done Worth</h2>
       </div>
       <div class="dislike">
-        <a href="works_listed.php"><?php echo $rowcount; ?></a>
+        <a href="works_listed.php"><?php echo $row; ?></a>
         <h2>Dislike</h2>
       </div>
     </div>
@@ -72,7 +73,7 @@ if ($result = mysqli_query($conn, $sql)) {
       <div class="postdiv">
         <img src="images/new-post.png" alt="">
         <div class="row1">
-          <a class="postprojbtn" href="postaproject.php">Edit Profile</a>
+          <a class="postprojbtn" href="postaboutworker.php">Edit Profile</a>
           <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. A eveniet cupiditate illo maiores facilis
             similique
             quam dolorem? Odio, quos ea.</p>
