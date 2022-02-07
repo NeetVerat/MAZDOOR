@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 06, 2022 at 08:04 PM
+-- Generation Time: Feb 07, 2022 at 11:48 AM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 7.3.31
 
@@ -123,6 +123,33 @@ INSERT INTO `projects` (`token`, `projectname`, `description`, `bigdescription`,
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `requesthire`
+--
+
+CREATE TABLE `requesthire` (
+  `requesthireid` int(255) NOT NULL,
+  `holdername` varchar(65) NOT NULL,
+  `shortdics` varchar(65) NOT NULL,
+  `longdics` varchar(255) NOT NULL,
+  `mintotal` int(18) NOT NULL,
+  `maxtotal` int(18) NOT NULL,
+  `category` int(11) NOT NULL,
+  `descimg1` varchar(19) NOT NULL,
+  `descimg2` varchar(19) NOT NULL,
+  `descimg3` varchar(19) NOT NULL,
+  `descimg4` varchar(19) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `requesthire`
+--
+
+INSERT INTO `requesthire` (`requesthireid`, `holdername`, `shortdics`, `longdics`, `mintotal`, `maxtotal`, `category`, `descimg1`, `descimg2`, `descimg3`, `descimg4`) VALUES
+(1, 'sf', 'efesf', 'esfs', 3245, 345, 0, 'sasta neet.png', 'sasta neet.png', 'sasta neet.png', 'sasta neet.png');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `users`
 --
 
@@ -196,7 +223,8 @@ CREATE TABLE `workerlogin` (
 
 INSERT INTO `workerlogin` (`email`, `username`, `password`, `bdate`, `add1`, `add2`, `add3`, `city`, `state`, `phoneno`, `altno`, `aadharcard`, `aadharfront`, `aadharback`, `workerpanno`, `panfront`, `panback`, `addfront`, `addback`, `id`, `firstname`, `lastname`, `middlename`, `pincode`) VALUES
 ('a@a.in', 'as', '81dc9bdb52d04dc20036dbd8313ed055', '2022-01-04', 'a', 'a', 'a', '', 'a', 956230147, 956230147, 956230147, 'upload check.jpg', 'upload check.jpg', '956230147', 'upload check.jpg', 'upload check.jpg', 'upload check.jpg', 'upload check.jpg', 1, 'a', 'a', 'a', 956874),
-('aaaa@a.i', 'a', '202cb962ac59075b964b07152d234b70', '2022-01-06', '3', '3', '3', '', '3', 3, 3, 3, 'upload check.jpg', 'upload check.jpg', '3', 'upload check.jpg', 'upload check.jpg', 'upload check.jpg', 'upload check.jpg', 2, 'a', 'a', 'a', 3);
+('aaaa@a.i', 'a', '202cb962ac59075b964b07152d234b70', '2022-01-06', '3', '3', '3', '', '3', 3, 3, 3, 'upload check.jpg', 'upload check.jpg', '3', 'upload check.jpg', 'upload check.jpg', 'upload check.jpg', 'upload check.jpg', 2, 'a', 'a', 'a', 3),
+('1@g.com', 'one', '81dc9bdb52d04dc20036dbd8313ed055', '0000-00-00', '', '', NULL, '', '', 0, NULL, 0, '', '', '', '', '', '', '', 7, '', '', '', 0);
 
 --
 -- Indexes for dumped tables
@@ -221,6 +249,12 @@ ALTER TABLE `projectbids`
 ALTER TABLE `projects`
   ADD PRIMARY KEY (`token`),
   ADD UNIQUE KEY `id` (`id`);
+
+--
+-- Indexes for table `requesthire`
+--
+ALTER TABLE `requesthire`
+  ADD PRIMARY KEY (`requesthireid`);
 
 --
 -- Indexes for table `users`
@@ -257,6 +291,12 @@ ALTER TABLE `projects`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
+-- AUTO_INCREMENT for table `requesthire`
+--
+ALTER TABLE `requesthire`
+  MODIFY `requesthireid` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
@@ -266,7 +306,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `workerlogin`
 --
 ALTER TABLE `workerlogin`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
