@@ -73,13 +73,13 @@
             while ($row = mysqli_fetch_assoc($query_run)) {
           ?>
           <div class="card-1">
-            <img src="../uploads/upload5<?php echo $row['descimg1']; ?>" alt="SeD" />
+            <img src="uploads/upload5/<?php echo $row['descimg1']; ?>" alt="SeD" />
             <div class="card1_text">
               <h1> <?php echo $row['holdername']; ?> </h1>
               <h2>Budget</h2>
               <h2>&#8377;<?php echo $row['maxtotal']; ?> </h2>
             </div>
-            <a href="bidding_page.php/?token=<?php echo $row['requesthireid ']; ?>" target="_blank">Hire</a>
+            <a href="bidding_page.php/?token=<?php echo $row['requesthireid']; ?>" target="_blank">Hire</a>
           </div>
 
           <?php
