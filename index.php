@@ -19,7 +19,6 @@
         <a href="index.php" class="logo_link">MAZDOOR</a>
         <ul>
           <li><a href="how_it_works.html">How it Works</a></li>
-          <li><a href="projects.php">Browse Jobs</a></li>
         </ul>
       </div>
       <div class="navigation">
@@ -38,7 +37,7 @@
         online.
       </p>
       <div>
-        <a href="browse_jobs.html">Hire a Worker</a>
+        <a href="worker.php">Hire a Worker</a>
         <a href="projects.php">Earn Money Working</a>
       </div>
     </div>

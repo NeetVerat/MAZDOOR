@@ -45,7 +45,7 @@ error_reporting(0);
       ?>
       <?php
           for ($row['id'] = 0; $row['id'] < 1; $row['id']++) {
-            echo "<div class=", "row", ">";
+            echo "<a href=", "bid.php", ">", "<div class=", "row", ">";
             echo '<img src=', '"images/paysafely.svg"', 'alt=', "", '>';
             echo "<div class=", "inner_row", ">";
             echo "<h1>";
@@ -58,7 +58,7 @@ error_reporting(0);
             echo "<h3> ₹ ";
             echo $row['tomoney'];
             echo "</h3>";
-            echo "</div>";
+            echo "</div></a>";
           }
 
           ?>

@@ -24,7 +24,7 @@ if ($result = mysqli_query($conn, $sql)) {
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="css/client_dashboard.css" />
+  <link rel="stylesheet" href="css/worker_dashboard.css" />
   <title>Worker Dashboard</title>
 </head>
 
@@ -73,7 +73,7 @@ if ($result = mysqli_query($conn, $sql)) {
       <div class="postdiv">
         <img src="images/new-post.png" alt="">
         <div class="row1">
-          <a class="postprojbtn" href="postaboutworker.php">Edit Profile</a>
+          <a class="postprojbtn" href="postaboutworker.php">Apply for work</a>
           <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. A eveniet cupiditate illo maiores facilis
             similique
             quam dolorem? Odio, quos ea.</p>
