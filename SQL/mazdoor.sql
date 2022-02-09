@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 07, 2022 at 11:48 AM
+-- Generation Time: Feb 09, 2022 at 01:53 PM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 7.3.31
 
@@ -79,7 +79,7 @@ CREATE TABLE `projectbids` (
   `biddersdics` varchar(255) NOT NULL,
   `bidderbudget` int(69) NOT NULL,
   `tenderpdf` varchar(255) NOT NULL,
-  `token` varchar(255) NOT NULL,
+  `tokenpb` varchar(255) NOT NULL,
   `projectidofbids` int(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -87,7 +87,7 @@ CREATE TABLE `projectbids` (
 -- Dumping data for table `projectbids`
 --
 
-INSERT INTO `projectbids` (`biddersname`, `biddersdics`, `bidderbudget`, `tenderpdf`, `token`, `projectidofbids`) VALUES
+INSERT INTO `projectbids` (`biddersname`, `biddersdics`, `bidderbudget`, `tenderpdf`, `tokenpb`, `projectidofbids`) VALUES
 ('fgdfg', 'gdg', 564564, 'Array', 'v8Tg9iliUyA90DK3', 8);
 
 -- --------------------------------------------------------
@@ -116,7 +116,7 @@ CREATE TABLE `projects` (
 --
 
 INSERT INTO `projects` (`token`, `projectname`, `description`, `bigdescription`, `frommoney`, `tomoney`, `cardimage`, `descimg1`, `descimg2`, `descimg3`, `descimg4`, `id`) VALUES
-('GCvCGS2TGAVfADSn', 'q', 'q', 'q', 1, 2, 'upload check.jpg', 'uploadcheck.jpg', 'upload check.jpg', 'upload check.jpg', 'upload check.jpg', 1),
+('GCvCGS2TGAVfADSn', 'q', 'q', 'q', 1, 2, 'uploadcheck.jpg', 'uploadcheck.jpg', 'uploadcheck.jpg', 'uploadcheck.jpg', 'uploadcheck.jpg', 1),
 ('v17q9siyrUQZ1TKP', 'charms height', 'sadfasd', 'ewrwefds', 435, 123435, 'ben-allan-BIeC4YK2MTA-unsplash.jpg', 'billy-freeman-V38rMuljw2Y-unsplash.jpg', 'brett-jordan-nz-cBSChvUw-unsplash.jpg', 'clay-leconey-J9AgM47fVDU-unsplash.jpg', 'l-steward-masweneng-KnB--1wimeA-unsplash.jpg', 2),
 ('v8Tg9iliUyA90DK3', 'QWERTY', 'ASDFASF', 'A DSFVVVVVVVVVVVVVVVEWQ DASSSSSSSSSSSSSS AWEEEEEEEEEEEEEEEEEEE', 1234132, 4352345, 'ben-allan-BIeC4YK2MTA-unsplash.jpg', 'billy-freeman-V38rMuljw2Y-unsplash.jpg', 'clay-leconey-J9AgM47fVDU-unsplash.jpg', 'mark-potterton-sNVkn3507Oo-unsplash.jpg', 'scott-blake-x-ghf9LjrVg-unsplash.jpg', 3);
 

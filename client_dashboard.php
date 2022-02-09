@@ -32,9 +32,9 @@ if ($result = mysqli_query($conn, $sql)) {
     <!-- -------------- Start of Navbar ---------------- -->
     <nav class="navbar">
       <div class="logo">
-        <a href="index.html" class="logo_link">MAZDOOR</a>
+        <a href="../index.php" class="logo_link">MAZDOOR</a>
         <ul>
-          <li><a href="how_it_works.html">How it Works</a></li>
+          <li><a href="../how_it_works.html">How it Works</a></li>
         </ul>
       </div>
       <div class="welcome-client">

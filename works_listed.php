@@ -22,7 +22,7 @@ error_reporting(0);
     <!-- -------------- Start of Navbar ---------------- -->
     <nav class="navbar">
       <div class="logo">
-        <a href="index.html" class="logo_link">MAZDOOR</a>
+        <a href="../index.php" class="logo_link">MAZDOOR</a>
         <ul>
           <li><a href="how_it_works.html">How it Works</a></li>
           <li><a href=" worker.php">Browse Jobs</a></li>
@@ -45,7 +45,8 @@ error_reporting(0);
       ?>
       <?php
           for ($row['id'] = 0; $row['id'] < 1; $row['id']++) {
-            echo "<a href=", "bid.php", ">", "<div class=", "row", ">";
+            echo "<a href=","bid.php/?token=".$row['token'].">";
+            echo "<div class=", "row", ">";
             echo '<img src=', '"images/paysafely.svg"', 'alt=', "", '>';
             echo "<div class=", "inner_row", ">";
             echo "<h1>";

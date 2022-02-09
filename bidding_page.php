@@ -43,7 +43,7 @@ if (isset($_POST['submit'])) {
   $biddersname = $_POST['biddersname'];
   $biddersdics = $_POST['biddersdics'];
   $bidderbudget = $_POST['bidderbudget'];
-  $tenderpdf = $_FILES['tenderpdf'];
+  $tenderpdf = $_FILES['tenderpdf']['name'];
   $token = $_POST['token'];
 
   $sql = "SELECT * FROM projectbids ";
@@ -88,7 +88,7 @@ if (isset($_POST['submit'])) {
     <!-- -------------- Start of Navbar ---------------- -->
     <nav class="navbar">
       <div class="logo">
-        <a href="index.php" class="logo_link">MAZDOOR</a>
+        <a href="../index.php" class="logo_link">MAZDOOR</a>
         <ul>
           <li><a href="../how_it_works.html">How it Works</a></li>
         </ul>
