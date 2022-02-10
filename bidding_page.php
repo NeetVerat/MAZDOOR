@@ -1,7 +1,7 @@
 <?php
 
 require 'config.php';
-//error_reporting(0);
+error_reporting(0);
 
 $url = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 
@@ -47,7 +47,7 @@ if (isset($_POST['submit'])) {
   $tokenpb = $_POST['tokenpb'];
   $sql = "SELECT * FROM projectbids ";
   $result = mysqli_query($conn, $sql);
-  if (!$result->num_rows > 0) {
+  if ($result->num_rows > 0) {
     $sql = "INSERT INTO projectbids(biddersname, biddersdics, bidderbudget, tenderpdf, tokenpb ) VALUES ('$biddersname','$biddersdics','$bidderbudget','$tenderpdf','$tokenpb')";
     $result = mysqli_query($conn, $sql);
     if ($result) {
@@ -75,7 +75,7 @@ if (isset($_POST['submit'])) {
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="../css/bidding_page.css">
+  <link rel="stylesheet" href="css/bidding_page.css">
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto&display=swap" rel="stylesheet" />
