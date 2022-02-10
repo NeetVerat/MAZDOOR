@@ -1,7 +1,7 @@
 <?php
 
 require 'config.php';
-// error_reporting(0);
+error_reporting(0);
 
 $url = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 
@@ -28,7 +28,6 @@ $biddersname = $row['biddersname'];
 $biddersdics = $row['biddersdics'];
 $bidderbudget = $row['bidderbudget'];
 $tenderpdf = $row['tenderpdf'];
-
 ?>
 
 <!DOCTYPE html>
@@ -78,7 +77,10 @@ $tenderpdf = $row['tenderpdf'];
       </div>
     </section>
       <div class="bids_container">
-        <iframe src="<?php echo $rows['tenderpdf'] ?>" frameborder="0" width="100%" height="100%"></iframe>
+        <iframe src="../pdf/<?php echo $tenderpdf; ?>" frameborder="0" width="100%" height="100%">
+        </iframe>
+        <?php echo $tenderpdf;?>
+        <!-- <img src="../uploads/upload4/<?php //echo $ddescimg4; ?>" alt="img4" /> -->
       </div>
 
 </div>

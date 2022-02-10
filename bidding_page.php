@@ -1,7 +1,7 @@
 <?php
 
 require 'config.php';
-error_reporting(0);
+//error_reporting(0);
 
 $url = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 
@@ -44,12 +44,11 @@ if (isset($_POST['submit'])) {
   $biddersdics = $_POST['biddersdics'];
   $bidderbudget = $_POST['bidderbudget'];
   $tenderpdf = $_FILES['tenderpdf']['name'];
-  $token = $_POST['token'];
-
+  $tokenpb = $_POST['tokenpb'];
   $sql = "SELECT * FROM projectbids ";
   $result = mysqli_query($conn, $sql);
   if (!$result->num_rows > 0) {
-    $sql = "INSERT INTO projectbids(biddersname, biddersdics, bidderbudget, tenderpdf, token ) VALUES ('$biddersname','$biddersdics','$bidderbudget','$tenderpdf','$token')";
+    $sql = "INSERT INTO projectbids(biddersname, biddersdics, bidderbudget, tenderpdf, tokenpb ) VALUES ('$biddersname','$biddersdics','$bidderbudget','$tenderpdf','$tokenpb')";
     $result = mysqli_query($conn, $sql);
     if ($result) {
       echo "<script>alert('Wow! Your BID Submitted.')</script>";
@@ -57,7 +56,7 @@ if (isset($_POST['submit'])) {
       $biddersdics = " ";
       $bidderbudget = " ";
       $tenderpdf = " ";
-      $token = " ";
+      $tokenpb = " ";
     } else {
       //echo "<script>alert('Result vala mai error.')</script>";
     }
@@ -181,7 +180,7 @@ if (isset($_POST['submit'])) {
 
               <input type="file" placeholder="Upload your Tendure" name="tenderpdf" class="tender"
                 value="<?php echo $tenderpdf ?>" />
-              <input type="text" placeholder="Description" name="token" value="<?php echo $params['token'] ?>"
+              <input type="text" placeholder="Description" name="tokenpb" value="<?php echo $params['tokenpb'] ?>"
                 style="display: none;" />
               <br><button name="submit">Submit</button>
             </div>
