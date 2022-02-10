@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 09, 2022 at 01:53 PM
+-- Generation Time: Feb 10, 2022 at 07:18 PM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 7.3.31
 
@@ -88,7 +88,7 @@ CREATE TABLE `projectbids` (
 --
 
 INSERT INTO `projectbids` (`biddersname`, `biddersdics`, `bidderbudget`, `tenderpdf`, `tokenpb`, `projectidofbids`) VALUES
-('fgdfg', 'gdg', 564564, 'Array', 'v8Tg9iliUyA90DK3', 8);
+('Neet', 'Peru Gamer', 69, 'AI_IT_12279688.pdf', '', 10);
 
 -- --------------------------------------------------------
 
@@ -116,7 +116,7 @@ CREATE TABLE `projects` (
 --
 
 INSERT INTO `projects` (`token`, `projectname`, `description`, `bigdescription`, `frommoney`, `tomoney`, `cardimage`, `descimg1`, `descimg2`, `descimg3`, `descimg4`, `id`) VALUES
-('GCvCGS2TGAVfADSn', 'q', 'q', 'q', 1, 2, 'uploadcheck.jpg', 'uploadcheck.jpg', 'uploadcheck.jpg', 'uploadcheck.jpg', 'uploadcheck.jpg', 1),
+('GCvCGS2TGAVfADSn', 'q', 'q', 'q', 1, 2, 'upload check.jpg', 'uploadcheck.jpg', 'uploadcheck.jpg', 'uploadcheck.jpg', 'uploadcheck.jpg', 1),
 ('v17q9siyrUQZ1TKP', 'charms height', 'sadfasd', 'ewrwefds', 435, 123435, 'ben-allan-BIeC4YK2MTA-unsplash.jpg', 'billy-freeman-V38rMuljw2Y-unsplash.jpg', 'brett-jordan-nz-cBSChvUw-unsplash.jpg', 'clay-leconey-J9AgM47fVDU-unsplash.jpg', 'l-steward-masweneng-KnB--1wimeA-unsplash.jpg', 2),
 ('v8Tg9iliUyA90DK3', 'QWERTY', 'ASDFASF', 'A DSFVVVVVVVVVVVVVVVEWQ DASSSSSSSSSSSSSS AWEEEEEEEEEEEEEEEEEEE', 1234132, 4352345, 'ben-allan-BIeC4YK2MTA-unsplash.jpg', 'billy-freeman-V38rMuljw2Y-unsplash.jpg', 'clay-leconey-J9AgM47fVDU-unsplash.jpg', 'mark-potterton-sNVkn3507Oo-unsplash.jpg', 'scott-blake-x-ghf9LjrVg-unsplash.jpg', 3);
 
@@ -282,7 +282,7 @@ ALTER TABLE `logindetails`
 -- AUTO_INCREMENT for table `projectbids`
 --
 ALTER TABLE `projectbids`
-  MODIFY `projectidofbids` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `projectidofbids` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `projects`
