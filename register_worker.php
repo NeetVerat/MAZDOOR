@@ -28,7 +28,6 @@ if (isset($_POST['submit']))
       $aadharback = $_FILES['aadharback']['name'];
       $workerpanno = $_POST['workerpanno'];
       $panfront = $_FILES['panfront']['name'];
-      $panback = $_FILES['panback']['name'];
       $add1 = $_POST['add1'];
       $add2 = $_POST['add2'];
       $add3 = $_POST['add3'];
@@ -45,7 +44,7 @@ if (isset($_POST['submit']))
         
         if (!$result->num_rows > 0) 
         {
-        $sql = "INSERT INTO workerlogin (email, username, password, bdate, add1, add2, add3, city, state, phoneno, altno, aadharcard, aadharfront, aadharback, workerpanno, panfront, panback, addfront, addback, firstname, lastname, middlename, pincode) VALUES ( '$email','$username','$password','$bdate','$add1','$add2','$add3','$city','$state','$phoneno','$altno','$aadharcard','$aadharfront','$aadharback','$workerpanno','$panfront','$panback','$addfront','$addback', '$firstname', '$lastname','$middlename','$pincode')";
+        $sql = "INSERT INTO workerlogin (email, username, password, bdate, add1, add2, add3, city, state, phoneno, altno, aadharcard, aadharfront, aadharback, workerpanno, panfront,  addfront, addback, firstname, lastname, middlename, pincode) VALUES ( '$email','$username','$password','$bdate','$add1','$add2','$add3','$city','$state','$phoneno','$altno','$aadharcard','$aadharfront','$aadharback','$workerpanno','$panfront','$addfront','$addback', '$firstname', '$lastname','$middlename','$pincode')";
           $result = mysqli_query($conn, $sql);
 
           if ($result) 
@@ -66,7 +65,6 @@ if (isset($_POST['submit']))
             $aadharback = "";
             $workerpanno = "";
             $panfront = "";
-            $panback = "";
             $add1 = "";
             $add2 = "";
             $add3 = "";

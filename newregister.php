@@ -35,7 +35,6 @@ error_reporting(0)
         <input type="file" placeholder="Upload aadharback" name="aadharback" value="<?php echo $aadharback; ?>" />
         <input type="text" placeholder="Pan Card Number" name="workerpanno" value="<?php echo $workerpanno; ?>" />
         <input type="file" placeholder="Upload pan front" name="panfront" value="<?php echo $panfront; ?>" />
-        <input type="file" placeholder="Upload pan back" name="panback" value="<?php echo $panback; ?>" />
         <input type="text" placeholder="Address Line 1" name="add1" value="<?php echo $add1; ?>" />
         <input type="text" placeholder="Address Line 2" name="add2" value="<?php echo $add2; ?>" />
         <input type="text" placeholder="Address Line 3" name="add3" value="<?php echo $add3; ?>" />
@@ -68,7 +67,6 @@ error_reporting(0)
         <input type="file" placeholder="Upload Aadhar back" name="caadharback" value="<?php echo $caadharback; ?>" />
         <input type="text" placeholder="Pan Card Number" name="clientpannum" value="<?php echo $clientpannum; ?>" />
         <input type="file" placeholder="Upload pan front" name="cpancardfront" value="<?php echo $cpancardfront; ?>" />
-        <input type="file" placeholder="Upload pan back" name="cpancardback" value="<?php echo $cpancardback; ?>" />
         <input type="text" placeholder="Address Line 1" name="clientadrsline1"
           value="<?php echo $clientadrsline1; ?>" />
         <input type="text" placeholder="Address Line 2" name="clientadrsline2"

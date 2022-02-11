@@ -27,7 +27,6 @@ if (isset($_POST['submit'])) {
   $caadharfront = $_FILES['caadharfront']['name'];
   $caadharback = $_FILES['caadharback']['name'];
   $cpancardfront = $_FILES['cpancardfront']['name'];
-  $cpancardback = $_FILES['cpancardback']['name'];
   $clientadrsline3 = $_POST['clientadrsline3'];
   $clientfirst = $_POST['clientfirst'];
   $clientlast = $_POST['clientlast'];
@@ -41,7 +40,7 @@ if (isset($_POST['submit'])) {
     $result = mysqli_query($conn, $sql);
 
     if (!$result->num_rows > 0) {
-      $sql = "INSERT INTO logindetails (clientemail, clientusername, clientpassword, clientmobilenum, clientaadharnum, clientpannum, clientadrsline1, clientadrsline2, clientcity, clientsstate, clientpincode, clientaltno, caadharfront, caadharback, cpancardfront, cpancardback, clientadrsline3, clientfirst, clientlast, clientmiddle, clientbday, clientaddfront, clientaddback) VALUES ('$clientemail','$clientusername','$clientpassword','$clientmobilenum','$clientaadharnum','$clientpannum','$clientadrsline1','$clientadrsline2','$clientcity','$clientsstate','$clientpincode','$clientaltno','$caadharfront','$caadharback','$clientbday','$cpancardfront','$clientadrsline3','$clientfirst','$clientlast','$clientmiddle','$cpancardback','$clientaddfront','$clientaddback')";
+      $sql = "INSERT INTO logindetails (clientemail, clientusername, clientpassword, clientmobilenum, clientaadharnum, clientpannum, clientadrsline1, clientadrsline2, clientcity, clientsstate, clientpincode, clientaltno, caadharfront, caadharback, cpancardfront, clientadrsline3, clientfirst, clientlast, clientmiddle, clientbday, clientaddfront, clientaddback) VALUES ('$clientemail','$clientusername','$clientpassword','$clientmobilenum','$clientaadharnum','$clientpannum','$clientadrsline1','$clientadrsline2','$clientcity','$clientsstate','$clientpincode','$clientaltno','$caadharfront','$caadharback','$clientbday','$cpancardfront','$clientadrsline3','$clientfirst','$clientlast','$clientmiddle','$clientaddfront','$clientaddback')";
       $result = mysqli_query($conn, $sql);
       if ($result) {
         echo "<script>alert('Wow! User Registration Completed.')</script>";
@@ -61,7 +60,6 @@ if (isset($_POST['submit'])) {
         $caadharfront = "";
         $cpancardback = "";
         $cpancardfront = "";
-        $cpancardback = "";
         $clientadrsline3 = "";
         $clientfirst = "";
         $clientlast = "";

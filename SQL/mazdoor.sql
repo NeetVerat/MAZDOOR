@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 10, 2022 at 07:18 PM
+-- Generation Time: Feb 11, 2022 at 05:30 PM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 7.3.31
 
@@ -44,7 +44,6 @@ CREATE TABLE `logindetails` (
   `caadharfront` varchar(15) NOT NULL,
   `caadharback` varchar(15) NOT NULL,
   `cpancardfront` varchar(15) NOT NULL,
-  `cpancardback` varchar(15) NOT NULL,
   `clientadrsline3` varchar(65) DEFAULT NULL,
   `clientfirst` varchar(65) NOT NULL,
   `clientlast` varchar(65) NOT NULL,
@@ -58,15 +57,15 @@ CREATE TABLE `logindetails` (
 -- Dumping data for table `logindetails`
 --
 
-INSERT INTO `logindetails` (`id`, `clientemail`, `clientusername`, `clientpassword`, `clientmobilenum`, `clientaadharnum`, `clientpannum`, `clientadrsline1`, `clientadrsline2`, `clientcity`, `clientsstate`, `clientpincode`, `clientaltno`, `caadharfront`, `caadharback`, `cpancardfront`, `cpancardback`, `clientadrsline3`, `clientfirst`, `clientlast`, `clientmiddle`, `clientbday`, `clientaddfront`, `clientaddback`) VALUES
-(1, 'veratnatie@gmail.com', 'neet', '202cb962ac59075b964b07152d234b70', 2147483647, 2147483647, '1234568asd', 'bldg no 24, regency sarwam, titwala, east', 'uoahsdlkjffheowh', 'titwala', 'Maharashtra', 421605, 0, '', '', '', '', '', '', '', '', '0000-00-00', '', ''),
-(2, 'veratnatie1@gmail.com', 'neet', '827ccb0eea8a706c4c34a16891f84e7b', 2147483647, 2134243241, '324ewrq123', 'bldg no 24, regency sarwam, titwala, east', 'uoahsdlkjffheowh', 'titwala', 'Maharashtra', 421605, 0, '', '', '', '', '', '', '', '', '0000-00-00', '', ''),
-(3, 'QWERTY@GMAIL.COM', 'QWERTY', '81dc9bdb52d04dc20036dbd8313ed055', 2147483647, 1343243241, 'DFDSAF123', 'bldg no 24, regency sarwam, titwala, east', 'uoahsdlkjffheowh', 'titwala', 'Maharashtra', 421605, 0, '', '', '', '', '', '', '', '', '0000-00-00', '', ''),
-(4, 'a@h.i', 'a', '123', 4, 4, '4', '4a', 'a', 'a', 'a', 154879, 4, 'upload check.jp', 'upload check.jp', '2021-08-11', 'upload check.jp', 'a', 'a', 'a', 'a', '0000-00-00', 'upload check.jpg', 'upload check.jpg'),
-(5, 'ad@m.b', 'as', '202cb962ac59075b964b07152d234b70', 3, 3, '3', '3', '3', '3', '3', 7, 3, '', '', '2021-08-11', '', '3', 'a', 'a', 'a', '0000-00-00', '', ''),
-(6, 'sdfkjb@gsubdfn.com', 'adminboi', '550a141f12de6341fba65b0ad0433500', 0, 0, '', '', '', '', '', 0, 0, '', '', '', '', '', '', '', '', '0000-00-00', '', ''),
-(7, '', '', '202cb962ac59075b964b07152d234b70', 0, 0, '', '', '', '', '', 0, 0, '', '', '', '', '', '', '', '', '0000-00-00', '', ''),
-(8, 'udfgin@g.hoi', 'sfgsdhfb', '698d51a19d8a121ce581499d7b701668', 0, 0, '', '', '', '', '', 0, 0, '', '', '2021-02-11', '', '', '', '', '', '0000-00-00', '', '');
+INSERT INTO `logindetails` (`id`, `clientemail`, `clientusername`, `clientpassword`, `clientmobilenum`, `clientaadharnum`, `clientpannum`, `clientadrsline1`, `clientadrsline2`, `clientcity`, `clientsstate`, `clientpincode`, `clientaltno`, `caadharfront`, `caadharback`, `cpancardfront`, `clientadrsline3`, `clientfirst`, `clientlast`, `clientmiddle`, `clientbday`, `clientaddfront`, `clientaddback`) VALUES
+(1, 'veratnatie@gmail.com', 'neet', '202cb962ac59075b964b07152d234b70', 2147483647, 2147483647, '1234568asd', 'bldg no 24, regency sarwam, titwala, east', 'uoahsdlkjffheowh', 'titwala', 'Maharashtra', 421605, 0, '', '', '', '', '', '', '', '0000-00-00', '', ''),
+(2, 'veratnatie1@gmail.com', 'neet', '827ccb0eea8a706c4c34a16891f84e7b', 2147483647, 2134243241, '324ewrq123', 'bldg no 24, regency sarwam, titwala, east', 'uoahsdlkjffheowh', 'titwala', 'Maharashtra', 421605, 0, '', '', '', '', '', '', '', '0000-00-00', '', ''),
+(3, 'QWERTY@GMAIL.COM', 'QWERTY', '81dc9bdb52d04dc20036dbd8313ed055', 2147483647, 1343243241, 'DFDSAF123', 'bldg no 24, regency sarwam, titwala, east', 'uoahsdlkjffheowh', 'titwala', 'Maharashtra', 421605, 0, '', '', '', '', '', '', '', '0000-00-00', '', ''),
+(4, 'a@h.i', 'a', '123', 4, 4, '4', '4a', 'a', 'a', 'a', 154879, 4, 'upload check.jp', 'upload check.jp', '2021-08-11', 'a', 'a', 'a', 'a', '0000-00-00', 'upload check.jpg', 'upload check.jpg'),
+(5, 'ad@m.b', 'as', '202cb962ac59075b964b07152d234b70', 3, 3, '3', '3', '3', '3', '3', 7, 3, '', '', '2021-08-11', '3', 'a', 'a', 'a', '0000-00-00', '', ''),
+(6, 'sdfkjb@gsubdfn.com', 'adminboi', '550a141f12de6341fba65b0ad0433500', 0, 0, '', '', '', '', '', 0, 0, '', '', '', '', '', '', '', '0000-00-00', '', ''),
+(7, '', '', '202cb962ac59075b964b07152d234b70', 0, 0, '', '', '', '', '', 0, 0, '', '', '', '', '', '', '', '0000-00-00', '', ''),
+(8, 'udfgin@g.hoi', 'sfgsdhfb', '698d51a19d8a121ce581499d7b701668', 0, 0, '', '', '', '', '', 0, 0, '', '', '2021-02-11', '', '', '', '', '0000-00-00', '', '');
 
 -- --------------------------------------------------------
 
@@ -82,13 +81,6 @@ CREATE TABLE `projectbids` (
   `tokenpb` varchar(255) NOT NULL,
   `projectidofbids` int(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `projectbids`
---
-
-INSERT INTO `projectbids` (`biddersname`, `biddersdics`, `bidderbudget`, `tenderpdf`, `tokenpb`, `projectidofbids`) VALUES
-('Neet', 'Peru Gamer', 69, 'AI_IT_12279688.pdf', '', 10);
 
 -- --------------------------------------------------------
 
@@ -207,7 +199,6 @@ CREATE TABLE `workerlogin` (
   `aadharback` varchar(255) NOT NULL,
   `workerpanno` varchar(10) NOT NULL,
   `panfront` varchar(255) NOT NULL,
-  `panback` varchar(255) NOT NULL,
   `addfront` varchar(255) NOT NULL,
   `addback` varchar(255) NOT NULL,
   `id` int(255) NOT NULL,
@@ -221,10 +212,10 @@ CREATE TABLE `workerlogin` (
 -- Dumping data for table `workerlogin`
 --
 
-INSERT INTO `workerlogin` (`email`, `username`, `password`, `bdate`, `add1`, `add2`, `add3`, `city`, `state`, `phoneno`, `altno`, `aadharcard`, `aadharfront`, `aadharback`, `workerpanno`, `panfront`, `panback`, `addfront`, `addback`, `id`, `firstname`, `lastname`, `middlename`, `pincode`) VALUES
-('a@a.in', 'as', '81dc9bdb52d04dc20036dbd8313ed055', '2022-01-04', 'a', 'a', 'a', '', 'a', 956230147, 956230147, 956230147, 'upload check.jpg', 'upload check.jpg', '956230147', 'upload check.jpg', 'upload check.jpg', 'upload check.jpg', 'upload check.jpg', 1, 'a', 'a', 'a', 956874),
-('aaaa@a.i', 'a', '202cb962ac59075b964b07152d234b70', '2022-01-06', '3', '3', '3', '', '3', 3, 3, 3, 'upload check.jpg', 'upload check.jpg', '3', 'upload check.jpg', 'upload check.jpg', 'upload check.jpg', 'upload check.jpg', 2, 'a', 'a', 'a', 3),
-('1@g.com', 'one', '81dc9bdb52d04dc20036dbd8313ed055', '0000-00-00', '', '', NULL, '', '', 0, NULL, 0, '', '', '', '', '', '', '', 7, '', '', '', 0);
+INSERT INTO `workerlogin` (`email`, `username`, `password`, `bdate`, `add1`, `add2`, `add3`, `city`, `state`, `phoneno`, `altno`, `aadharcard`, `aadharfront`, `aadharback`, `workerpanno`, `panfront`, `addfront`, `addback`, `id`, `firstname`, `lastname`, `middlename`, `pincode`) VALUES
+('a@a.in', 'as', '81dc9bdb52d04dc20036dbd8313ed055', '2022-01-04', 'a', 'a', 'a', '', 'a', 956230147, 956230147, 956230147, 'upload check.jpg', 'upload check.jpg', '956230147', 'upload check.jpg', 'upload check.jpg', 'upload check.jpg', 1, 'a', 'a', 'a', 956874),
+('aaaa@a.i', 'a', '202cb962ac59075b964b07152d234b70', '2022-01-06', '3', '3', '3', '', '3', 3, 3, 3, 'upload check.jpg', 'upload check.jpg', '3', 'upload check.jpg', 'upload check.jpg', 'upload check.jpg', 2, 'a', 'a', 'a', 3),
+('1@g.com', 'one', '81dc9bdb52d04dc20036dbd8313ed055', '0000-00-00', '', '', NULL, '', '', 0, NULL, 0, '', '', '', '', '', '', 7, '', '', '', 0);
 
 --
 -- Indexes for dumped tables
@@ -282,7 +273,7 @@ ALTER TABLE `logindetails`
 -- AUTO_INCREMENT for table `projectbids`
 --
 ALTER TABLE `projectbids`
-  MODIFY `projectidofbids` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `projectidofbids` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `projects`
