@@ -50,22 +50,30 @@ if ($result = mysqli_query($conn, $sql)) {
     <!-- ----------------- Start of Statistics ---------------------- -->
 
     <div class="row">
-      <div class="works_done">
-        <a href="works_assigned_done.html">5</a>
-        <h2>Works Done</h2>
-      </div>
-      <div class="Loyalty_Badge">
-        <a href="works_assigned_done.html">2</a>
-        <h2>Loyalty Badge</h2>
-      </div>
-      <div class="work_done_worth">
-        <a href="works_assigned_done.html">500000</a>
-        <h2>Work Done Worth</h2>
-      </div>
-      <div class="dislike">
-        <a href="works_listed.php"><?php echo $row; ?></a>
-        <h2>Dislike</h2>
-      </div>
+      <a href="works_assigned_done.html">
+        <div class="works_done">
+          <p>5</p>
+          <h2>Works Done</h2>
+        </div>
+      </a>
+      <a href="works_assigned_done.html">
+        <div class="Loyalty_Badge">
+          <p>2</p>
+          <h2>Work in progress</h2>
+        </div>
+      </a>
+      <a href="works_assigned_done.html">
+        <div class="work_done_worth">
+          <p>500000</p>
+          <h2>Work Done Worth</h2>
+        </div>
+      </a>
+      <a href="works_listed.php">
+        <div class="dislike">
+          <p>5</p>
+          <h2>Dislike</h2>
+        </div>
+      </a>
     </div>
 
 

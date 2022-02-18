@@ -138,11 +138,23 @@ a {
   border-radius: 1.3rem;
 } */
 
+.works_done p,
+.Loyalty_Badge p,
+.work_done_worth p,
+.dislike p {
+  color: #000;
+  font-size: 5rem;
+  font-weight: bold;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
 .works_done h2,
 .Loyalty_Badge h2,
 .work_done_worth h2,
 .dislike h2 {
   padding-bottom: 1rem;
+  color: #000;
 }
 
 .works_done {
