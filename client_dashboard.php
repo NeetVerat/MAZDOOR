@@ -49,46 +49,58 @@ if ($result = mysqli_query($conn, $sql)) {
     <!-- ----------------- Start of Statistics ---------------------- -->
 
     <div class="row">
-      <div class="works_done">
-        <a href="works_assigned_done.html">5</a>
-        <h2>Works Assigned done</h2>
-      </div>
-      <div class="Loyalty_Badge">
-        <a href="works_assigned_done.html">2</a>
-        <h2>Work in progress</h2>
-      </div>
-      <div class="work_done_worth">
-        <a href="works_assigned_done.html">500000</a>
-        <h2>Total Expenses</h2>
-      </div>
-      <div class="dislike">
-        <a href="works_listed.php"><?php echo $rowcount; ?></a>
-        <h2>work listed</h2>
-      </div>
+      <a href="works_assigned_done.html">
+        <div class="works_done">
+          <p>5</p>
+          <h2>Works Assigned done</h2>
+        </div>
+      </a>
+      <a href="works_assigned_done.html">
+        <div class="Loyalty_Badge">
+          <p>2</p>
+          <h2>Work in progress</h2>
+        </div>
+      </a>
+      <a href="works_assigned_done.html">
+        <div class="work_done_worth">
+          <p>500000</p>
+          <h2>Total Expenses</h2>
+        </div>
+      </a>
+      <a href="works_listed.php">
+        <div class="dislike">
+          <p><?php echo $rowcount; ?></p>
+          <h2>work listed</h2>
+        </div>
+      </a>
     </div>
 
 
     <div class="contain">
-      <div class="postdiv">
-        <img src="images/new-post.png" alt="">
-        <div class="row1">
-          <a class="postprojbtn" href="postaproject.php">Post Project</a>
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. A eveniet cupiditate illo maiores facilis
-            similique
-            quam dolorem? Odio, quos ea.</p>
+      <a class="postprojbtn" href="postaproject.php">
+        <div class="postdiv">
+          <img src="images/new-post.png" alt="">
+          <div class="row1">
+            <h2>Post Project</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. A eveniet cupiditate illo maiores facilis
+              similique
+              quam dolorem? Odio, quos ea.</p>
+          </div>
         </div>
-      </div>
+      </a>
 
 
-      <div class="hirediv">
-        <img src="images/headhunter.png" alt="">
-        <div class="row1">
-          <a class="postprojbtn" href="worker.php">Hire Worker</a>
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. A eveniet cupiditate illo maiores facilis
-            similique
-            quam dolorem? Odio, quos ea.</p>
+      <a class="postprojbtn" href="worker.php">
+        <div class="hirediv">
+          <img src="images/headhunter.png" alt="">
+          <div class="row1">
+            <h2>Hire Worker</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. A eveniet cupiditate illo maiores facilis
+              similique
+              quam dolorem? Odio, quos ea.</p>
+          </div>
         </div>
-      </div>
+      </a>
     </div>
   </div>
 </body>

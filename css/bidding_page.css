@@ -157,6 +157,10 @@ section {
   margin: 1rem 0.6rem 0 1rem;
 }
 
+.bids_container ul {
+  overflow: scroll;
+}
+
 .row {
   display: flex;
   color: #000;
@@ -170,12 +174,11 @@ section {
 }
 
 .bids_container button {
-  height: 3rem;
+  height: 5rem;
   background: #4ebd73;
   border: none;
   border-bottom-left-radius: 1rem;
   border-bottom-right-radius: 1rem;
-  transform: translateY(25.25rem);
   font-size: 1rem;
 }
 

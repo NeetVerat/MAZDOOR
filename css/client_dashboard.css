@@ -117,32 +117,23 @@ a {
   flex-direction: column;
 }
 
-.works_done a,
-.Loyalty_Badge a,
-.work_done_worth a,
-.dislike a {
-  font-size: 5rem;
-  text-align: center;
+.works_done p,
+.Loyalty_Badge p,
+.work_done_worth p,
+.dislike p {
   color: #000;
+  font-size: 5rem;
   font-weight: bold;
-  width: 100%;
-  height: 100%;
-  padding-top: 3rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
-
-/* .works_done a:hover,
-.Loyalty_Badge a:hover,
-.work_done_worth a:hover,
-.dislike a:hover {
-  background: #181b23d2;
-  border-radius: 1.3rem;
-} */
 
 .works_done h2,
 .Loyalty_Badge h2,
 .work_done_worth h2,
 .dislike h2 {
   padding-bottom: 1rem;
+  color: #000;
 }
 
 .works_done {
@@ -179,13 +170,17 @@ a {
   margin-left: 2rem;
 }
 
-.postdiv a {
+.postdiv h2 {
   height: 8rem;
   width: 100%;
   font-size: 3rem;
   color: #000000;
   font-weight: 900;
   margin-top: 2rem;
+}
+
+.row1 p {
+  color: #000;
 }
 
 .row1 {
@@ -229,7 +224,7 @@ a {
   margin-left: 2rem;
 }
 
-.hirediv a {
+.hirediv h2 {
   height: 8rem;
   width: 100%;
   font-size: 3rem;

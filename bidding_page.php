@@ -75,7 +75,7 @@ if (isset($_POST['submit'])) {
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="css/bidding_page.css">
+  <link rel="stylesheet" href="../css/bidding_page.css">
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto&display=swap" rel="stylesheet" />
@@ -120,47 +120,48 @@ if (isset($_POST['submit'])) {
         </div>
       </div>
 
-<div class="bids_container">
-  <ul>
+      <div class="bids_container">
+        <ul>
           <?php
           require 'config.php';
 
-            $query = "SELECT * FROM projectbids";
-            $query_run = mysqli_query($conn, $query);
-            $check_empty = mysqli_num_rows($query_run) > 0;
-            if ($check_empty) {
-            while ($row = mysqli_fetch_assoc($query_run)) {
-            ?>
-            <?php
-            for ($row['id'] = 0; $row['id'] < 1; $row['id']++) {
-            echo "<li>";
-            echo '<div class="row">';
-            echo '<div class="column">';
-            echo "<h2>";
-            echo $row['biddersname'];
-            echo "</h2>";
-            echo "<p>";
-            echo $row['biddersdics'];
-            echo "</p>";
-            echo "</div>";
-            echo "<p> ₹ ";
-            echo $row['bidderbudget'];
-            echo "</p>";
-            echo "</div>";
-            echo "</li>";
-          }
 
+          $query = "SELECT * FROM projectbids ";
+          $query_run = mysqli_query($conn, $query);
+          $check_empty = mysqli_num_rows($query_run) > 0;
+          if ($check_empty) {
+            while ($row = mysqli_fetch_assoc($query_run)) {
           ?>
           <?php
-        }
-      } else {
-        echo "SeD!!! no one here";
-      }
-      ?>
-    </li>
-  </ul>
-  <button id="myBtn">BID</button>
-</div>
+              for ($row['id'] = 0; $row['id'] < 1; $row['id']++) {
+                echo "<li>";
+                echo '<div class="row">';
+                echo '<div class="column">';
+                echo "<h2>";
+                echo $row['biddersname'];
+                echo "</h2>";
+                echo "<p>";
+                echo $row['biddersdics'];
+                echo "</p>";
+                echo "</div>";
+                echo "<p> ₹ ";
+                echo $row['bidderbudget'];
+                echo "</p>";
+                echo "</div>";
+                echo "</li>";
+              }
+
+              ?>
+          <?php
+            }
+          } else {
+            echo "SeD!!! no one here";
+          }
+          ?>
+          </li>
+        </ul>
+        <button id="myBtn">BID</button>
+      </div>
 
       <div id="myModal" class="modal">
 
@@ -180,8 +181,7 @@ if (isset($_POST['submit'])) {
 
               <input type="file" placeholder="Upload your Tendure" name="tenderpdf" class="tender"
                 value="<?php echo $tenderpdf ?>" />
-              <input type="text" placeholder="Description" name="tokenpb" value="<?php echo $params['tokenpb'] ?>"
-                style="display: none;" />
+              <input type="text" name="tokenpb" value="<?php echo $params['token']; ?>" />
               <br><button name="submit">Submit</button>
             </div>
           </form>
