@@ -17,19 +17,9 @@
         <a class="logo_link" href="index.php">MAZDOOR</a>
         <ul>
           <li><a href="how_it_works.html">How it Works</a></li>
-          <li><a href="worker.php">Browse Jobs</a></li>
         </ul>
       </div>
-      <div class="navigation">
-        <ul>
-          <li>
-            <a class="landing-login" href="login.php">Log In</a>
-          </li>
-          <li>
-            <a class="landing-signup" href="register.php">Sign Up</a>
-          </li>
-        </ul>
-      </div>
+
     </nav>
 
     <!-- -------------- End of Navbar ---------------- -->
@@ -77,10 +67,15 @@
             <img src="uploads/<?php echo $row['cardimage']; ?>" alt="SeD" />
             <div class="card1_text">
               <h1> <?php echo $row['projectname']; ?> </h1>
+              <p><?php echo $row['description']; ?></p>
+            </div>
+            <div class="hover-card">
+              <p><?php echo $row['description']; ?></p>
               <h2>Budget</h2>
               <h2>&#8377;<?php echo $row['frommoney']; ?> - &#8377;<?php echo $row['tomoney']; ?> </h2>
+              <a href="bidding_page.php/?token=<?php echo $row['token']; ?>" target="_blank">BID</a>
             </div>
-            <a href="bidding_page.php/?token=<?php echo $row['token']; ?>" target="_blank">BID</a>
+
           </div>
 
           <?php

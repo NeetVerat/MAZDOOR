@@ -58,7 +58,7 @@
 
   <!-- -------------- Start of Need something done ---------------- -->
 
-  <div class="container-2">
+  <!-- <div class="container-2">
     <div class="row">
       <div class="postajob">
         <div class="postajob-row">
@@ -103,7 +103,63 @@
         </p>
       </div>
     </div>
+  </div> -->
+
+  <div class="testing_features">
+    <div class="circle-behind"></div>
+    <div class="a">
+      <h1>Post a Job</h1>
+      <p>
+        It's easy. Simply post a
+        job you need<br /> completed
+        and receive competitive<br />
+        bids from workers within minutes.
+      </p>
+    </div>
+    <div class="b">
+      <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+      <lottie-player src="https://assets2.lottiefiles.com/packages/lf20_wycox7py.json" background="transparent"
+        speed="1" loop autoplay></lottie-player>
+    </div>
   </div>
+
+  <div class="testing_features1">
+    <div class="circle-behind1"></div>
+    <div class="a1">
+      <h1>Post a Job</h1>
+      <p>
+        It's easy. Simply post a
+        job you need<br /> completed
+        and receive competitive<br />
+        bids from workers within minutes.
+      </p>
+    </div>
+    <div class="b1">
+      <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+      <lottie-player src="https://assets1.lottiefiles.com/packages/lf20_y4pmwklq.json" speed="1" loop autoplay>
+      </lottie-player>
+    </div>
+  </div>
+
+
+  <div class="testing_features2">
+    <div class="circle-behind2"></div>
+    <div class="a2">
+      <h1>Choose Worker</h1>
+      <p>
+        Whatever your needs, there
+        will be a worker<br /> to get it
+        done from plumbing work,<br />
+        construction work, (and a whole lot more).
+      </p>
+    </div>
+    <div class="b2">
+      <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+      <lottie-player src="https://assets8.lottiefiles.com/packages/lf20_v33gmcrb.json" background="transparent"
+        speed="1" loop autoplay></lottie-player>
+    </div>
+  </div>
+
 
   <!-- -------------- End of Need something done ---------------- -->
 

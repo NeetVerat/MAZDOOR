@@ -58,13 +58,13 @@ if (isset($_POST['submit'])) {
       $tenderpdf = " ";
       $tokenpb = " ";
     } else {
-      //echo "<script>alert('Result vala mai error.')</script>";
+      echo "<script>alert('Result vala mai error.')</script>";
     }
   } else {
-    //echo "<script>alert('Insert vala mai error.')</script>";
+    echo "<script>alert('Insert vala mai error.')</script>";
   }
 } else {
-  //echo "<script>alert('isset vale mai error.')</script>";
+  echo "<script>alert('isset vale mai error.')</script>";
 }
 ?>
 

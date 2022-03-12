@@ -6,8 +6,9 @@
 
 html {
   font-family: "Playfair Display", serif;
-
-  background: #171717;
+  /*
+  background: #171717; */
+  background: #212529;
 }
 
 .container {
@@ -28,7 +29,8 @@ a {
   display: flex;
   justify-content: start;
   padding: 0.5rem 0 0.5rem 0;
-  background: #171717;
+  /* background: #171717; */
+  background: #212529;
   z-index: 2;
 }
 
@@ -64,7 +66,8 @@ a {
 header {
   display: flex;
   justify-content: space-between;
-  background: #171717;
+  /* background: #171717; */
+  background: #212529;
   padding: 1rem 0 1rem 0;
   align-items: center;
 }
@@ -80,7 +83,8 @@ header h1 {
 
 .budget_section {
   font-family: "Roboto", sans-serif;
-  background: #292424;
+  /* background: #292424; */
+  background: #2a2e32;
   border-radius: 1rem;
   padding: 1rem;
   margin-right: 2rem;
@@ -121,9 +125,11 @@ section {
   flex-direction: column;
   width: 50vw;
   height: 71.8vh;
-  background: #faf1e6;
+  /* background: #faf1e6; */
+  background: #2a2e32;
   border-radius: 1rem;
   margin: 1rem 0 1rem 1rem;
+  color: #fff;
 }
 
 .details_container p {
@@ -136,7 +142,8 @@ section {
 }
 
 .imgdesc {
-  background: #000000;
+  /* background: #000000; */
+  background: #2a2e32;
   border-radius: 1rem;
 }
 
@@ -152,7 +159,8 @@ section {
   flex-direction: column;
   width: 50vw;
   height: 71.5vh;
-  background: #faf1e6;
+  /* background: #faf1e6; */
+  background: #2a2e32;
   border-radius: 1rem;
   margin: 1rem 0.6rem 0 1rem;
 }
@@ -163,14 +171,22 @@ section {
 
 .row {
   display: flex;
-  color: #000;
-  background: #ffd369;
+  color: #fff;
+  /* color: #000; */
+  /* background: #ffd369; */
+  background: #2a2e32;
   /* width: 54rem; */
-  border-radius: 1rem;
+  /* border-radius: 1rem; */
   margin: 1rem;
   padding: 1rem;
   align-items: center;
   justify-content: space-between;
+  border-bottom: solid 1px #191c1f;
+}
+
+.row:hover {
+  background: #191c1f;
+  border-radius: 0.7rem;
 }
 
 .bids_container button {
@@ -190,7 +206,7 @@ section {
 
 /* width */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 1px;
 }
 
 /* Track */

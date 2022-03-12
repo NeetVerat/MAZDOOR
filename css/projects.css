@@ -149,19 +149,19 @@ a {
 }
 
 .card-1 {
-  height: 21.4rem;
-  width: 17.5rem;
+  height: 30rem;
+  width: 20rem;
   background: #f4f4f4;
-  border-radius: 1rem 1rem 0 0;
+  border-radius: 0.5rem;
   margin-bottom: 3rem;
   box-shadow: 0.2rem 0.2rem 0.5rem #00000063;
   min-height: 21.4rem;
 }
 
 .card-1 img {
-  height: 10rem;
-  width: 17.5rem;
-  border-radius: 1rem 1rem 0 0;
+  height: 14rem;
+  width: 20rem;
+  border-radius: 0.5rem 0.5rem 0 0;
 }
 
 .card1_text {
@@ -170,8 +170,9 @@ a {
 
 .card-1 h1 {
   overflow: hidden;
-  font-size: 1.5rem;
+  font-size: 2rem;
   padding-bottom: 1rem;
+  text-transform: capitalize;
 }
 
 .card1_text h2 {
@@ -199,6 +200,45 @@ a {
   color: #000000;
   box-shadow: 0.2rem 0.2rem 0.5rem #00000063;
   cursor: pointer;
+  margin-left: 0.2rem;
+}
+
+.hover-card {
+  display: none;
+  height: 30rem;
+  width: 20rem;
+  color: #fff;
+  padding: 1rem;
+}
+
+.hover-card p {
+  height: 15rem;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  max-width: 15rem;
+}
+
+.card-1:hover .hover-card {
+  display: block;
+  position: absolute;
+  height: 30rem;
+  width: 20rem;
+  background: #2a2c2a;
+  transform: translateY(-20.17rem);
+  border-radius: 0.5rem;
+  animation: fadeInAnimation 0.8s ease-in-out;
+}
+
+.hover-card h2:nth-child(2) {
+  padding-bottom: 0.5rem;
+  text-align: center;
+}
+
+.hover-card h2:nth-child(3) {
+  border-radius: 0.3rem;
+  margin-bottom: 7rem;
+  color: #1eb457;
+  text-align: center;
 }
 
 /* --------------------------------- Scrollbar ----------------------------------------- */
@@ -215,4 +255,13 @@ a {
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background: #000000;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
