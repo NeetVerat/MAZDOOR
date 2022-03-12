@@ -47,7 +47,7 @@ if (isset($_POST['submit'])) {
   $tokenpb = $_POST['tokenpb'];
   $sql = "SELECT * FROM projectbids ";
   $result = mysqli_query($conn, $sql);
-  if ($result->num_rows > 0) {
+  if ($result->num_rows >= 0) {
     $sql = "INSERT INTO projectbids(biddersname, biddersdics, bidderbudget, tenderpdf, tokenpb ) VALUES ('$biddersname','$biddersdics','$bidderbudget','$tenderpdf','$tokenpb')";
     $result = mysqli_query($conn, $sql);
     if ($result) {
@@ -58,13 +58,13 @@ if (isset($_POST['submit'])) {
       $tenderpdf = " ";
       $tokenpb = " ";
     } else {
-      echo "<script>alert('Result vala mai error.')</script>";
+      //echo "<script>alert('Result vala mai error.')</script>";
     }
   } else {
-    echo "<script>alert('Insert vala mai error.')</script>";
+    //echo "<script>alert('Insert vala mai error.')</script>";
   }
 } else {
-  echo "<script>alert('isset vale mai error.')</script>";
+  //echo "<script>alert('isset vale mai error.')</script>";
 }
 ?>
 
@@ -120,48 +120,47 @@ if (isset($_POST['submit'])) {
         </div>
       </div>
 
-      <div class="bids_container">
-        <ul>
+<div class="bids_container">
+  <ul>
           <?php
           require 'config.php';
 
-
-          $query = "SELECT * FROM projectbids ";
-          $query_run = mysqli_query($conn, $query);
-          $check_empty = mysqli_num_rows($query_run) > 0;
-          if ($check_empty) {
+            $query = "SELECT * FROM projectbids";
+            $query_run = mysqli_query($conn, $query);
+            $check_empty = mysqli_num_rows($query_run) > 0;
+            if ($check_empty) {
             while ($row = mysqli_fetch_assoc($query_run)) {
-          ?>
-          <?php
-              for ($row['id'] = 0; $row['id'] < 1; $row['id']++) {
-                echo "<li>";
-                echo '<div class="row">';
-                echo '<div class="column">';
-                echo "<h2>";
-                echo $row['biddersname'];
-                echo "</h2>";
-                echo "<p>";
-                echo $row['biddersdics'];
-                echo "</p>";
-                echo "</div>";
-                echo "<p> ₹ ";
-                echo $row['bidderbudget'];
-                echo "</p>";
-                echo "</div>";
-                echo "</li>";
-              }
-
-              ?>
-          <?php
-            }
-          } else {
-            echo "SeD!!! no one here";
+            ?>
+            <?php
+            for ($row['id'] = 0; $row['id'] < 1; $row['id']++) {
+            echo "<li>";
+            echo '<div class="row">';
+            echo '<div class="column">';
+            echo "<h2>";
+            echo $row['biddersname'];
+            echo "</h2>";
+            echo "<p>";
+            echo $row['biddersdics'];
+            echo "</p>";
+            echo "</div>";
+            echo "<p> ₹ ";
+            echo $row['bidderbudget'];
+            echo "</p>";
+            echo "</div>";
+            echo "</li>";
           }
+
           ?>
-          </li>
-        </ul>
-        <button id="myBtn">BID</button>
-      </div>
+          <?php
+        }
+      } else {
+        echo "SeD!!! no one here";
+      }
+      ?>
+    </li>
+  </ul>
+  <button id="myBtn">BID</button>
+</div>
 
       <div id="myModal" class="modal">
 
@@ -181,7 +180,8 @@ if (isset($_POST['submit'])) {
 
               <input type="file" placeholder="Upload your Tendure" name="tenderpdf" class="tender"
                 value="<?php echo $tenderpdf ?>" />
-              <input type="text" name="tokenpb" value="<?php echo $params['token']; ?>" />
+              <input type="text" placeholder="Description" name="tokenpb" value="<?php echo $params['tokenpb'] ?>"
+                style="display: none;" />
               <br><button name="submit">Submit</button>
             </div>
           </form>
