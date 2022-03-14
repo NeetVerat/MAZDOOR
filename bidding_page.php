@@ -45,6 +45,7 @@ if (isset($_POST['submit'])) {
   $bidderbudget = $_POST['bidderbudget'];
   $tenderpdf = $_FILES['tenderpdf']['name'];
   $tokenpb = $_POST['tokenpb'];
+
   $sql = "SELECT * FROM projectbids ";
   $result = mysqli_query($conn, $sql);
   if ($result->num_rows >= 0) {
@@ -52,11 +53,13 @@ if (isset($_POST['submit'])) {
     $result = mysqli_query($conn, $sql);
     if ($result) {
       echo "<script>alert('Wow! Your BID Submitted.')</script>";
+      move_uploaded_file($_FILES["tenderpdf"]["tmp_name"], "pdf/" . $_FILES["tenderpdf"]["name"]);
       $biddersname = " ";
       $biddersdics = " ";
       $bidderbudget = " ";
       $tenderpdf = " ";
       $tokenpb = " ";
+      //move_uploaded_file($_FILES["tenderpdf"]["name"], "pdf/" . $_FILES["tenderpdf"]["name"]);
     } else {
       //echo "<script>alert('Result vala mai error.')</script>";
     }
