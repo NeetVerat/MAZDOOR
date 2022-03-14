@@ -1,7 +1,7 @@
 <?php
 
 require 'config.php';
-// error_reporting(0);
+error_reporting(0);
 
 $url = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 

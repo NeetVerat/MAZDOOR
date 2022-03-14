@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 11, 2022 at 05:30 PM
+-- Generation Time: Mar 14, 2022 at 06:49 PM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 7.3.31
 
@@ -79,8 +79,16 @@ CREATE TABLE `projectbids` (
   `bidderbudget` int(69) NOT NULL,
   `tenderpdf` varchar(255) NOT NULL,
   `tokenpb` varchar(255) NOT NULL,
-  `projectidofbids` int(255) NOT NULL
+  `projectidofbids` int(255) NOT NULL,
+  `chahiye` varchar(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `projectbids`
+--
+
+INSERT INTO `projectbids` (`biddersname`, `biddersdics`, `bidderbudget`, `tenderpdf`, `tokenpb`, `projectidofbids`, `chahiye`) VALUES
+(' fsdf', ' sdfsdf', 567, 'AIP Q2.pdf', 'v17q9siyrUQZ1TKP', 15, NULL);
 
 -- --------------------------------------------------------
 
@@ -273,7 +281,7 @@ ALTER TABLE `logindetails`
 -- AUTO_INCREMENT for table `projectbids`
 --
 ALTER TABLE `projectbids`
-  MODIFY `projectidofbids` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `projectidofbids` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `projects`

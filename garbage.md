@@ -25,6 +25,9 @@ tokenn
 ied
 
 
+<!--                -->
+ If chahiye = NULL
+ 
 
 
 
@@ -33,8 +36,7 @@ ied
 
 
 
-
-
+<!--  -->
 biddersname
 biddersdics
 bidderbudget

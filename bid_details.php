@@ -1,7 +1,7 @@
 <?php
 
 require 'config.php';
-//error_reporting(0);
+error_reporting(0);
 
 $url = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 
@@ -73,8 +73,25 @@ $tenderpdf = $row['tenderpdf'];
     <section>
       <div class="details_container">
         <p><?php echo $row['biddersdics']; ?></p>
-        <button>ACCEPT</button>
-        <button>REJECT</button>
+        <?php 
+        $query = "SELECT * FROM projectbids WHERE projectidofbids = '$projectidofbids'"  ;
+        $query_run = mysqli_query($conn, $query);
+        $check_empty = mysqli_num_rows($query_run) >= 0;
+        if ($check_empty) {
+        while ($row = mysqli_fetch_assoc($query_run)) {
+        if($row['chahiye'] = 'NULL'){ 
+        ?>
+        <form action="accept.php" method="POST">
+        <button type="submit" name="accept">Accept</button>
+        <form action="accept.php" method="POST">
+        <button type="submit" name="reject">Reject</button> 
+      
+      <!-- iski zarurat nhi hai tabhi bhi rakha hu nikalna rhega tb bata dena -->
+        <?php
+        }}}
+        ?>
+
+
       </div>
     </section>
       <div class="bids_container">
