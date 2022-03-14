@@ -268,7 +268,8 @@ a {
   background: #000;
   color: #fff;
   justify-content: space-between;
-  margin-top: 5rem;
+  padding-top: 5rem;
+  box-shadow: 4px 5px orangered;
 }
 
 lottie-player {
@@ -318,7 +319,7 @@ lottie-player {
   background: #fff;
   color: #000;
   justify-content: space-between;
-  margin-top: 5rem;
+  padding-top: 5rem;
   flex-direction: row-reverse;
 }
 
@@ -367,7 +368,7 @@ lottie-player {
   background: #000;
   color: #fff;
   justify-content: space-between;
-  margin-top: 5rem;
+  padding-top: 5rem;
 }
 
 /* ------------------------------------------------------------------------------------------------------------------------------- */

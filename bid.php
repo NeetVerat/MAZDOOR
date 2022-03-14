@@ -1,7 +1,7 @@
 <?php
 
 require 'config.php';
-error_reporting(0);
+// error_reporting(0);
 
 $url = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 
@@ -86,27 +86,31 @@ $ddescimg4 = $rows['descimg4'];
           $query = "SELECT * FROM projectbids";
           $query_run = mysqli_query($conn, $query);
           $check_empty = mysqli_num_rows($query_run) > 0;
+
           if ($check_empty) {
             while ($row = mysqli_fetch_assoc($query_run)) {
           ?>
           <?php
+
               for ($row['id'] = 0; $row['id'] < 1; $row['id']++) {
-                echo "<a href=", "../bid_details.php/?tokenpb=".$row['tokenpb'].">";
-                echo "<li>";
-                echo '<div class="row">';
-                echo '<div class="column">';
-                echo "<h2>";
-                echo $row['biddersname'];
-                echo "</h2>";
-                echo "<p>";
-                echo $row['biddersdics'];
-                echo "</p>";
-                echo "</div>";
-                echo "<p> ₹ ";
-                echo $row['bidderbudget'];
-                echo "</p>";
-                echo "</div>";
-                echo "</li></a>";
+                if ($row['tokenpb'] == $token) {
+                  echo "<a href=", "../bid_details.php/?tokenpb=" . $row['tokenpb'] . ">";
+                  echo "<li>";
+                  echo '<div class="row">';
+                  echo '<div class="column">';
+                  echo "<h2>";
+                  echo $row['biddersname'];
+                  echo "</h2>";
+                  echo "<p>";
+                  echo $row['biddersdics'];
+                  echo "</p>";
+                  echo "</div>";
+                  echo "<p> ₹ ";
+                  echo $row['bidderbudget'];
+                  echo "</p>";
+                  echo "</div>";
+                  echo "</li></a>";
+                }
               }
 
               ?>

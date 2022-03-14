@@ -126,12 +126,13 @@
   <div class="testing_features1">
     <div class="circle-behind1"></div>
     <div class="a1">
-      <h1>Post a Job</h1>
+      <h1>Pay Safely</h1>
       <p>
-        It's easy. Simply post a
-        job you need<br /> completed
-        and receive competitive<br />
-        bids from workers within minutes.
+        With secure payments &
+        thousands of reviewed<br /> professionals to choose
+        from, Mazdoor.com is<br /> the
+        simplest and safest way to
+        get work done.
       </p>
     </div>
     <div class="b1">

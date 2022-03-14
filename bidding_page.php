@@ -120,47 +120,49 @@ if (isset($_POST['submit'])) {
         </div>
       </div>
 
-<div class="bids_container">
-  <ul>
+      <div class="bids_container">
+        <ul>
           <?php
           require 'config.php';
 
-            $query = "SELECT * FROM projectbids";
-            $query_run = mysqli_query($conn, $query);
-            $check_empty = mysqli_num_rows($query_run) > 0;
-            if ($check_empty) {
+          $query = "SELECT * FROM projectbids";
+          $query_run = mysqli_query($conn, $query);
+          $check_empty = mysqli_num_rows($query_run) > 0;
+          if ($check_empty) {
             while ($row = mysqli_fetch_assoc($query_run)) {
-            ?>
-            <?php
-            for ($row['id'] = 0; $row['id'] < 1; $row['id']++) {
-            echo "<li>";
-            echo '<div class="row">';
-            echo '<div class="column">';
-            echo "<h2>";
-            echo $row['biddersname'];
-            echo "</h2>";
-            echo "<p>";
-            echo $row['biddersdics'];
-            echo "</p>";
-            echo "</div>";
-            echo "<p> ₹ ";
-            echo $row['bidderbudget'];
-            echo "</p>";
-            echo "</div>";
-            echo "</li>";
-          }
-
           ?>
           <?php
-        }
-      } else {
-        echo "SeD!!! no one here";
-      }
-      ?>
-    </li>
-  </ul>
-  <button id="myBtn">BID</button>
-</div>
+              for ($row['id'] = 0; $row['id'] < 1; $row['id']++) {
+                if ($row['tokenpb'] == $token) {
+                  echo "<li>";
+                  echo '<div class="row">';
+                  echo '<div class="column">';
+                  echo "<h2>";
+                  echo $row['biddersname'];
+                  echo "</h2>";
+                  echo "<p>";
+                  echo $row['biddersdics'];
+                  echo "</p>";
+                  echo "</div>";
+                  echo "<p> ₹ ";
+                  echo $row['bidderbudget'];
+                  echo "</p>";
+                  echo "</div>";
+                  echo "</li>";
+                }
+              }
+
+              ?>
+          <?php
+            }
+          } else {
+            echo "SeD!!! no one here";
+          }
+          ?>
+          </li>
+        </ul>
+        <button id="myBtn">BID</button>
+      </div>
 
       <div id="myModal" class="modal">
 
@@ -180,8 +182,7 @@ if (isset($_POST['submit'])) {
 
               <input type="file" placeholder="Upload your Tendure" name="tenderpdf" class="tender"
                 value="<?php echo $tenderpdf ?>" />
-              <input type="text" placeholder="Description" name="tokenpb" value="<?php echo $params['tokenpb'] ?>"
-                style="display: none;" />
+              <input type="text" placeholder="Description" name="tokenpb" value="<?php echo $params['token'] ?>" />
               <br><button name="submit">Submit</button>
             </div>
           </form>
