@@ -94,7 +94,7 @@ $ddescimg4 = $rows['descimg4'];
 
               for ($row['id'] = 0; $row['id'] < 1; $row['id']++) {
                 if ($row['tokenpb'] == $token) {
-                  echo "<a href=", "../bid_details.php/?tokenpb=" . $row['tokenpb'] . ">";
+                  echo "<a href=", "../bid_details.php/?projectidofbids=" . $row['projectidofbids'] . ">";
                   echo "<li>";
                   echo '<div class="row">';
                   echo '<div class="column">';

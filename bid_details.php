@@ -1,13 +1,13 @@
 <?php
 
 require 'config.php';
-error_reporting(0);
+//error_reporting(0);
 
 $url = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 
-preg_match('/(tokenpb=.+)/', $url, $key_match);
+preg_match('/(projectidofbids=.+)/', $url, $key_match);
 $tokyraw = $key_match[0];
-$tokenpb = preg_replace("/(tokenpb=)/", '', $tokyraw);
+$projectidofbids = preg_replace("/(projectidofbids=)/", '', $tokyraw);
 
 // $link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS']
 //   === 'on' ? "https" : "http") .
@@ -16,10 +16,11 @@ $tokenpb = preg_replace("/(tokenpb=)/", '', $tokyraw);
 // $url_components = parse_url($link);
 // parse_str($url_components['query'], $params);
 // //echo $params['token'];
+//and projectidofbids = '$projectidofbids'
 
-$query = "SELECT * FROM projectbids WHERE tokenpb = '$tokenpb'";
+$query = "SELECT * FROM projectbids WHERE projectidofbids = '$projectidofbids'"  ;
 $query_run = mysqli_query($conn, $query);
-$check_empty = mysqli_num_rows($query_run) > 0;
+$check_empty = mysqli_num_rows($query_run) >= 0;
 if ($check_empty) {
 while ($row = mysqli_fetch_assoc($query_run)) {
 
