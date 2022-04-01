@@ -84,7 +84,8 @@ $tenderpdf = $row['tenderpdf'];
         <form action="accept.php" method="POST">
         <button type="submit" name="accept">Accept</button>
         <form action="accept.php" method="POST">
-        <button type="submit" name="reject">Reject</button> 
+        <button type="submit" name="reject">Reject</button>
+        <a href="https://chat.gise.at/#apvuqpcrqvaokjavdhbf">Chat</a>
       
       <!-- iski zarurat nhi hai tabhi bhi rakha hu nikalna rhega tb bata dena -->
         <?php
