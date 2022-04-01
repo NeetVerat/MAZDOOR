@@ -18,18 +18,19 @@ $projectidofbids = preg_replace("/(projectidofbids=)/", '', $tokyraw);
 // //echo $params['token'];
 //and projectidofbids = '$projectidofbids'
 
-$query = "SELECT * FROM projectbids WHERE projectidofbids = '$projectidofbids'"  ;
+$query = "SELECT * FROM projectbids WHERE projectidofbids = '$projectidofbids'";
 $query_run = mysqli_query($conn, $query);
 $check_empty = mysqli_num_rows($query_run) >= 0;
 if ($check_empty) {
-while ($row = mysqli_fetch_assoc($query_run)) {
+  while ($row = mysqli_fetch_assoc($query_run)) {
 
 
-$biddersname = $row['biddersname'];
-$biddersdics = $row['biddersdics'];
-$bidderbudget = $row['bidderbudget'];
-$tenderpdf = $row['tenderpdf'];
-// $projectidofbids = $row['projectidofbids '];
+    $biddersname = $row['biddersname'];
+    $biddersdics = $row['biddersdics'];
+    $bidderbudget = $row['bidderbudget'];
+    $tenderpdf = $row['tenderpdf'];
+
+    // $projectidofbids = $row['projectidofbids '];
 ?>
 
 <!DOCTYPE html>
@@ -57,7 +58,7 @@ $tenderpdf = $row['tenderpdf'];
         </ul>
       </div>
     </nav>
-                        
+
     <!-- -------------- End of Navbar ---------------- -->
 
     <header>
@@ -75,43 +76,55 @@ $tenderpdf = $row['tenderpdf'];
       <div class="details_container">
         <p><?php echo $row['biddersdics']; ?></p>
         <a href="https://chat.gise.at/#apvuqpcrqvaokjavdhbf">Chat</a>
-          <button type="submit" name="accept" onclick="clickAccept()">Accept</button>
-          function clickAccept(){
-          var acceptresult ="<?php accept_func(); ?>"
-          document.write(acceptresult);
-          }
-          <button type="submit" name="reject" onclick="clickReject()">Reject</button>
-          function clickReject(){
-          var rejectresult ="<?php reject_func(); ?>"
-          document.write(rejectresult);
-          }}
-        <?php 
-        $query = "SELECT * FROM projectbids WHERE projectidofbids = '$projectidofbids'"  ;
+        <button type="submit" name="accept" onclick="clickAccept()">Accept</button>
+        <button type="submit" name="reject" onclick="clickReject()">Reject</button>
+
+        <?php
+        $query = "SELECT * FROM projectbids WHERE projectidofbids = '$projectidofbids'";
         $query_run = mysqli_query($conn, $query);
         $check_empty = mysqli_num_rows($query_run) >= 0;
         if ($check_empty) {
-        while ($row = mysqli_fetch_assoc($query_run)) { ?>
-          <?php
-          function accept_func(){
-          $sql = "SELECT chahiye from projectbids WHERE projectidofbids = '$projectidofbids'";
-          $chahiye111 = $row["chahiye"];
-          if(is_null($chahiye111)){
-          $sql1 = "UPDATE projectbids SET chahiye = 'NULL' WHERE projectidofbids = '$projectidofbids'";
-          }}
-          function reject_func(){
-          $sql = "SELECT chahiye from projectbids WHERE projectidofbids = '$projectidofbids'";
-          $chahiye111 = $row["chahiye"];
-          if(is_null($chahiye111)){
-          $sql1 = "UPDATE projectbids SET chahiye = 'NULL' WHERE projectidofbids = '$projectidofbids'";
-          }}}
-          ?>
+          while ($row = mysqli_fetch_assoc($query_run)) {
+            function accept_func()
+            {
+              $sql = "SELECT chahiye from projectbids WHERE projectidofbids = '$projectidofbids'";
+              $chahiye111 = $row['chahiye'];
+              if (is_null($chahiye111)) {
+                $sql1 = "UPDATE projectbids SET chahiye = 'ACCEPT' WHERE projectidofbids = '$projectidofbids'";
+              }
+            }
+            function reject_func()
+            {
+              $sql = "SELECT chahiye from projectbids WHERE projectidofbids = '$projectidofbids'";
+              $chahiye111 = $row['chahiye'];
+              if (is_null($chahiye111)) {
+                $sql1 = "UPDATE projectbids SET chahiye = 'REJECT' WHERE projectidofbids = '$projectidofbids'";
+              }
+            }
+          }
+        }
+      }
+    }
+        ?>
       </div>
     </section>
-      <div class="bids_container">
-        <iframe src="../pdf/<?php echo $tenderpdf; ?>" frameborder="0" width="100%" height="100%">
-        </iframe>
-        <?php echo $tenderpdf;?>
-      </div>
-</div>
+    <div class="bids_container">
+      <iframe src="../pdf/<?php echo $tenderpdf; ?>" frameborder="0" width="100%" height="100%">
+      </iframe>
+      <?php echo $tenderpdf; ?>
+    </div>
+  </div>
+  <script>
+  function clickAccept() {
+    var acceptresult = "<?php accept_func(); ?>"
+    document.write(acceptresult);
+  }
+
+  function clickReject() {
+    var rejectresult = "<?php reject_func(); ?>"
+    document.write(rejectresult);
+  }
+  </script>
 </body>
+
 </html>
