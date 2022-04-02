@@ -1,4 +1,4 @@
 echo off
 git add .
-git commit -m "sql backend remaning"
+git commit -m "Reject Accept Ready"
 git push
