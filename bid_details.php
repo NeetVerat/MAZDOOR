@@ -1,41 +1,23 @@
 <?php
-
 require 'config.php';
 error_reporting(0);
-
 $url = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-
 preg_match('/(projectidofbids=.+)/', $url, $key_match);
 $tokyraw = $key_match[0];
 $projectidofbids = preg_replace("/(projectidofbids=)/", '', $tokyraw);
-
-// $link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS']
-//   === 'on' ? "https" : "http") .
-//   "://" . $_SERVER['HTTP_HOST'] .
-// $_SERVER['REQUEST_URI'];
-// $url_components = parse_url($link);
-// parse_str($url_components['query'], $params);
-// //echo $params['token'];
-//and projectidofbids = '$projectidofbids'
-
 $query = "SELECT * FROM projectbids WHERE projectidofbids = '$projectidofbids'";
 $query_run = mysqli_query($conn, $query);
 $check_empty = mysqli_num_rows($query_run) >= 0;
 if ($check_empty) {
   while ($row = mysqli_fetch_assoc($query_run)) {
-
-
     $biddersname = $row['biddersname'];
     $biddersdics = $row['biddersdics'];
     $bidderbudget = $row['bidderbudget'];
     $tenderpdf = $row['tenderpdf'];
-
-    // $projectidofbids = $row['projectidofbids '];
+    $chahiye = $row['chahiye'];
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -46,7 +28,6 @@ if ($check_empty) {
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto&display=swap" rel="stylesheet" />
   <title>Bidding Page</title>
 </head>
-
 <body>
   <div class="container">
     <!-- -------------- Start of Navbar ---------------- -->
@@ -58,9 +39,7 @@ if ($check_empty) {
         </ul>
       </div>
     </nav>
-
     <!-- -------------- End of Navbar ---------------- -->
-
     <header>
       <h1 class="heading_text"><?php echo $row['biddersname']; ?>
       </h1>
@@ -71,40 +50,46 @@ if ($check_empty) {
         </div>
       </div>
     </header>
-
     <section>
       <div class="details_container">
         <p><?php echo $row['biddersdics']; ?></p>
         <a href="https://chat.gise.at/#apvuqpcrqvaokjavdhbf">Chat</a>
         <button type="submit" name="accept" onclick="clickAccept()">Accept</button>
         <button type="submit" name="reject" onclick="clickReject()">Reject</button>
-
         <?php
-        $query = "SELECT * FROM projectbids WHERE projectidofbids = '$projectidofbids'";
+        $query = "SELECT chahiye FROM projectbids WHERE projectidofbids = '$projectidofbids'";
         $query_run = mysqli_query($conn, $query);
         $check_empty = mysqli_num_rows($query_run) >= 0;
         if ($check_empty) {
-          while ($row = mysqli_fetch_assoc($query_run)) {
-            function accept_func()
-            {
-              $sql = "SELECT chahiye from projectbids WHERE projectidofbids = '$projectidofbids'";
-              $chahiye111 = $row['chahiye'];
-              if (is_null($chahiye111)) {
-                $sql1 = "UPDATE projectbids SET chahiye = 'ACCEPT' WHERE projectidofbids = '$projectidofbids'";
+          while ($check_empty = mysqli_fetch_assoc($query_run)) {
+
+            function accept_func() {
+              global $chahiye;
+              global $projectidofbids;
+              echo "proj:{$chahiye}";
+                echo "proj:{$projectidofbids}";
+                echo "sql k upr";
+
+              if (is_null($chahiye)) {
+                //$sql1 = "UPDATE projectbids SET chahiye = 'ACCEPT' WHERE projectidofbids = '$projectidofbids' AND chahiye IS NULL";
+                $sql1 = "SELECT projectbids, ISNULL(chahiye, accept) chahiye, FROM projectbids"; 
+                $queryrun = mysqli_query($conn, $sql1);
+                $check_empty = mysqli_fetch_assoc($queryrun);
               }
-            }
-            function reject_func()
-            {
+              else {
+                echo "<script>alert('accept vala wrong')</script>";
+              }}
+            function reject_func() {
               $sql = "SELECT chahiye from projectbids WHERE projectidofbids = '$projectidofbids'";
               $chahiye111 = $row['chahiye'];
+              echo "sql k r vale niche";
               if (is_null($chahiye111)) {
                 $sql1 = "UPDATE projectbids SET chahiye = 'REJECT' WHERE projectidofbids = '$projectidofbids'";
+              }}}}
+              else {
+                echo "<script>alert('Check vale mai error')</script>";
               }
-            }
-          }
-        }
-      }
-    }
+}}
         ?>
       </div>
     </section>
@@ -119,12 +104,10 @@ if ($check_empty) {
     var acceptresult = "<?php accept_func(); ?>"
     document.write(acceptresult);
   }
-
   function clickReject() {
     var rejectresult = "<?php reject_func(); ?>"
     document.write(rejectresult);
   }
   </script>
 </body>
-
 </html>
