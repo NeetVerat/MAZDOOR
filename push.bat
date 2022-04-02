@@ -1,4 +1,4 @@
 echo off
 git add .
-git commit -m "Reject Accept Ready"
+git commit -m "Updated bidding_page_worker"
 git push
