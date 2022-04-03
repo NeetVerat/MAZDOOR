@@ -18,18 +18,18 @@ $projectidofbids = preg_replace("/(projectidofbids=)/", '', $tokyraw);
 // //echo $params['token'];
 //and projectidofbids = '$projectidofbids'
 
-$query = "SELECT * FROM projectbids WHERE projectidofbids = '$projectidofbids'"  ;
+$query = "SELECT * FROM projectbids WHERE projectidofbids = '$projectidofbids'";
 $query_run = mysqli_query($conn, $query);
 $check_empty = mysqli_num_rows($query_run) >= 0;
 if ($check_empty) {
-while ($row = mysqli_fetch_assoc($query_run)) {
+  while ($row = mysqli_fetch_assoc($query_run)) {
 
-$token = $row['tokenpb'];
-$biddersname = $row['biddersname'];
-$biddersdics = $row['biddersdics'];
-$bidderbudget = $row['bidderbudget'];
-$tenderpdf = $row['tenderpdf'];
-$chahiye = $row['chahiye'];
+    $token = $row['tokenpb'];
+    $biddersname = $row['biddersname'];
+    $biddersdics = $row['biddersdics'];
+    $bidderbudget = $row['bidderbudget'];
+    $tenderpdf = $row['tenderpdf'];
+    $chahiye = $row['chahiye'];
 ?>
 
 <!DOCTYPE html>
@@ -57,7 +57,7 @@ $chahiye = $row['chahiye'];
         </ul>
       </div>
     </nav>
-                        
+
     <!-- -------------- End of Navbar ---------------- -->
 
     <header>
@@ -73,75 +73,78 @@ $chahiye = $row['chahiye'];
 
     <section>
       <div class="details_container">
-        <p><?php echo $row['biddersdics']; ?></p>
-        <?php 
-        $query = "SELECT * FROM projectbids WHERE projectidofbids = '$projectidofbids'"  ;
-        $query_run = mysqli_query($conn, $query);
-        $check_empty = mysqli_num_rows($query_run) >= 0;
-        if ($check_empty) {
-        while ($check_empty = mysqli_fetch_assoc($query_run)) {
-        if(!empty($chahiye)){ 
-        ?>
+        <p style="height: 90%;"><?php echo $row['biddersdics']; ?></p>
+        <?php
+            $query = "SELECT * FROM projectbids WHERE projectidofbids = '$projectidofbids'";
+            $query_run = mysqli_query($conn, $query);
+            $check_empty = mysqli_num_rows($query_run) >= 0;
+            if ($check_empty) {
+              while ($check_empty = mysqli_fetch_assoc($query_run)) {
+                if (!empty($chahiye)) {
+            ?>
         <form action="#" method="POST">
-        <button type="submit" name="accept">Accept</button>
-          <?php 
-          require 'config.php';
-          if (isset($_POST['accept'])) {
-          //$sql1 = "UPDATE `projectbids` SET `chahiye` = 'accept' WHERE `projectbids`.`projectidofbids` = $projectidofbids;";
+          <button class="accept_btn" type="submit" name="accept">Accept</button>
+          <?php
+                    require 'config.php';
+                    if (isset($_POST['accept'])) {
+                      //$sql1 = "UPDATE `projectbids` SET `chahiye` = 'accept' WHERE `projectbids`.`projectidofbids` = $projectidofbids;";
 
 
-          $sql2 = "DELETE from `projects` where `token` = '$token'";
+                      $sql2 = "DELETE from `projects` where `token` = '$token'";
 
-            echo "$token";
+                      echo "$token";
 
-          $result2 = mysqli_query($conn, $sql2);
-          // $result1 = mysqli_query($conn, $sql1);
-          if($result2){
-          echo "<script>alert('Its been ACCEPTED')</script>";
-          } else {
-                  echo "<br>Rohan teri bajse Mission Failed hua";
-              }}
-          ?>
+                      $result2 = mysqli_query($conn, $sql2);
+                      // $result1 = mysqli_query($conn, $sql1);
+                      if ($result2) {
+                        echo "<script>alert('Its been ACCEPTED')</script>";
+                      } else {
+                        echo "<br>Rohan teri bajse Mission Failed hua";
+                      }
+                    }
+                    ?>
 
 
-     <!--    <form action="#" method="POST">
+          <!--    <form action="#" method="POST">
         <button type="submit" name="reject">Reject</button>  -->
-        <?php 
-          // require 'config.php';
-          // if (isset($_POST['reject'])) {
-          // $sql12 = "UPDATE `projectbids` SET `chahiye` = 'reject' WHERE `projectbids`.`projectidofbids` = $projectidofbids;";
-          // $result12 = mysqli_query($conn, $sql12);
-          // if($result12){
-          // echo "<script>alert('It's been REJECTED')</script>";
-          // ?>
+          <?php
+                    // require 'config.php';
+                    // if (isset($_POST['reject'])) {
+                    // $sql12 = "UPDATE `projectbids` SET `chahiye` = 'reject' WHERE `projectbids`.`projectidofbids` = $projectidofbids;";
+                    // $result12 = mysqli_query($conn, $sql12);
+                    // if($result12){
+                    // echo "<script>alert('It's been REJECTED')</script>";
+                    //
+                    ?>
           <!-- // <META HTTP-EQUIV='REFRESH' CONTENT = "0; URL=http://localhost/main/works_listed.php"> -->
           <?php
-          // } else {
-          //         echo "Mission Failed";
-          //     }}
-          ?>
-      
-      <!-- iski zarurat nhi hai tabhi bhi rakha hu nikalna rhega tb bata dena -->
-        <?php
-        }}}
-        ?>
+                    // } else {
+                    //         echo "Mission Failed";
+                    //     }}
+                    ?>
+
+          <!-- iski zarurat nhi hai tabhi bhi rakha hu nikalna rhega tb bata dena -->
+          <?php
+                }
+              }
+            }
+              ?>
 
 
+      </div>
+      <div class="bids_container"">
+      <iframe src=" ../pdf/<?php echo $tenderpdf; ?>" frameborder="0" width="100%" height="100%">
+        </iframe>
       </div>
     </section>
-      <div class="bids_container">
-        <iframe src="../pdf/<?php echo $tenderpdf; ?>" frameborder="0" width="100%" height="100%">
-        </iframe>
-        <?php echo $tenderpdf;?>
-        <!-- <img src="../uploads/upload4/<?php //echo $ddescimg4; ?>" alt="img4" /> -->
-      </div>
 
-</div>
-<?php 
-}
+
+  </div>
+  <?php
+  }
 }
 
-?>
+  ?>
 </body>
 
 </html>

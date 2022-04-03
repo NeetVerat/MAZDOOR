@@ -141,34 +141,19 @@ section {
   word-wrap: break-word;
 }
 
-.imgdesc {
-  /* background: #000000; */
-  background: #2a2e32;
-  border-radius: 1rem;
-}
-
-.imgdesc img {
-  height: 8rem;
-  width: 13rem;
-  margin: 0.9rem 0 0.9rem 1.22rem;
-  border-radius: 1rem;
-}
 
 .bids_container {
   display: flex;
   flex-direction: column;
   width: 50vw;
-  height: 71.5vh;
+  height: 100vh;
   /* background: #faf1e6; */
   background: #2a2e32;
   border-radius: 1rem;
-  margin: 1rem 0.6rem 0 1rem;
+  margin: 1rem 0.6rem 0 10rem;
+  padding-bottom: 1rem;
 }
 
-.bids_container ul {
-  overflow: scroll;
-  height: 90%;
-}
 
 .row {
   display: flex;
