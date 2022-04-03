@@ -167,6 +167,7 @@ section {
 
 .bids_container ul {
   overflow: scroll;
+  height: 90%;
 }
 
 .row {
