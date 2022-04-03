@@ -1,4 +1,4 @@
 echo off
 git add .
-git commit -m "Worker in progress in client dashboard"
+git commit -m "Sql Updated"
 git push
