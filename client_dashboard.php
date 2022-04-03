@@ -49,13 +49,13 @@ if ($result = mysqli_query($conn, $sql)) {
     <!-- ----------------- Start of Statistics ---------------------- -->
 
     <div class="row">
-      <a href="works_assigned_done.html">
+      <a href="works_assigned_done.php">
         <div class="works_done">
           <p>5</p>
           <h2>Works Assigned done</h2>
         </div>
       </a>
-      <a href="works_assigned_done.html">
+      <a href="works_in_progress.php">
         <div class="Loyalty_Badge">
           <p>2</p>
           <h2>Work in progress</h2>
