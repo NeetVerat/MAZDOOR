@@ -115,6 +115,10 @@ header {
   border: solid #21c28c 0.1rem;
 }
 
+.inner_row h1{
+  margin-bottom: 2rem;
+}
+
 #img_done {
   width: 2rem;
 }

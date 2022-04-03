@@ -1,4 +1,4 @@
 echo off
 git add .
-git commit -m "Updated accept button & chat button in bid details page"
+git commit -m "Updated work in progress page"
 git push

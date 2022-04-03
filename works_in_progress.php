@@ -1,4 +1,4 @@
-<?php 
+<?php
 include "config.php";
 
 ?>
@@ -6,6 +6,7 @@ include "config.php";
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,6 +14,7 @@ include "config.php";
   <link rel="stylesheet" href="css/work_assigned_done.css">
   <title>Work In Progress</title>
 </head>
+
 <body>
   <div class="container">
     <!-- -------------- Start of Navbar ---------------- -->
@@ -40,43 +42,49 @@ include "config.php";
         while ($row = mysqli_fetch_assoc($query_run)) {
       ?>
       <?php
-      if($row['toshow'] == 'yes'){
-          for ($row['toshow'] = 0; $row['toshow'] < 1; $row['toshow']++) {
-            ?>
-            <!-- //echo "<a href=","bid.php/?token=".$row['token'].">"; -->
-            <?php
-            require 'config.php';
-
-            $query1 = "SELECT * FROM projectbids";
-            $query_run1 = mysqli_query($conn, $query1);
-            $check_empty1 = mysqli_num_rows($query_run1) > 0;
-            if ($check_empty1) {
-            while ($row1 = mysqli_fetch_assoc($query_run1)) {
-            ?>
-            <?php
-            // if($row['token'] == $row1['tokenpb']){
-            if($row1['chahiye'] == 'accept') {
-            echo $row1['chahiye'];
-            echo "<div class=", "row", ">";
-            echo '<img src=', '"images/paysafely.svg"', 'alt=', "", '>';
-            echo "<div class=", "inner_row", ">";
-            echo "<h1>";
-            echo $row['projectname'];
-            echo "</h1>";
-            echo "<h2>";
-            echo $row1['biddersname'];
-            echo "</h2>";
-            echo "</div>";
-            echo "<h3> ₹ ";
-            echo $row1['bidderbudget'];
-            echo "</h3>";
-            echo "</div></a>";
-          }}}}}}}
-        // }
-
+          if ($row['toshow'] == 'yes') {
+            for ($row['toshow'] = 0; $row['toshow'] < 1; $row['toshow']++) {
           ?>
+      <!-- //echo "<a href=","bid.php/?token=".$row['token'].">"; -->
+      <?php
+              require 'config.php';
 
-    <!-- <div class="row">
+              $query1 = "SELECT * FROM projectbids";
+              $query_run1 = mysqli_query($conn, $query1);
+              $check_empty1 = mysqli_num_rows($query_run1) > 0;
+              if ($check_empty1) {
+                while ($row1 = mysqli_fetch_assoc($query_run1)) {
+              ?>
+      <?php
+                  // if($row['token'] == $row1['tokenpb']){
+                  if ($row1['chahiye'] == 'accept') {
+                    // echo $row1['chahiye'];
+                    echo "<div class=", "row", ">";
+                    echo '<img src=', '"images/paysafely.svg"', 'alt=', "", '>';
+                    echo "<div class=", "inner_row", ">";
+                    echo "<h1>";
+                    echo $row['projectname'];
+                    echo "</h1>";
+                    echo "<h2> Work Assigned To: ";
+                    echo $row1['biddersname'];
+                    echo "</h2>";
+                    echo "</div>";
+                    echo "<h3> ₹ ";
+                    echo $row1['bidderbudget'];
+                    echo "</h3>";
+                    echo "</div></a>";
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      // }
+
+      ?>
+
+      <!-- <div class="row">
       <img src="images/paysafely.svg" alt="">
       <div class="inner_row"><h1>Lorem</h1>
         <h2>Lorem ipsum dolor sit amet.</h2>
@@ -86,6 +94,7 @@ include "config.php";
       <img id="img_done" src="images/icons8-done.svg" alt="completed img" >
       <h3>COMPLETED</h3>
     </div> -->
-  </div>
+    </div>
 </body>
+
 </html>
