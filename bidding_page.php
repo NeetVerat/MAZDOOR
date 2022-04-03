@@ -185,7 +185,8 @@ if (isset($_POST['submit'])) {
 
               <input type="file" placeholder="Upload your Tendure" name="tenderpdf" class="tender"
                 value="<?php echo $tenderpdf ?>" />
-              <input type="text" placeholder="Description" name="tokenpb" value="<?php echo $params['token'] ?>" />
+              <input type="text" placeholder="Description" name="tokenpb" style="display: none;"
+                value="<?php echo $params['token'] ?>" />
               <br><button name="submit">Submit</button>
             </div>
           </form>

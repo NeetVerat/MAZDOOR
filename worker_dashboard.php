@@ -52,26 +52,28 @@ if ($result = mysqli_query($conn, $sql)) {
     <div class="row">
       <a href="works_assigned_done.html">
         <div class="works_done">
-          <p>5</p>
-          <h2>Works Done</h2>
+          <div class="works_done_left">
+            <p>5</p>
+            <h2>Works Done</h2>
+          </div>
+
+          <div class="works_done_right">
+            <lottie-player src="https://assets4.lottiefiles.com/private_files/lf30_6uhcq95s.json"
+              background="transparent" speed="1" style="width: 300px; height: 300px;" loop autoplay></lottie-player>
+          </div>
         </div>
+
       </a>
       <a href="works_assigned_done.html">
         <div class="Loyalty_Badge">
-          <p>2</p>
-          <h2>Work in progress</h2>
-        </div>
-      </a>
-      <a href="works_assigned_done.html">
-        <div class="work_done_worth">
-          <p>500000</p>
-          <h2>Work Done Worth</h2>
-        </div>
-      </a>
-      <a href="works_listed.php">
-        <div class="dislike">
-          <p>5</p>
-          <h2>Dislike</h2>
+          <div class="workinprogress_left">
+            <p>2</p>
+            <h2>Work in progress</h2>
+          </div>
+          <div class="workinprogress_right">
+            <lottie-player src="https://assets7.lottiefiles.com/private_files/lf30_ytezzo51.json"
+              background="transparent" speed="1" style="width: 300px; height: 300px;" loop autoplay></lottie-player>
+          </div>
         </div>
       </a>
     </div>
@@ -100,6 +102,7 @@ if ($result = mysqli_query($conn, $sql)) {
       </div>
     </div>
   </div>
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 </body>
 
 </html>

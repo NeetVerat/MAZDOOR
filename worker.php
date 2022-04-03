@@ -79,7 +79,7 @@
               <h2>Budget</h2>
               <h2>&#8377;<?php echo $row['maxtotal']; ?> </h2>
             </div>
-            <a href="bidding_page.php/?token=<?php echo $row['requesthireid']; ?>" target="_blank">Hire</a>
+            <a href="bidding_page_worker.php/?token=<?php echo $row['requesthireid']; ?>" target="_blank">Hire</a>
           </div>
 
           <?php

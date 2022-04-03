@@ -60,7 +60,6 @@ include 'config.php';
       <button type="submit" name="submitrequst" class="submit_proj">Submit</button>
   </form>
   <script>
-
   var modal = document.getElementById("myModal");
   var btn = document.getElementById("myBtn");
   var span = document.getElementsByClassName("close")[0];

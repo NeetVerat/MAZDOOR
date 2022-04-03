@@ -61,12 +61,6 @@ if ($result = mysqli_query($conn, $sql)) {
           <h2>Work in progress</h2>
         </div>
       </a>
-      <a href="works_assigned_done.html">
-        <div class="work_done_worth">
-          <p>500000</p>
-          <h2>Total Expenses</h2>
-        </div>
-      </a>
       <a href="works_listed.php">
         <div class="dislike">
           <p><?php echo $rowcount; ?></p>

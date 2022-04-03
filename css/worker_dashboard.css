@@ -103,24 +103,30 @@ a {
 }
 
 .works_done,
-.Loyalty_Badge,
-.work_done_worth,
-.dislike {
+.Loyalty_Badge{
   display: flex;
-  height: 15rem;
-  width: 20rem;
+  height: 18rem;
+  width: 44.5rem;
   background: #181b23;
-  align-items: center;
-  justify-content: center;
+  /* align-items: center; */
+  justify-content: space-evenly;
   margin: 0 2rem;
   border-radius: 1.5rem;
+
+}
+
+.works_done_left,
+.workinprogress_left{
+  display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .works_done a,
-.Loyalty_Badge a,
-.work_done_worth a,
-.dislike a {
+.Loyalty_Badge a {
+  display: flex;
+  flex-direction: column;
   font-size: 5rem;
   text-align: center;
   color: #000;
@@ -143,10 +149,10 @@ a {
 .work_done_worth p,
 .dislike p {
   color: #000;
-  font-size: 5rem;
+  font-size: 6rem;
   font-weight: bold;
   margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .works_done h2,
@@ -162,7 +168,7 @@ a {
 }
 
 .Loyalty_Badge {
-  background: linear-gradient(to bottom right, #eb3349, #f45c43);
+  background: linear-gradient(to bottom right, #4ca1af, #e0eafc);
 }
 
 .work_done_worth {
