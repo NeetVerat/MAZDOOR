@@ -39,7 +39,7 @@ if ($check_empty) {
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="../css/bidding_page.css">
+  <link rel="stylesheet" href="../css/bidding_details.css">
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto&display=swap" rel="stylesheet" />
@@ -83,7 +83,10 @@ if ($check_empty) {
                 if (!empty($chahiye)) {
             ?>
         <form action="#" method="POST">
-          <button class="accept_btn" type="submit" name="accept">Accept</button>
+          <div class="btn_div">
+            <button class="accept_btn" type="submit" name="accept">Accept</button>
+            <a href="https://chat.gise.at/#hjbzifugndfgdfg">Chat</a>
+          </div>
           <?php
                     require 'config.php';
                     if (isset($_POST['accept'])) {

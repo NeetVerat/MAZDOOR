@@ -146,12 +146,11 @@ section {
   display: flex;
   flex-direction: column;
   width: 50vw;
-  height: 100vh;
+  height: 71.7vh;
   /* background: #faf1e6; */
   background: #2a2e32;
   border-radius: 1rem;
-  margin: 1rem 0.6rem 0 10rem;
-  padding-bottom: 1rem;
+  margin: 1rem 0.6rem 0 1rem;
 }
 
 
@@ -189,12 +188,27 @@ section {
 }
 
 .accept_btn{
-  width: 100%;
+  width: 50%;
   padding: 1.5rem 0;
-  background: #4ebd73;
-  font-size: 1rem;
+  background: #00cc44;
+  font-size: 1.5rem;
+  font-weight: 550;
   border: none;
   border-bottom-left-radius: 1rem;
+}
+
+.btn_div{
+  display: flex;
+}
+.btn_div a{
+  width: 50%;
+  padding: 1.5rem 0;
+  color: #000000;
+  background: #ffb700;
+  font-size: 1.5rem;
+  font-weight: 900;
+  border: none;
+  text-align: center;
   border-bottom-right-radius: 1rem;
 }
 
