@@ -8,13 +8,19 @@ if (!isset($_SESSION['username'])) {
   header("Location: index.php");
 }
 
-$sql = "SELECT * from projects";
+$sql1 = "SELECT * FROM projects WHERE toshow = 'no'";
 
-if ($result = mysqli_query($conn, $sql)) {
+if ($result1 = mysqli_query($conn, $sql1)) {
 
-  $row = mysqli_num_rows($result);
+  $rowcount1 = mysqli_num_rows($result1);
 }
 
+$sql2 = "SELECT * FROM projects WHERE toshow = 'yes'";
+
+if ($result2 = mysqli_query($conn, $sql2)) {
+
+  $rowcount2 = mysqli_num_rows($result2);
+}
 ?>
 
 <!DOCTYPE html>
@@ -50,10 +56,10 @@ if ($result = mysqli_query($conn, $sql)) {
     <!-- ----------------- Start of Statistics ---------------------- -->
 
     <div class="row">
-      <a href="works_assigned_done.html">
+      <a href="workassigneddone.php">
         <div class="works_done">
           <div class="works_done_left">
-            <p>5</p>
+            <p><?php echo $rowcount1; ?></p>
             <h2>Works Done</h2>
           </div>
 
@@ -64,10 +70,10 @@ if ($result = mysqli_query($conn, $sql)) {
         </div>
 
       </a>
-      <a href="works_assigned_done.html">
+      <a href="workinprogress.php">
         <div class="Loyalty_Badge">
           <div class="workinprogress_left">
-            <p>2</p>
+            <p><?php echo $rowcount2; ?></p>
             <h2>Work in progress</h2>
           </div>
           <div class="workinprogress_right">
