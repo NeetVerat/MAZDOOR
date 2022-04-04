@@ -41,14 +41,13 @@ include "config.php";
         while ($row = mysqli_fetch_assoc($query_run)) {
           if ($row['toshow'] == 'yes') {
             for ($row['toshow'] = 0; $row['toshow'] < 1; $row['toshow']++) {
-              require 'config.php';
-              include 'bid_details.php';
               $query1 = "SELECT * FROM projectbids";
               $query_run1 = mysqli_query($conn, $query1);
               $check_empty1 = mysqli_num_rows($query_run1) > 0;
               if ($check_empty1) {
                 while ($row1 = mysqli_fetch_assoc($query_run1)) {
-                  if ($row1['chahiye'] == 'accept') {
+                  $token = $row['token'];
+                  if ($row1['chahiye'] == 'accept'&& $row1['tokenpb']== $row['token']) {
                     echo "<div class=", "row", ">";
                     echo '<img src=', '"images/paysafely.svg"', 'alt=', "", '>';
                     echo "<div class=", "inner_row", ">";
@@ -61,16 +60,21 @@ include "config.php";
                     echo "</div>";
                     echo "<h3> ₹ ";
                     echo $row1['bidderbudget'];
+                    ?>
+                    <form action ="#" method="POST">
+                    <button name ="wokdon" type ="submit" class="wokdon">Work Done</button>
+                    <?php
                     echo "<br>";
-                    $query69 = "UPDATE `projects` SET `toshow` = 'no' WHERE `projects`.`token` = '$token'";
-                    $quryrun = mysqli_query($conn,$query69);
-                    echo $query69;
                     echo "</h3>";
                     echo "</div></a>";
                   }
                 }
               }
+              if(isset($_POST['wokdon'])){
+              $query12 = "UPDATE `projects` SET `toshow` = 'no' WHERE `projects`.`token` = '$token'";
+              $query_run12 = mysqli_query($conn, $query12);
             }
+          }
           }
         }
       }
