@@ -1,4 +1,4 @@
 echo off
 git add .
-git commit -m "'work assigned done' done"
+git commit -m "Client Dashborad Completed"
 git push

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 04, 2022 at 11:11 AM
+-- Generation Time: Apr 04, 2022 at 02:47 PM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 7.3.31
 
@@ -89,13 +89,13 @@ CREATE TABLE `projectbids` (
 
 INSERT INTO `projectbids` (`biddersname`, `biddersdics`, `bidderbudget`, `tenderpdf`, `tokenpb`, `projectidofbids`, `chahiye`) VALUES
 ('eight8', 'ibpfg', 465, 'Get_Started_With_Smallpdf.pdf', 'v17q9siyrUQZ1TKP', 16, 'ss'),
-(' on1', ' cvcvcv', 984984, 'Get_Started_With_Smallpdf.pdf', 'v17q9siyrUQZ1TKP', 17, 'accept'),
+(' on1', ' cvcvcv', 984984, 'Get_Started_With_Smallpdf.pdf', 'v17q9siyrUQZ1TKP', 17, 'acceptdfs'),
 ('two2', ' dfgdfgdfg', 49874, 'Get_Started_With_Smallpdf.pdf', 'v17q9siyrUQZ1TKP', 18, 'sasdasd'),
 ('four4', 'fdfsdf', 45, 'Get_Started_With_Smallpdf.pdf', 'GCvCGS2TGAVfADSn', 19, 'gh'),
 ('si6', 'ikdjbfgi', 41651, 'Get_Started_With_Smallpdf.pdf', 'GCvCGS2TGAVfADSn', 20, 'ghg'),
-('seven7', 'fgtrgr', 5645654, 'Get_Started_With_Smallpdf.pdf', 'v8Tg9iliUyA90DK3', 21, 'ghgfh'),
-('three3', 'zdgzdfg', 5675676, 'Get_Started_With_Smallpdf.pdf', 'GCvCGS2TGAVfADSn', 22, 'accept'),
-('five5', 'sdfsdf', 45345, 'Get_Started_With_Smallpdf.pdf', 'v8Tg9iliUyA90DK3', 23, 'accept');
+('seven7', 'fgtrgr', 5645654, 'Get_Started_With_Smallpdf.pdf', 'v8Tg9iliUyA90DK3', 21, 'accept'),
+('three3', 'zdgzdfg', 5675676, 'Get_Started_With_Smallpdf.pdf', 'GCvCGS2TGAVfADSn', 22, 'acceptdfs'),
+('five5', 'sdfsdf', 45345, 'Get_Started_With_Smallpdf.pdf', 'v8Tg9iliUyA90DK3', 23, 'acceptsdf');
 
 -- --------------------------------------------------------
 
@@ -124,6 +124,7 @@ CREATE TABLE `projects` (
 --
 
 INSERT INTO `projects` (`token`, `projectname`, `description`, `bigdescription`, `frommoney`, `tomoney`, `cardimage`, `descimg1`, `descimg2`, `descimg3`, `descimg4`, `id`, `toshow`) VALUES
+('if32jS6NgDRqOHcW', 'sidfgy', 'usdif', 'UBFDIG', 498, 4651, 'ben-allan-BIeC4YK2MTA-unsplash.jpg', 'brett-jordan-nz-cBSChvUw-unsplash.jpg', 'l-steward-masweneng-KnB--1wimeA-unsplash.jpg', 'mark-potterton-sNVkn3507Oo-unsplash.jpg', 'upload check.jpg', 4, 'show'),
 ('v8Tg9iliUyA90DK3', 'QWERTY', 'ASDFASF', 'A DSFVVVVVVVVVVVVVVVEWQ DASSSSSSSSSSSSSS AWEEEEEEEEEEEEEEEEEEE', 1234132, 4352345, 'ben-allan-BIeC4YK2MTA-unsplash.jpg', 'billy-freeman-V38rMuljw2Y-unsplash.jpg', 'clay-leconey-J9AgM47fVDU-unsplash.jpg', 'mark-potterton-sNVkn3507Oo-unsplash.jpg', 'scott-blake-x-ghf9LjrVg-unsplash.jpg', 3, 'no');
 
 -- --------------------------------------------------------
@@ -293,7 +294,7 @@ ALTER TABLE `projectbids`
 -- AUTO_INCREMENT for table `projects`
 --
 ALTER TABLE `projects`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `requesthire`

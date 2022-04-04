@@ -30,7 +30,7 @@ if (isset($_POST['submit_project'])) {
   $descimg3 = $_FILES["desc-image3"]['name'];
   $descimg4 = $_FILES["desc-image4"]['name'];
 
-  $query = "INSERT INTO projects (`token`,`projectname`,`description`,`bigdescription`,`frommoney`,`tomoney`,`cardimage`,`descimg1`,`descimg2`,`descimg3`,`descimg4`) VALUES ('$token','$projectname','$description','$bigdescription','$frommoney','$tomoney','$cardimage','$descimg1','$descimg2','$descimg3','$descimg4')";
+  $query = "INSERT INTO projects (`token`,`projectname`,`description`,`bigdescription`,`frommoney`,`tomoney`,`cardimage`,`descimg1`,`descimg2`,`descimg3`,`descimg4`,`toshow`) VALUES ('$token','$projectname','$description','$bigdescription','$frommoney','$tomoney','$cardimage','$descimg1','$descimg2','$descimg3','$descimg4','show')";
   $query_run = mysqli_query($conn, $query);
 
   if ($query_run) {

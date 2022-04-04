@@ -90,8 +90,8 @@ if ($check_empty) {
           <?php
                     require 'config.php';
                     if (isset($_POST['accept'])) {
-                      $sql1 = "UPDATE `projectbids` SET `chahiye` = 'accept' WHERE `projectbids`.`projectidofbids` = $projectidofbids;";
-                      $sql2 = "DELETE from `projects` where `token` = '$token'";
+                      $sql1 = "UPDATE `projectbids` SET `chahiye` = 'accept' WHERE `projectbids`.`projectidofbids` = '$projectidofbids';";
+                      $sql2 = "UPDATE `projects` SET `toshow` = 'yes' WHERE `projects`.`token` = '$token';";;
                       echo "$token";
                       $result2 = mysqli_query($conn, $sql2);
                       $result1 = mysqli_query($conn, $sql1);

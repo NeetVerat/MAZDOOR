@@ -42,35 +42,27 @@ error_reporting(0);
       $check_empty = mysqli_num_rows($query_run) > 0;
       if ($check_empty) {
         while ($row = mysqli_fetch_assoc($query_run)) {
-      ?>
-      <?php
-          for ($row['id'] = 0; $row['id'] < 1; $row['id']++) {
-            echo "<a href=","bid.php/?token=".$row['token'].">";
-            echo "<div class=", "row", ">";
-            echo '<img src=', '"images/paysafely.svg"', 'alt=', "", '>';
-            echo "<div class=", "inner_row", ">";
-            echo "<h1>";
-            echo $row['projectname'];
-            echo "</h1>";
-            echo "<h2>";
-            echo $row['description'];
-            echo "</h2>";
-            echo "</div>";
-            echo "<h3> ₹ ";
-            echo $row['tomoney'];
-            echo "</h3>";
-            echo "</div></a>";
+          if($row['toshow'] =='show'){
+            echo $row['toshow'];
+            for ($row['id'] = 0; $row['id'] < 1; $row['id']++) {
+              echo "<a href=","bid.php/?token=".$row['token'].">";
+              echo "<div class=", "row", ">";
+              echo '<img src=', '"images/paysafely.svg"', 'alt=', "", '>';
+              echo "<div class=", "inner_row", ">";
+              echo "<h1>";
+              echo $row['projectname'];
+              echo "</h1>";
+              echo "<h2>";
+              echo $row['description'];
+              echo "</h2>";
+              echo "</div>";
+              echo "<h3> ₹ ";
+              echo $row['tomoney'];
+              echo "</h3>";
+              echo "</div></a>";
+            }}
           }
-
-          ?>
-
-      <!-- <h1> <?php //while($row['id'] > 0){  $row['id']-- ;}
-                    ?> </h1>
-              <h1> <?php //while($row['id'] > 0){  $row['id']-- ;}
-                    ?> </h1>    -->
-      <?php
-        }
-      } else {
+        } else {
         echo "SeD!!! no one here";
       }
       ?>
