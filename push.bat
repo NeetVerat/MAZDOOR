@@ -1,4 +1,4 @@
 echo off
 git add .
-git commit -m "Worker Dashboard done"
+git commit -m "Hire tab done"
 git push

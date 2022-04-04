@@ -1,74 +1,29 @@
 <?php
 
 require 'config.php';
-error_reporting(0);
-
+// error_reporting(0);
 $url = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 
 preg_match('/(token=.+)/', $url, $key_match);
 $tokraw = $key_match[0];
 $token = preg_replace("/(token=)/", '', $tokraw);
 
+$query = "SELECT * FROM requesthire WHERE requesthireid = '$token'";
+$query_run = mysqli_query($conn, $query);
+$row = mysqli_fetch_assoc($query_run);
 
-$query = "SELECT * FROM projects WHERE token = '$token'";
-$data = mysqli_query($conn, $query);
-$rows = mysqli_fetch_assoc($data);
+// $requesthireid = $row['requesthireid'];
+$holdername = $row['holdername'];
+$mintotal = $row['mintotal'];
+$maxtotal = $row['maxtotal'];
+$longdics = $row['longdics'];
+$descimg1 = $row['descimg1'];
+$descimg2 = $row['descimg2'];
+$descimg3 = $row['descimg3'];
+$descimg4 = $row['descimg4'];
 
-$projname = $rows['projectname'];
-$projdes = $rows['description'];
-$bigdesc = $rows['bigdescription'];
-$from = $rows['frommoney'];
-$tomon = $rows['tomoney'];
-$cardimg = $rows['cardimage'];
-$ddescimg1 = $rows['descimg1'];
-$ddescimg2 = $rows['descimg2'];
-$ddescimg3 = $rows['descimg3'];
-$ddescimg4 = $rows['descimg4'];
+echo $token;
 
-?>
-<?php
-
-require 'config.php';
-error_reporting(0);
-
-$link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS']
-  === 'on' ? "https" : "http") .
-  "://" . $_SERVER['HTTP_HOST'] .
-  $_SERVER['REQUEST_URI'];
-$url_components = parse_url($link);
-parse_str($url_components['query'], $params);
-//echo $params['token'];
-
-if (isset($_POST['submit'])) {
-  $biddersname = $_POST['biddersname'];
-  $biddersdics = $_POST['biddersdics'];
-  $bidderbudget = $_POST['bidderbudget'];
-  $tenderpdf = $_FILES['tenderpdf']['name'];
-  $tokenpb = $_POST['tokenpb'];
-
-  $sql = "SELECT * FROM projectbids ";
-  $result = mysqli_query($conn, $sql);
-  if ($result->num_rows >= 0) {
-    $sql = "INSERT INTO projectbids(biddersname, biddersdics, bidderbudget, tenderpdf, tokenpb ) VALUES ('$biddersname','$biddersdics','$bidderbudget','$tenderpdf','$tokenpb')";
-    $result = mysqli_query($conn, $sql);
-    if ($result) {
-      echo "<script>alert('Wow! Your BID Submitted.')</script>";
-      move_uploaded_file($_FILES["tenderpdf"]["tmp_name"], "pdf/" . $_FILES["tenderpdf"]["name"]);
-      $biddersname = " ";
-      $biddersdics = " ";
-      $bidderbudget = " ";
-      $tenderpdf = " ";
-      $tokenpb = " ";
-      //move_uploaded_file($_FILES["tenderpdf"]["name"], "pdf/" . $_FILES["tenderpdf"]["name"]);
-    } else {
-      //echo "<script>alert('Result vala mai error.')</script>";
-    }
-  } else {
-    //echo "<script>alert('Insert vala mai error.')</script>";
-  }
-} else {
-  //echo "<script>alert('isset vale mai error.')</script>";
-}
 ?>
 
 <!DOCTYPE html>
@@ -101,32 +56,28 @@ if (isset($_POST['submit'])) {
 
     <header>
       <h1 class="heading_text">
-        <?php echo $projname; ?>
+        <?php echo $row['holdername']; ?>
       </h1>
       <div class="budget_section">
         <h1>Budget</h1>
         <div class="budget_values">
-          <p class="budget_from">&#8377; &nbsp;<?php echo $from; ?></p>
-          <p class="budget_to">&#8377; &nbsp;<?php echo $tomon; ?></p>
+          <p class="budget_from">&#8377; &nbsp;<?php echo $row['mintotal']; ?></p>
+          <p class="budget_to">&#8377; &nbsp;<?php echo $row['maxtotal']; ?></p>
         </div>
       </div>
     </header>
 
     <section>
       <div class="details_container">
-        <p><?php echo $bigdesc; ?></p>
+        <p><?php echo $row['longdics']; ?></p>
         <div class="imgdesc">
-          <img src="../uploads/upload1/<?php echo $ddescimg1; ?>" alt="img1" />
-          <img src="../uploads/upload2/<?php echo $ddescimg2; ?>" alt="img2" />
-          <img src="../uploads/upload3/<?php echo $ddescimg3; ?>" alt="img3" />
-          <img src="../uploads/upload4/<?php echo $ddescimg4; ?>" alt="img4" />
+          <img src="../uploads/upload5/<?php echo $row['descimg1']; ?>" alt="img1" />
+          <img src="../uploads/upload6/<?php echo $row['descimg2']; ?>" alt="img2" />
+          <img src="../uploads/upload7/<?php echo $row['descimg3']; ?>" alt="img3" />
+          <img src="../uploads/upload8/<?php echo $row['descimg4']; ?>" alt="img4" />
         </div>
       </div>
-
     </section>
   </div>
-
-
 </body>
-
 </html>
