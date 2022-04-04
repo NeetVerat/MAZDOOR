@@ -8,11 +8,25 @@ if (!isset($_SESSION['clientusername'])) {
   header("Location: index.php");
 }
 
-$sql = "SELECT * from projects";
+$sql = "SELECT * FROM projects WHERE toshow = 'show'";
 
 if ($result = mysqli_query($conn, $sql)) {
 
   $rowcount = mysqli_num_rows($result);
+}
+
+$sql1 = "SELECT * FROM projects WHERE toshow = 'no'";
+
+if ($result1 = mysqli_query($conn, $sql1)) {
+
+  $rowcount1 = mysqli_num_rows($result1);
+}
+
+$sql2 = "SELECT * FROM projects WHERE toshow = 'yes'";
+
+if ($result2 = mysqli_query($conn, $sql2)) {
+
+  $rowcount2 = mysqli_num_rows($result2);
 }
 
 ?>
@@ -51,13 +65,13 @@ if ($result = mysqli_query($conn, $sql)) {
     <div class="row">
       <a href="works_assigned_done.php">
         <div class="works_done">
-          <p>5</p>
+          <p><?php echo $rowcount1; ?></p>
           <h2>Works Assigned done</h2>
         </div>
       </a>
       <a href="works_in_progress.php">
         <div class="Loyalty_Badge">
-          <p>2</p>
+          <p><?php echo $rowcount2; ?></p>
           <h2>Work in progress</h2>
         </div>
       </a>
