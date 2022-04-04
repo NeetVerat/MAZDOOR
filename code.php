@@ -40,7 +40,7 @@ move_uploaded_file($_FILES["desc-image2"]["tmp_name"], "uploads/upload2/" . $_FI
 move_uploaded_file($_FILES["desc-image3"]["tmp_name"], "uploads/upload3/" . $_FILES["desc-image3"]["name"]);
 move_uploaded_file($_FILES["desc-image4"]["tmp_name"], "uploads/upload4/" . $_FILES["desc-image4"]["name"]);
 $_SESSION['success'] = "Project Added";
-header('Location: http://' .$SERVER['HTTP_HOST'] . '/postaproject.php');
+header('Location: postaproject.php');
 exit;
 ?>
 <META HTTP-EQUIV='REFRESH' CONTENT = "0; URL=http://localhost/main/postaproject.php">
