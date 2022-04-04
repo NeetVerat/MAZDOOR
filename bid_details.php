@@ -90,21 +90,18 @@ if ($check_empty) {
           <?php
                     require 'config.php';
                     if (isset($_POST['accept'])) {
-                      //$sql1 = "UPDATE `projectbids` SET `chahiye` = 'accept' WHERE `projectbids`.`projectidofbids` = $projectidofbids;";
-
-
+                      $sql1 = "UPDATE `projectbids` SET `chahiye` = 'accept' WHERE `projectbids`.`projectidofbids` = $projectidofbids;";
                       $sql2 = "DELETE from `projects` where `token` = '$token'";
-
                       echo "$token";
-
                       $result2 = mysqli_query($conn, $sql2);
-                      // $result1 = mysqli_query($conn, $sql1);
+                      $result1 = mysqli_query($conn, $sql1);
                       if ($result2) {
                         echo "<script>alert('Its been ACCEPTED')</script>";
                       } else {
-                        echo "<br>Rohan teri bajse Mission Failed hua";
+                        echo "<br>Mission Failed hua";
                       }
                     }
+
                     ?>
 
 
@@ -135,7 +132,7 @@ if ($check_empty) {
 
 
       </div>
-      <div class="bids_container"">
+      <div class="bids_container">
       <iframe src=" ../pdf/<?php echo $tenderpdf; ?>" frameborder="0" width="100%" height="100%">
         </iframe>
       </div>

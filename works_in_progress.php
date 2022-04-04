@@ -34,31 +34,21 @@ include "config.php";
     <div class="column">
       <?php
       require 'config.php';
-
       $query = "SELECT * FROM projects";
       $query_run = mysqli_query($conn, $query);
       $check_empty = mysqli_num_rows($query_run) > 0;
       if ($check_empty) {
         while ($row = mysqli_fetch_assoc($query_run)) {
-      ?>
-      <?php
           if ($row['toshow'] == 'yes') {
             for ($row['toshow'] = 0; $row['toshow'] < 1; $row['toshow']++) {
-          ?>
-      <!-- //echo "<a href=","bid.php/?token=".$row['token'].">"; -->
-      <?php
               require 'config.php';
-
+              include 'bid_details.php';
               $query1 = "SELECT * FROM projectbids";
               $query_run1 = mysqli_query($conn, $query1);
               $check_empty1 = mysqli_num_rows($query_run1) > 0;
               if ($check_empty1) {
                 while ($row1 = mysqli_fetch_assoc($query_run1)) {
-              ?>
-      <?php
-                  // if($row['token'] == $row1['tokenpb']){
                   if ($row1['chahiye'] == 'accept') {
-                    // echo $row1['chahiye'];
                     echo "<div class=", "row", ">";
                     echo '<img src=', '"images/paysafely.svg"', 'alt=', "", '>';
                     echo "<div class=", "inner_row", ">";
@@ -71,6 +61,10 @@ include "config.php";
                     echo "</div>";
                     echo "<h3> ₹ ";
                     echo $row1['bidderbudget'];
+                    echo "<br>";
+                    $query69 = "UPDATE `projects` SET `toshow` = 'no' WHERE `projects`.`token` = '$token'";
+                    $quryrun = mysqli_query($conn,$query69);
+                    echo $query69;
                     echo "</h3>";
                     echo "</div></a>";
                   }
