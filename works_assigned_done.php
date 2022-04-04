@@ -24,27 +24,48 @@
 
     <header>Works Assigned Done</header>
     <div class="column">
-    <div class="row">
-      <img src="images/paysafely.svg" alt="">
-      <div class="inner_row"><h1>Lorem</h1>
-        <h2>Lorem ipsum dolor sit amet.</h2>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam inventore eligendi quibusdam voluptates corrupti totam.</p>
-      </div>
-      <h3>1000</h3>
-      <img id="img_done" src="images/icons8-done.svg" alt="completed img" >
-      <h3>COMPLETED</h3>
-    </div>
+      <?php
+      require 'config.php';
+      $query = "SELECT * FROM projects";
+      $query_run = mysqli_query($conn, $query);
+      $check_empty = mysqli_num_rows($query_run) > 0;
+      if ($check_empty) {
+        while ($row = mysqli_fetch_assoc($query_run)) {
+          if ($row['toshow'] == 'no') {
+            for ($row['toshow'] = 0; $row['toshow'] < 1; $row['toshow']++) {
+              $query1 = "SELECT * FROM projectbids";
+              $query_run1 = mysqli_query($conn, $query1);
+              $check_empty1 = mysqli_num_rows($query_run1) > 0;
+              if ($check_empty1) {
+                while ($row1 = mysqli_fetch_assoc($query_run1)) {
+                  $token = $row['token'];
+                  if ($row1['chahiye'] == 'accept'&& $row1['tokenpb']== $row['token']) {
+                    echo "<div class=", "row", ">";
+                    echo '<img src=', '"images/paysafely.svg"', 'alt=', "", '>';
+                    echo "<div class=", "inner_row", ">";
+                    echo "<h1>";
+                    echo $row['projectname'];
+                    echo "</h1>";
+                    echo "<h2> Work Assigned To: ";
+                    echo $row1['biddersname'];
+                    echo "</h2>";
+                    echo "</div>";
+                    echo "<h3> ₹ ";
+                    echo $row1['bidderbudget'];
+                    echo "<br>";
+                    echo "</h3>";
+                    echo "</div></a>";
+                  }
+                }
+              }
+             
+          }
+          }
+        }
+      }
+?>
 
-    <div class="row">
-      <img src="images/paysafely.svg" alt="">
-      <div class="inner_row"><h1>Lorem</h1>
-        <h2>Lorem ipsum dolor sit amet.</h2>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam inventore eligendi quibusdam voluptates corrupti totam.</p>
-      </div>
-      <h3>1000</h3>
-      <img id="img_done" src="images/icons8-done.svg" alt="completed img" >
-      <h3>COMPLETED</h3>
-    </div>
+   
   </div>
 </body>
 </html>

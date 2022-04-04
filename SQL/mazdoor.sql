@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 03, 2022 at 04:47 PM
+-- Generation Time: Apr 04, 2022 at 11:11 AM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 7.3.31
 
@@ -95,7 +95,7 @@ INSERT INTO `projectbids` (`biddersname`, `biddersdics`, `bidderbudget`, `tender
 ('si6', 'ikdjbfgi', 41651, 'Get_Started_With_Smallpdf.pdf', 'GCvCGS2TGAVfADSn', 20, 'ghg'),
 ('seven7', 'fgtrgr', 5645654, 'Get_Started_With_Smallpdf.pdf', 'v8Tg9iliUyA90DK3', 21, 'ghgfh'),
 ('three3', 'zdgzdfg', 5675676, 'Get_Started_With_Smallpdf.pdf', 'GCvCGS2TGAVfADSn', 22, 'accept'),
-('five5', 'sdfsdf', 45345, 'Get_Started_With_Smallpdf.pdf', 'v8Tg9iliUyA90DK3', 23, 'ghfgh');
+('five5', 'sdfsdf', 45345, 'Get_Started_With_Smallpdf.pdf', 'v8Tg9iliUyA90DK3', 23, 'accept');
 
 -- --------------------------------------------------------
 
@@ -124,7 +124,7 @@ CREATE TABLE `projects` (
 --
 
 INSERT INTO `projects` (`token`, `projectname`, `description`, `bigdescription`, `frommoney`, `tomoney`, `cardimage`, `descimg1`, `descimg2`, `descimg3`, `descimg4`, `id`, `toshow`) VALUES
-('v8Tg9iliUyA90DK3', 'QWERTY', 'ASDFASF', 'A DSFVVVVVVVVVVVVVVVEWQ DASSSSSSSSSSSSSS AWEEEEEEEEEEEEEEEEEEE', 1234132, 4352345, 'ben-allan-BIeC4YK2MTA-unsplash.jpg', 'billy-freeman-V38rMuljw2Y-unsplash.jpg', 'clay-leconey-J9AgM47fVDU-unsplash.jpg', 'mark-potterton-sNVkn3507Oo-unsplash.jpg', 'scott-blake-x-ghf9LjrVg-unsplash.jpg', 3, 'yes');
+('v8Tg9iliUyA90DK3', 'QWERTY', 'ASDFASF', 'A DSFVVVVVVVVVVVVVVVEWQ DASSSSSSSSSSSSSS AWEEEEEEEEEEEEEEEEEEE', 1234132, 4352345, 'ben-allan-BIeC4YK2MTA-unsplash.jpg', 'billy-freeman-V38rMuljw2Y-unsplash.jpg', 'clay-leconey-J9AgM47fVDU-unsplash.jpg', 'mark-potterton-sNVkn3507Oo-unsplash.jpg', 'scott-blake-x-ghf9LjrVg-unsplash.jpg', 3, 'no');
 
 -- --------------------------------------------------------
 
