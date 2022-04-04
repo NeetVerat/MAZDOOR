@@ -46,7 +46,7 @@ if ($result2 = mysqli_query($conn, $sql2)) {
     <!-- -------------- Start of Navbar ---------------- -->
     <nav class="navbar">
       <div class="logo">
-        <a href="../index.php" class="logo_link">MAZDOOR</a>
+        <a href="index.php" class="logo_link">MAZDOOR</a>
         <ul>
           <li><a href="../how_it_works.html">How it Works</a></li>
         </ul>
