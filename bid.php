@@ -48,6 +48,7 @@ $ddescimg4 = $rows['descimg4'];
         <a href="../index.php" class="logo_link">MAZDOOR</a>
         <ul>
           <li><a href="../how_it_works.html">How it Works</a></li>
+          <li><a href="../client_dashboard.php">Dashboard</a></li>
         </ul>
       </div>
     </nav>
@@ -94,7 +95,7 @@ $ddescimg4 = $rows['descimg4'];
 
               for ($row['id'] = 0; $row['id'] < 1; $row['id']++) {
                 if ($row['tokenpb'] == $token) {
-                  echo "<a href=", "../bid_details.php/?projectidofbids=" . $row['projectidofbids']. "?tokenpb=". $row['tokenpb']. ">";
+                  echo "<a href=", "../bid_details.php/?projectidofbids=" . $row['projectidofbids'] . "?tokenpb=" . $row['tokenpb'] . ">";
                   echo "<li>";
                   echo '<div class="row">';
                   echo '<div class="column">';

@@ -74,7 +74,7 @@ header {
   width: 96vw;
   background: #2d2c2c;
   margin: 0 0 0.5rem 2rem;
-  padding: 1rem;
+  /* padding: 1rem; */
   border-radius: 1rem;
   /* border: solid #747474 0.1rem; */
   /* box-shadow: 5px 5px 5px #bebebe; */
@@ -85,11 +85,12 @@ header {
   margin: 0 1rem 0 0;
   height: 7rem;
   width: 7rem;
+  margin: 1rem;
 }
 
 .row h1 {
-  width: 70vw;
-  color: #21c28c;
+  width: 50vw;
+  margin-top: 1rem;
 }
 
 .row h2 {
@@ -121,6 +122,17 @@ header {
 
 #img_done {
   width: 2rem;
+}
+
+.wokdon{
+height: 100%;
+border: none;
+width: 8vw;
+background: #21c28c;
+border-top-right-radius: 1rem;
+border-bottom-right-radius: 1rem;
+font-size: 1.5rem;
+font-weight: 700;
 }
 
 @media only screen and (min-width: 320px) and (max-width: 480px) {

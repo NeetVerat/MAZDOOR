@@ -18,41 +18,54 @@ include 'config.php';
 </head>
 
 <body>
-  <form action="code.php" method="POST" enctype="multipart/form-data">
-    <h2>POST PROJECT</h2>
-    <div class="container">
-      <div class="left_right">
-        <div class="left">
-          <input type="text" name="project_name" placeholder="  Project Name" class="proj_name" required><br>
-          <textarea name="description" type="text" rows="4" cols="2300" class="form-control"
-            placeholder="Short Description" required></textarea>
-          <textarea name="bigdescription" type="text" rows="4" cols="2300" class="form-control"
-            placeholder="Brief Description" required></textarea>
-        </div>
-        <div class="right">
-          <div class="money">
-            <h2>Budget</h2>
-            <div class="row">
-              <input name="from_money" type="number" placeholder="From" required />
-              <input name="to_money" type="number" placeholder="To" required />
-            </div>
-          </div>
-          <button id="myBtn">Upload Photos</button>
-        </div>
+  <div class="container">
+    <!-- -------------- Start of Navbar ---------------- -->
+    <nav class="navbar">
+      <div class="logo">
+        <a href="index.php" class="logo_link">MAZDOOR</a>
+        <ul>
+          <li><a href="how_it_works.html">How it Works</a></li>
+          <li><a href="client_dashboard.php">Dashboard</a></li>
+        </ul>
       </div>
-      <div id="myModal" class="modal">
-        <!-- Modal content -->
-        <div class="modal-content">
-          <form action="" method="POST" enctype="multipart/form-data">
-            <span class="close">&times;</span>
-            <div class="down">
-              <input type="file" name="card-image" id="card-image" class="form-control" required />
-              <input type="file" name="desc-image1" id="desc-image1" class="form-control" required />
-              <input type="file" name="desc-image2" id="desc-image2" class="form-control" required />
-              <input type="file" name="desc-image3" id="desc-image3" class="form-control" required />
-              <input type="file" name="desc-image4" id="desc-image4" class="form-control" required />
+    </nav>
 
-              <!-- <span id="file-chosen">No file chosen</span>
+    <!-- -------------- End of Navbar ---------------- -->
+    <form action="code.php" method="POST" enctype="multipart/form-data">
+      <h2>POST PROJECT</h2>
+      <div class="container">
+        <div class="left_right">
+          <div class="left">
+            <input type="text" name="project_name" placeholder="  Project Name" class="proj_name" required><br>
+            <textarea name="description" type="text" rows="4" cols="2300" class="form-control"
+              placeholder="Short Description" required></textarea>
+            <textarea name="bigdescription" type="text" rows="4" cols="2300" class="form-control"
+              placeholder="Brief Description" required></textarea>
+          </div>
+          <div class="right">
+            <div class="money">
+              <h2>Budget</h2>
+              <div class="row">
+                <input name="from_money" type="number" placeholder="From" required />
+                <input name="to_money" type="number" placeholder="To" required />
+              </div>
+            </div>
+            <button id="myBtn">Upload Photos</button>
+          </div>
+        </div>
+        <div id="myModal" class="modal">
+          <!-- Modal content -->
+          <div class="modal-content">
+            <form action="" method="POST" enctype="multipart/form-data">
+              <span class="close">&times;</span>
+              <div class="down">
+                <input type="file" name="card-image" id="card-image" class="form-control" required />
+                <input type="file" name="desc-image1" id="desc-image1" class="form-control" required />
+                <input type="file" name="desc-image2" id="desc-image2" class="form-control" required />
+                <input type="file" name="desc-image3" id="desc-image3" class="form-control" required />
+                <input type="file" name="desc-image4" id="desc-image4" class="form-control" required />
+
+                <!-- <span id="file-chosen">No file chosen</span>
               <label for="card-image">Upload Card Image</label>
               <input type="file" id="card-image" hidden required />
 
@@ -72,14 +85,15 @@ include 'config.php';
               <label for="desc-image4">Upload Image</label>
               <input type="file" id="desc-image4" hidden required /> -->
 
-              <br>
-              <!-- <button name="submit">Submit</button> -->
-            </div>
-          </form>
+                <br>
+                <!-- <button name="submit">Submit</button> -->
+              </div>
+            </form>
+          </div>
         </div>
-      </div>
-      <button type="submit" name="submit_project" class="submit_proj">Submit</button>
-  </form>
+        <button type="submit" name="submit_project" class="submit_proj">Submit</button>
+    </form>
+  </div>
   <script>
   // Get the modal
   var modal = document.getElementById("myModal");

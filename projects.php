@@ -17,6 +17,7 @@
         <a class="logo_link" href="index.php">MAZDOOR</a>
         <ul>
           <li><a href="how_it_works.html">How it Works</a></li>
+          <li><a href="worker_dashboard.php">Dashboard</a></li>
         </ul>
       </div>
 
@@ -25,32 +26,6 @@
     <!-- -------------- End of Navbar ---------------- -->
 
     <div class="main-container2">
-      <!-- -------------------- Search box Container ------------------ -->
-      <div class="search-container">
-        <form action="/action_page.php">
-          <input type="text" placeholder="Search.." name="search" />
-          <button type="submit">Search</button>
-        </form>
-      </div>
-
-      <!-- ------------------------ Filter Conatiner--------------------- -->
-
-      <div class="filter-container">
-        <!-- -------- Category -------------- -->
-        <select class="filter-category">
-          <option value="0">Category</option>
-          <option value="1">Plumbing</option>
-          <option value="2">Electrical</option>
-          <option value="3">Painting</option>
-          <option value="4">Carpenting</option>
-          <option value="5">Welding</option>
-          <option value="6">Sweeping and Cleaning</option>
-          <option value="7">Loading and unloading</option>
-          <option value="8">Construction</option>
-          <option value="9">Agriculture</option>
-        </select>
-      </div>
-
       <!-- ------------------- card section ------------------------->
       <div class="card-exterior">
         <div class="cards">

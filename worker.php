@@ -17,18 +17,10 @@
         <a class="logo_link" href="index.php">MAZDOOR</a>
         <ul>
           <li><a href="how_it_works.html">How it Works</a></li>
+          <li><a href="client_dashboard.php">Dashboard</a></li>
         </ul>
       </div>
-      <div class="navigation">
-        <ul>
-          <li>
-            <a class="landing-login" href="login.php">Log In</a>
-          </li>
-          <li>
-            <a class="landing-signup" href="register.php">Sign Up</a>
-          </li>
-        </ul>
-      </div>
+
     </nav>
 
     <!-- -------------- End of Navbar ---------------- -->

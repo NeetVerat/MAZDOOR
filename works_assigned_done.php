@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,15 +8,16 @@
   <link rel="stylesheet" href="css/work_assigned_done.css">
   <title>Work Assigned Done</title>
 </head>
+
 <body>
   <div class="container">
     <!-- -------------- Start of Navbar ---------------- -->
     <nav class="navbar">
       <div class="logo">
-        <a href="index.html" class="logo_link">MAZDOOR</a>
+        <a href="index.php" class="logo_link">MAZDOOR</a>
         <ul>
           <li><a href="how_it_works.html">How it Works</a></li>
-          <li><a href=" worker.php">Browse Jobs</a></li>
+          <li><a href=" client_dashboard.php">Dashboard</a></li>
         </ul>
       </div>
     </nav>
@@ -39,7 +41,7 @@
               if ($check_empty1) {
                 while ($row1 = mysqli_fetch_assoc($query_run1)) {
                   $token = $row['token'];
-                  if ($row1['chahiye'] == 'accept'&& $row1['tokenpb']== $row['token']) {
+                  if ($row1['chahiye'] == 'accept' && $row1['tokenpb'] == $row['token']) {
                     echo "<div class=", "row", ">";
                     echo '<img src=', '"images/paysafely.svg"', 'alt=', "", '>';
                     echo "<div class=", "inner_row", ">";
@@ -58,14 +60,14 @@
                   }
                 }
               }
-             
-          }
+            }
           }
         }
       }
-?>
+      ?>
 
-   
-  </div>
+
+    </div>
 </body>
+
 </html>

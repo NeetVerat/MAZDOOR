@@ -22,10 +22,10 @@ error_reporting(0);
     <!-- -------------- Start of Navbar ---------------- -->
     <nav class="navbar">
       <div class="logo">
-        <a href="../index.php" class="logo_link">MAZDOOR</a>
+        <a href="index.php" class="logo_link">MAZDOOR</a>
         <ul>
           <li><a href="how_it_works.html">How it Works</a></li>
-          <li><a href=" worker.php">Browse Jobs</a></li>
+          <li><a href=" client_dashboard.php">Dashboard</a></li>
         </ul>
       </div>
     </nav>
@@ -42,10 +42,10 @@ error_reporting(0);
       $check_empty = mysqli_num_rows($query_run) > 0;
       if ($check_empty) {
         while ($row = mysqli_fetch_assoc($query_run)) {
-          if($row['toshow'] =='show'){
+          if ($row['toshow'] == 'show') {
             echo $row['toshow'];
             for ($row['id'] = 0; $row['id'] < 1; $row['id']++) {
-              echo "<a href=","bid.php/?token=".$row['token'].">";
+              echo "<a href=", "bid.php/?token=" . $row['token'] . ">";
               echo "<div class=", "row", ">";
               echo '<img src=', '"images/paysafely.svg"', 'alt=', "", '>';
               echo "<div class=", "inner_row", ">";
@@ -60,9 +60,10 @@ error_reporting(0);
               echo $row['tomoney'];
               echo "</h3>";
               echo "</div></a>";
-            }}
+            }
           }
-        } else {
+        }
+      } else {
         echo "SeD!!! no one here";
       }
       ?>

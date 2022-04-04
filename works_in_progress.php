@@ -23,7 +23,7 @@ include "config.php";
         <a href="index.php" class="logo_link">MAZDOOR</a>
         <ul>
           <li><a href="how_it_works.html">How it Works</a></li>
-          <li><a href="worker.php">Browse Jobs</a></li>
+          <li><a href=" client_dashboard.php">Dashboard</a></li>
         </ul>
       </div>
     </nav>
@@ -47,7 +47,7 @@ include "config.php";
               if ($check_empty1) {
                 while ($row1 = mysqli_fetch_assoc($query_run1)) {
                   $token = $row['token'];
-                  if ($row1['chahiye'] == 'accept'&& $row1['tokenpb']== $row['token']) {
+                  if ($row1['chahiye'] == 'accept' && $row1['tokenpb'] == $row['token']) {
                     echo "<div class=", "row", ">";
                     echo '<img src=', '"images/paysafely.svg"', 'alt=', "", '>';
                     echo "<div class=", "inner_row", ">";
@@ -60,29 +60,29 @@ include "config.php";
                     echo "</div>";
                     echo "<h3> ₹ ";
                     echo $row1['bidderbudget'];
-                    ?>
-                    <form action ="#" method="POST">
-                    <button name ="wokdon" type ="submit" class="wokdon">Work Done</button>
-                    <?php
-                    echo "<br>";
                     echo "</h3>";
+      ?>
+      <form action="#" method="POST">
+        <button name="wokdon" type="submit" class="wokdon">Work Done</button>
+        <?php
+
                     echo "</div></a>";
                   }
                 }
               }
-              if(isset($_POST['wokdon'])){
-              $query12 = "UPDATE `projects` SET `toshow` = 'no' WHERE `projects`.`token` = '$token'";
-              $query_run12 = mysqli_query($conn, $query12);
+              if (isset($_POST['wokdon'])) {
+                $query12 = "UPDATE `projects` SET `toshow` = 'no' WHERE `projects`.`token` = '$token'";
+                $query_run12 = mysqli_query($conn, $query12);
+              }
             }
-          }
           }
         }
       }
       // }
 
-      ?>
+        ?>
 
-      <!-- <div class="row">
+        <!-- <div class="row">
       <img src="images/paysafely.svg" alt="">
       <div class="inner_row"><h1>Lorem</h1>
         <h2>Lorem ipsum dolor sit amet.</h2>
