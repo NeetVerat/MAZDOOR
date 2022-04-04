@@ -72,7 +72,8 @@ include 'config.php';
               <label for="desc-image4">Upload Image</label>
               <input type="file" id="desc-image4" hidden required /> -->
 
-              <br><button name="submit">Submit</button>
+              <br>
+              <!-- <button name="submit">Submit</button> -->
             </div>
           </form>
         </div>

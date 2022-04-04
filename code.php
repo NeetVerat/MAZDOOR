@@ -39,14 +39,18 @@ move_uploaded_file($_FILES["desc-image1"]["tmp_name"], "uploads/upload1/" . $_FI
 move_uploaded_file($_FILES["desc-image2"]["tmp_name"], "uploads/upload2/" . $_FILES["desc-image2"]["name"]);
 move_uploaded_file($_FILES["desc-image3"]["tmp_name"], "uploads/upload3/" . $_FILES["desc-image3"]["name"]);
 move_uploaded_file($_FILES["desc-image4"]["tmp_name"], "uploads/upload4/" . $_FILES["desc-image4"]["name"]);
-$_SESSION['success'] = "Project Added";
+
+
+$_SESSION['clientusername'] = "Project Added";
 header('Location: postaproject.php');
+echo "<script>alert('Your Project Uploaded')</script>";
 exit;
 ?>
 <META HTTP-EQUIV='REFRESH' CONTENT = "0; URL=http://localhost/main/postaproject.php">
 <?php
 } else {
-$_SESSION['success'] = "Project Not Added";
+$_SESSION['clientusername'] = "Project Not Added";
 header('Location: postaproject.php');
+echo "<script>alert('Your Not Project Uploaded')</script>";
 }
 }
