@@ -65,7 +65,6 @@ include 'config.php';
                 <input type="file" name="desc-image3" id="desc-image3" class="form-control" required />
                 <input type="file" name="desc-image4" id="desc-image4" class="form-control" required />
                 <br>
-                <button name="submit">Submit</button>
               </div>
             </form>
           </div>
