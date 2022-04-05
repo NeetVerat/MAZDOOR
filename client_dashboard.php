@@ -81,8 +81,30 @@ if ($result2 = mysqli_query($conn, $sql2)) {
           <h2>work listed</h2>
         </div>
       </a>
+
     </div>
 
+    <div class="row">
+      <a href="works_assigned_done.php">
+        <div class="works_done">
+          <p><?php echo $rowcount1; ?></p>
+          <h2>Works Assigned done</h2>
+        </div>
+      </a>
+      <a href="works_in_progress.php">
+        <div class="Loyalty_Badge">
+          <p><?php echo $rowcount2; ?></p>
+          <h2>Work in progress</h2>
+        </div>
+      </a>
+      <a href="works_listed.php">
+        <div class="dislike">
+          <p><?php echo $rowcount; ?></p>
+          <h2>work listed</h2>
+        </div>
+      </a>
+
+    </div>
 
     <div class="contain">
       <a class="postprojbtn" href="postaproject.php">

@@ -8,6 +8,10 @@ html {
   font-family: "Fjalla One", sans-serif;
 }
 
+body{
+  background: #000000;
+}
+
 .container {
   width: 99vw;
   height: 100vh;
