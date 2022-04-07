@@ -1,4 +1,4 @@
 echo off
 git add .
-git commit -m "SQL updated"
+git commit -m "Front End Updated"
 git push

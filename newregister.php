@@ -43,7 +43,7 @@ error_reporting(0)
         <input type="text" placeholder="Pincode" name="pincode" value="<?php echo $pincode; ?>" />
         <input type="file" placeholder="Upload Address front" name="addfront" value="<?php echo $addfront; ?>" />
         <input type="file" placeholder="Upload Address back" name="addback" value="<?php echo $addback; ?>" />
-        <button name="submit">SignIn</button>
+        <button name="submit">SignUp</button>
       </form>
     </div>
     <div class="form-container sign-in-container">
@@ -80,7 +80,7 @@ error_reporting(0)
           value="<?php echo $clientaddfront; ?>" />
         <input type="file" placeholder="Upload Address back" name="clientaddback"
           value="<?php echo $clientaddback; ?>" />
-        <button name="submit">SignIn</button>
+        <button name="submit">SignUp</button>
         <!-- iss button ka naam IF vale naam se match hona chaiye vrna work nhi krega -->
       </form>
     </div>
@@ -91,10 +91,10 @@ error_reporting(0)
           <p>
             To keep connected with us please login with your personal info
           </p>
-          <button class="ghost" id="signIn">Sign In</button>
+          <button class="ghost" id="signIn">Sign Up</button>
         </div>
         <div class="overlay-panel overlay-right">
-          <h1>Hello, Friend!</h1>
+          <h1>Hello, Worker</h1>
           <p>Enter your personal details and start journey with us</p>
           <button class="ghost" id="signUp">Sign Up</button>
         </div>

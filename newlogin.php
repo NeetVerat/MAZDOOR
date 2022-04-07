@@ -23,7 +23,6 @@ error_reporting(0)
         <input type="email" placeholder="Email " name="clientemail" value="<?php echo $clientemail; ?>" />
         <input type="password" placeholder="Password" name="clientpassword"
           value="<?php echo $_POST['clientpassword']; ?>" />
-        <a href="#">Forgot your password?</a>
         <button name="submit" class="btn">Sign In</button>
       </form>
     </div>
@@ -32,7 +31,6 @@ error_reporting(0)
         <h1>Worker Login</h1>
         <input type="email" placeholder="Email" name="email" value="<?php echo $email ?>" />
         <input type="password" placeholder="Password" name="password" value="<?php echo $_POST['password']; ?>" />
-        <a href="#">Forgot your password?</a>
         <button name="submit">Sign In</button>
       </form>
     </div>
@@ -40,7 +38,7 @@ error_reporting(0)
       <div class="overlay">
         <div class="overlay-panel overlay-left">
           <h1>Welcome Back Worker!</h1>
-          <p>To login as Client</p>
+          <p>To login as Worker</p>
           <button class="ghost" id="signIn">Sign In</button>
         </div>
         <div class="overlay-panel overlay-right">

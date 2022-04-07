@@ -90,9 +90,8 @@ if ($result2 = mysqli_query($conn, $sql2)) {
         <img src="images/new-post.png" alt="">
         <div class="row1">
           <a class="postprojbtn" href="postaboutworker.php">Apply for work</a>
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. A eveniet cupiditate illo maiores facilis
-            similique
-            quam dolorem? Odio, quos ea.</p>
+          <p>Here worker can list themselves for some daily wage work in just few steps.
+          </p>
         </div>
       </div>
 
@@ -101,9 +100,8 @@ if ($result2 = mysqli_query($conn, $sql2)) {
         <img src="images/headhunter.png" alt="">
         <div class="row1">
           <a class="postprojbtn" href="projects.php">Browse Jobs</a>
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. A eveniet cupiditate illo maiores facilis
-            similique
-            quam dolorem? Odio, quos ea.</p>
+          <p>Here worker can apply for contract based work with the client by bidding on project and uploading tender
+            for work.</p>
         </div>
       </div>
     </div>

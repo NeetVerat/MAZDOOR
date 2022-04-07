@@ -119,9 +119,7 @@ if ($result4 = mysqli_query($conn, $sql4)) {
           <img src="images/new-post.png" alt="">
           <div class="row1">
             <h2>Post Project</h2>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. A eveniet cupiditate illo maiores facilis
-              similique
-              quam dolorem? Odio, quos ea.</p>
+            <p>Here client can list their project & upload requirement for the project.</p>
           </div>
         </div>
       </a>
@@ -132,9 +130,7 @@ if ($result4 = mysqli_query($conn, $sql4)) {
           <img src="images/headhunter.png" alt="">
           <div class="row1">
             <h2>Hire Worker</h2>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. A eveniet cupiditate illo maiores facilis
-              similique
-              quam dolorem? Odio, quos ea.</p>
+            <p>Here client can select a worker they fill suitable for there daily wage work.</p>
           </div>
         </div>
       </a>
