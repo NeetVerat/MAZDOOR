@@ -29,6 +29,20 @@ if ($result2 = mysqli_query($conn, $sql2)) {
   $rowcount2 = mysqli_num_rows($result2);
 }
 
+$sql3 = "SELECT * FROM requesthire WHERE hirework = 'hired'";
+
+if ($result3 = mysqli_query($conn, $sql3)) {
+
+  $rowcount3 = mysqli_num_rows($result3);
+}
+
+$sql4 = "SELECT * FROM requesthire WHERE hirework = 'done'";
+
+if ($result4 = mysqli_query($conn, $sql4)) {
+
+  $rowcount4 = mysqli_num_rows($result4);
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -85,25 +99,18 @@ if ($result2 = mysqli_query($conn, $sql2)) {
     </div>
 
     <div class="row">
-      <a href="works_assigned_done.php">
+      <a href="hire_assigned_done.php">
         <div class="works_done">
-          <p><?php echo $rowcount1; ?></p>
-          <h2>Works Assigned done</h2>
+          <p><?php echo $rowcount4; ?></p>
+          <h2>Hired Work Done</h2>
         </div>
       </a>
-      <a href="works_in_progress.php">
+      <a href="hireinprogress.php">
         <div class="Loyalty_Badge">
-          <p><?php echo $rowcount2; ?></p>
-          <h2>Work in progress</h2>
+          <p><?php echo $rowcount3; ?></p>
+          <h2>Hired Workers</h2>
         </div>
       </a>
-      <a href="works_listed.php">
-        <div class="dislike">
-          <p><?php echo $rowcount; ?></p>
-          <h2>work listed</h2>
-        </div>
-      </a>
-
     </div>
 
     <div class="contain">

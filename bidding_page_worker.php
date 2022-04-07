@@ -24,6 +24,17 @@ $descimg4 = $row['descimg4'];
 
 echo $token;
 
+
+    include('config.php');
+    // $requesthireid = $_POST['requesthireid'];
+    // $hirework
+
+    if (isset($_POST['hirebutton'])) {
+      $sql = "UPDATE `requesthire` SET `hirework` = 'hired' WHERE `requesthireid` = '$token';";
+      $qury = mysqli_query($conn, $sql);
+    }
+
+
 ?>
 
 <!DOCTYPE html>
@@ -76,6 +87,8 @@ echo $token;
           <img src="../uploads/upload7/<?php echo $row['descimg3']; ?>" alt="img3" />
           <img src="../uploads/upload8/<?php echo $row['descimg4']; ?>" alt="img4" />
         </div>
+          <form action="#" method="POST">
+          <button name="hirebutton" class="hirebutton" type="sumbit"></button>
       </div>
     </section>
   </div>

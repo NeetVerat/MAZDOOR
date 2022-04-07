@@ -1,4 +1,4 @@
 echo off
 git add .
-git commit -m "updated client dashboard"
+git commit -m "neet madarchod hai"
 git push

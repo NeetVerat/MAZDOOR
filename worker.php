@@ -63,6 +63,9 @@
           $check_empty = mysqli_num_rows($query_run) > 0;
           if ($check_empty) {
             while ($row = mysqli_fetch_assoc($query_run)) {
+              if ($row['hirework']=='hire') {
+                
+              
           ?>
           <div class="card-1">
             <img src="uploads/upload5/<?php echo $row['descimg1']; ?>" alt="SeD" />
@@ -75,7 +78,7 @@
           </div>
 
           <?php
-            }
+            }}
           } else {
             echo "SeD!!! no one here";
           }

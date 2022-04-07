@@ -16,7 +16,7 @@ if (isset($_POST['submitrequst']))
   $descimg3 = $_FILES["desc-image3"]['name'];
   $descimg4 = $_FILES["desc-image4"]['name'];
 
-  $query = "INSERT INTO requesthire (`holdername`,`shortdics`,`longdics`,`mintotal`,`maxtotal`,`descimg1`,`descimg2`,`descimg3`,`descimg4`) VALUES ('$holdername','$shortdics','$longdics','$mintotal','$maxtotal','$descimg1','$descimg2','$descimg3','$descimg4')";
+  $query = "INSERT INTO requesthire (`holdername`,`shortdics`,`longdics`,`mintotal`,`maxtotal`,`descimg1`,`descimg2`,`descimg3`,`descimg4`,`hirework`) VALUES ('$holdername','$shortdics','$longdics','$mintotal','$maxtotal','$descimg1','$descimg2','$descimg3','$descimg4','hire')";
   $query_run = mysqli_query($conn, $query);
 
   if ($query_run) 
