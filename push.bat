@@ -1,4 +1,4 @@
 echo off
 git add .
-git commit -m "neet madarchod hai"
+git commit -m "SQL updated"
 git push

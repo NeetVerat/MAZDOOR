@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 04, 2022 at 03:45 PM
+-- Generation Time: Apr 07, 2022 at 09:32 PM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 7.3.31
 
@@ -152,18 +152,20 @@ CREATE TABLE `requesthire` (
   `mintotal` int(18) NOT NULL,
   `maxtotal` int(18) NOT NULL,
   `category` int(11) NOT NULL,
-  `descimg1` varchar(19) NOT NULL,
-  `descimg2` varchar(19) NOT NULL,
-  `descimg3` varchar(19) NOT NULL,
-  `descimg4` varchar(19) NOT NULL
+  `descimg1` varchar(255) NOT NULL,
+  `descimg2` varchar(255) NOT NULL,
+  `descimg3` varchar(255) NOT NULL,
+  `descimg4` varchar(255) NOT NULL,
+  `hirework` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `requesthire`
 --
 
-INSERT INTO `requesthire` (`requesthireid`, `holdername`, `shortdics`, `longdics`, `mintotal`, `maxtotal`, `category`, `descimg1`, `descimg2`, `descimg3`, `descimg4`) VALUES
-(1, 'sf', 'efesf', 'esfs', 3245, 345, 0, 'sasta neet.png', 'sasta neet.png', 'sasta neet.png', 'sasta neet.png');
+INSERT INTO `requesthire` (`requesthireid`, `holdername`, `shortdics`, `longdics`, `mintotal`, `maxtotal`, `category`, `descimg1`, `descimg2`, `descimg3`, `descimg4`, `hirework`) VALUES
+(1, 'sf', 'efesf', 'esfs', 3245, 345, 0, 'sasta neet.png', 'sasta neet.png', 'sasta neet.png', 'sasta neet.png', 'hired'),
+(3, 'ammmm', 'mmm', 'mmmm', 777, 777, 0, 'ben-allan-BIeC4YK2MTA-unsplash.jpg', 'brett-jordan-nz-cBSChvUw-unsplash.jpg', 'upload check.jpg', 'scott-blake-x-ghf9LjrVg-unsplash.jpg', 'hire');
 
 -- --------------------------------------------------------
 
@@ -311,7 +313,7 @@ ALTER TABLE `projects`
 -- AUTO_INCREMENT for table `requesthire`
 --
 ALTER TABLE `requesthire`
-  MODIFY `requesthireid` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `requesthireid` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `users`
