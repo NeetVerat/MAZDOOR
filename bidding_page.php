@@ -49,7 +49,7 @@ if (isset($_POST['submit'])) {
   $sql = "SELECT * FROM projectbids ";
   $result = mysqli_query($conn, $sql);
   if ($result->num_rows >= 0) {
-    $sql = "INSERT INTO projectbids(biddersname, biddersdics, bidderbudget, tenderpdf, tokenpb ) VALUES ('$biddersname','$biddersdics','$bidderbudget','$tenderpdf','$tokenpb')";
+    $sql = "INSERT INTO projectbids(biddersname, biddersdics, bidderbudget, tenderpdf, tokenpb, chahiye ) VALUES ('$biddersname','$biddersdics','$bidderbudget','$tenderpdf','$tokenpb','nah')";
     $result = mysqli_query($conn, $sql);
     if ($result) {
       echo "<script>alert('Wow! Your BID Submitted.')</script>";
