@@ -48,12 +48,11 @@
                     echo "</h3>";
                     ?>
                     <form action="#" method="POST">
-                    <button name="hireup" type="submit" class="hireup">Hired Work Done</button>
+                    <button name="hireup" type="submit" class="wokdon">Hired Work Done</button></form>
                     <?php
                     if (isset($_POST['hireup'])) {
                     $query12 = "UPDATE `requesthire` SET `hirework` = 'done' WHERE `requesthire`.`requesthireid` = '$requesthireid';";
                     $query_run12 = mysqli_query($conn, $query12);
-                    echo $requesthireid;
                     echo "</div></a>";
               }
             }

@@ -79,16 +79,20 @@ echo $token;
     </header>
 
     <section>
-      <div class="details_container">
-        <p><?php echo $row['longdics']; ?></p>
-        <div class="imgdesc">
-          <img src="../uploads/upload5/<?php echo $row['descimg1']; ?>" alt="img1" />
-          <img src="../uploads/upload6/<?php echo $row['descimg2']; ?>" alt="img2" />
-          <img src="../uploads/upload7/<?php echo $row['descimg3']; ?>" alt="img3" />
-          <img src="../uploads/upload8/<?php echo $row['descimg4']; ?>" alt="img4" />
+      <div class="details_container" >
+        <div class="andarwalarow">
+          <p><?php echo $row['longdics']; ?></p>
+          <div class="imgdesc">
+            <img src="../uploads/upload5/<?php echo $row['descimg1']; ?>" alt="img1" />
+            <img src="../uploads/upload6/<?php echo $row['descimg2']; ?>" alt="img2" />
+            <img src="../uploads/upload7/<?php echo $row['descimg3']; ?>" alt="img3" />
+            <img src="../uploads/upload8/<?php echo $row['descimg4']; ?>" alt="img4" />
+          </div>
         </div>
+        <div class="andarwalarow1">
           <form action="#" method="POST">
-          <button name="hirebutton" class="hirebutton" type="sumbit"></button>
+          <button name="hirebutton" class="hirebutton" type="sumbit">Hire</button>
+        </div>
       </div>
     </section>
   </div>

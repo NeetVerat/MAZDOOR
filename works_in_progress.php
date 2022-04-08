@@ -61,11 +61,9 @@ include "config.php";
                     echo "<h3> ₹ ";
                     echo $row1['bidderbudget'];
                     echo "</h3>";
-      ?>
-      <form action="#" method="POST">
-        <button name="wokdon" type="submit" class="wokdon">Work Done</button>
-        <?php
-
+                    echo '<form action="#" method="POST">';
+                    echo '<button name="wokdon" type="submit" class="wokdon">Work Done</button>';
+                    echo '</form>';
                     echo "</div></a>";
                   }
                 }
@@ -82,16 +80,7 @@ include "config.php";
 
         ?>
 
-        <!-- <div class="row">
-      <img src="images/paysafely.svg" alt="">
-      <div class="inner_row"><h1>Lorem</h1>
-        <h2>Lorem ipsum dolor sit amet.</h2>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam inventore eligendi quibusdam voluptates corrupti totam.</p>
-      </div>
-      <h3>1000</h3>
-      <img id="img_done" src="images/icons8-done.svg" alt="completed img" >
-      <h3>COMPLETED</h3>
-    </div> -->
+    </div>
     </div>
 </body>
 
