@@ -29,7 +29,7 @@ if ($result2 = mysqli_query($conn, $sql2)) {
   $rowcount2 = mysqli_num_rows($result2);
 }
 
-$sql3 = "SELECT * FROM requesthire WHERE hirework = 'hired'";
+$sql3 = "SELECT * FROM requesthire WHERE hirework = 'hire'";
 
 if ($result3 = mysqli_query($conn, $sql3)) {
 

@@ -1,4 +1,4 @@
 echo off
 git add .
-git commit -m "Front End Updated buttons updated"
+git commit -m "HIre page bug removed"
 git push
