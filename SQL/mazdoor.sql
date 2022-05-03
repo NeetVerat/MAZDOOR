@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 07, 2022 at 09:32 PM
+-- Generation Time: Apr 22, 2022 at 08:05 PM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 7.3.31
 
@@ -95,7 +95,9 @@ INSERT INTO `projectbids` (`biddersname`, `biddersdics`, `bidderbudget`, `tender
 ('si6', 'ikdjbfgi', 41651, 'Get_Started_With_Smallpdf.pdf', 'GCvCGS2TGAVfADSn', 20, 'ghg'),
 ('seven7', 'fgtrgr', 5645654, 'Get_Started_With_Smallpdf.pdf', 'v8Tg9iliUyA90DK3', 21, 'accept'),
 ('three3', 'zdgzdfg', 5675676, 'Get_Started_With_Smallpdf.pdf', 'GCvCGS2TGAVfADSn', 22, 'acceptdfs'),
-('five5', 'sdfsdf', 45345, 'Get_Started_With_Smallpdf.pdf', 'v8Tg9iliUyA90DK3', 23, 'acceptsdf');
+('five5', 'sdfsdf', 45345, 'Get_Started_With_Smallpdf.pdf', 'v8Tg9iliUyA90DK3', 23, 'acceptsdf'),
+('sadasd', 'adasd', 546, 'Get_Started_With_Smallpdf.pdf', 'chVXj4qkCHe2U0u3', 24, 'nhi'),
+('sadasd678', 'adasd7', 54667, 'Get_Started_With_Smallpdf.pdf', 'chVXj4qkCHe2U0u3', 25, 'nhi');
 
 -- --------------------------------------------------------
 
@@ -127,6 +129,7 @@ INSERT INTO `projects` (`token`, `projectname`, `description`, `bigdescription`,
 ('3toYwGj4cmnPBuDC', '5zdfg', 'dfgzsrb', 'zsdgbtrtgzse', 2147483647, 2147483647, 'ben-allan-BIeC4YK2MTA-unsplash.jpg', 'l-steward-masweneng-KnB--1wimeA-unsplash.jpg', 'l-steward-masweneng-KnB--1wimeA-unsplash.jpg', 'scott-blake-x-ghf9LjrVg-unsplash.jpg', 'scott-blake-x-ghf9LjrVg-unsplash.jpg', 13, 'show'),
 ('AZHCLooH91HEmmvd', 'neet', 'sidngio', 'uhbgiu', 908890, 98786, 'mark-potterton-sNVkn3507Oo-unsplash.jpg', 'scott-blake-x-ghf9LjrVg-unsplash.jpg', 'scott-blake-x-ghf9LjrVg-unsplash.jpg', 'mark-potterton-sNVkn3507Oo-unsplash.jpg', 'upload check.jpg', 11, 'show'),
 ('AZj31PFMMKjBAIxu', 'bjsdgfiub', 'jnbsidf', 'ikjbdfgibdzfg', 47, 645645, 'ben-allan-BIeC4YK2MTA-unsplash.jpg', 'brett-jordan-nz-cBSChvUw-unsplash.jpg', 'l-steward-masweneng-KnB--1wimeA-unsplash.jpg', 'scott-blake-x-ghf9LjrVg-unsplash.jpg', 'upload check.jpg', 6, 'show'),
+('b7KfEX58vNS7alKI', 'sd5', '654654', '6456456', 456456, 456456, 'ben-allan-BIeC4YK2MTA-unsplash.jpg', 'brett-jordan-nz-cBSChvUw-unsplash.jpg', 'l-steward-masweneng-KnB--1wimeA-unsplash.jpg', 'scott-blake-x-ghf9LjrVg-unsplash.jpg', 'upload check.jpg', 16, 'show'),
 ('chVXj4qkCHe2U0u3', 'dftgdf', 'gdfgdfgd', 'gsdfgfdg', 6666, 6666, 'brett-jordan-nz-cBSChvUw-unsplash.jpg', 'l-steward-masweneng-KnB--1wimeA-unsplash.jpg', 'mark-potterton-sNVkn3507Oo-unsplash.jpg', 'scott-blake-x-ghf9LjrVg-unsplash.jpg', 'upload check.jpg', 9, 'show'),
 ('if32jS6NgDRqOHcW', 'sidfgy', 'usdif', 'UBFDIG', 498, 4651, 'ben-allan-BIeC4YK2MTA-unsplash.jpg', 'brett-jordan-nz-cBSChvUw-unsplash.jpg', 'l-steward-masweneng-KnB--1wimeA-unsplash.jpg', 'mark-potterton-sNVkn3507Oo-unsplash.jpg', 'upload check.jpg', 4, 'show'),
 ('lLYAPhcPI2MfyxIR', 'neetsd', 'dsfsghs', 'vresrvetet', 567567, 567567567, 'ben-allan-BIeC4YK2MTA-unsplash.jpg', 'ben-allan-BIeC4YK2MTA-unsplash.jpg', 'ben-allan-BIeC4YK2MTA-unsplash.jpg', 'ben-allan-BIeC4YK2MTA-unsplash.jpg', 'ben-allan-BIeC4YK2MTA-unsplash.jpg', 12, 'show'),
@@ -164,8 +167,11 @@ CREATE TABLE `requesthire` (
 --
 
 INSERT INTO `requesthire` (`requesthireid`, `holdername`, `shortdics`, `longdics`, `mintotal`, `maxtotal`, `category`, `descimg1`, `descimg2`, `descimg3`, `descimg4`, `hirework`) VALUES
-(1, 'sf', 'efesf', 'esfs', 3245, 345, 0, 'sasta neet.png', 'sasta neet.png', 'sasta neet.png', 'sasta neet.png', 'hired'),
-(3, 'ammmm', 'mmm', 'mmmm', 777, 777, 0, 'ben-allan-BIeC4YK2MTA-unsplash.jpg', 'brett-jordan-nz-cBSChvUw-unsplash.jpg', 'upload check.jpg', 'scott-blake-x-ghf9LjrVg-unsplash.jpg', 'hire');
+(1, 'sf', 'efesf', 'esfs', 3245, 345, 0, 'sasta neet.png', 'sasta neet.png', 'sasta neet.png', 'sasta neet.png', 'done'),
+(3, 'ammmm', 'mmm', 'mmmm', 777, 777, 0, 'ben-allan-BIeC4YK2MTA-unsplash.jpg', 'brett-jordan-nz-cBSChvUw-unsplash.jpg', 'upload check.jpg', 'scott-blake-x-ghf9LjrVg-unsplash.jpg', 'done'),
+(4, 'dfdf', 'dfsdf', 'dsfsdfsdf', 56, 654, 0, 'Get_Started_With_Smallpdf.pdf', 'Get_Started_With_Smallpdf.pdf', 'Get_Started_With_Smallpdf.pdf', 'Get_Started_With_Smallpdf.pdf', 'done'),
+(5, 'ghfgh', 'gfhfgh', 'gfhfgh', 9999, 9999, 0, 'mark-potterton-sNVkn3507Oo-unsplash.jpg', 'scott-blake-x-ghf9LjrVg-unsplash.jpg', 'scott-blake-x-ghf9LjrVg-unsplash.jpg', 'upload check.jpg', 'done'),
+(6, 'ghfgh', 'gfhfgh', 'gfhfgh', 9999, 99991, 0, 'mark-potterton-sNVkn3507Oo-unsplash.jpg', 'scott-blake-x-ghf9LjrVg-unsplash.jpg', 'scott-blake-x-ghf9LjrVg-unsplash.jpg', 'upload check.jpg', 'done');
 
 -- --------------------------------------------------------
 
@@ -301,19 +307,19 @@ ALTER TABLE `logindetails`
 -- AUTO_INCREMENT for table `projectbids`
 --
 ALTER TABLE `projectbids`
-  MODIFY `projectidofbids` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `projectidofbids` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- AUTO_INCREMENT for table `projects`
 --
 ALTER TABLE `projects`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `requesthire`
 --
 ALTER TABLE `requesthire`
-  MODIFY `requesthireid` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `requesthireid` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `users`

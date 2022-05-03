@@ -17,7 +17,7 @@
         <a href="index.php" class="logo_link">MAZDOOR</a>
         <ul>
           <li><a href="how_it_works.html">How it Works</a></li>
-          <li><a href="worker_dashboard.php">Dashboard</a></li>
+          <li><a href="client_dashboard.php">Dashboard</a></li>
         </ul>
       </div>
     </nav>
@@ -33,12 +33,13 @@
       $check_empty = mysqli_num_rows($query_run) > 0;
       if ($check_empty) {
         while ($row = mysqli_fetch_assoc($query_run)) {
-          if ($row['hirework'] == 'hired') {
+          if ($row['hirework'] == 'hire') {
             $requesthireid = $row['requesthireid'];
             for ($row['hirework'] = 0; $row['hirework'] < 1; $row['hirework']++) {
-              echo "<div class=", "row", ">";
-              echo '<img src=', '"images/paysafely.svg"', 'alt=', "", '>';
-              echo "<div class=", "inner_row", ">";
+              echo '<form action="kappa.php?id=' . $requesthireid . '" method="POST" class="btnsticktoright">';
+              echo '<div class="row">';
+              echo '<img src="images/paysafely.svg">';
+              echo '<div class="inner_row">';
               echo "<h1>";
               echo $row['holdername'];
               echo "</h1>";
@@ -48,22 +49,19 @@
               echo "<h3> ₹ ";
               echo $row['maxtotal'];
               echo "</h3>";
+
       ?>
-      <form action="#" method="POST" class="btnsticktoright">
-        <button name="hireup" type="submit" class="wokdon">Hired Work Done</button>
-        <?php
-              if (isset($_POST['hireup'])) {
-                $query12 = "UPDATE `requesthire` SET `hirework` = 'done' WHERE `requesthire`.`requesthireid` = '$requesthireid';";
-                $query_run12 = mysqli_query($conn, $query12);
-                echo $requesthireid;
-                echo "</div></a>";
-              }
+
+      <button name="hireup" type="submit" class="wokdon">Hired Work Done</button>
+      </form>
+    </div>
+    <?php
             }
           }
         }
       }
-        ?>
-    </div>
+?>
+  </div>
 </body>
 
 </html>
