@@ -51,7 +51,7 @@
                     echo "</h3>";
                     echo '<form action="kappa.php?id='.$requesthireid .'" method="POST" class="btnsticktoright" >';
 
-                    ?>
+      ?>
 
             <button name="hireup" type="submit" class="wokdon">Hired Work Done</button>
             </form>
@@ -61,6 +61,7 @@
             }
           }
         }
+      }
 ?>
     </div>
 </body>

@@ -100,13 +100,13 @@ if ($result4 = mysqli_query($conn, $sql4)) {
 
     <div class="row">
       <a href="hire_assigned_done.php">
-        <div class="works_done">
+        <div class="works_done" style="background: linear-gradient(to bottom right, #56CCF2, #2F80ED);">
           <p><?php echo $rowcount4; ?></p>
           <h2>Hired Work Done</h2>
         </div>
       </a>
       <a href="hireinprogress.php">
-        <div class="Loyalty_Badge">
+        <div class="Loyalty_Badge" style="background: linear-gradient(to bottom right, #F2C94C, #F2994A);">
           <p><?php echo $rowcount3; ?></p>
           <h2>Hired Workers</h2>
         </div>
