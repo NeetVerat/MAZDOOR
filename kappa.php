@@ -16,7 +16,7 @@ if (isset($_POST['hireup'])) {
 
 }
 
-die(header("Location: hireinprogress.php"));
+// die(header("Location: hireinprogress.php"));
 
 
 
