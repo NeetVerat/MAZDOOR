@@ -62,7 +62,7 @@ include "config.php";
                     echo $row1['bidderbudget'];
                     echo "</h3>";
       ?>
-      <form action="#" method="POST">
+      <form action="#" method="POST" class="btnsticktoright">
         <button name="wokdon" type="submit" class="wokdon">Work Done</button>
         <?php
 

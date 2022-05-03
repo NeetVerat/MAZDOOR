@@ -125,14 +125,22 @@ header {
 }
 
 .wokdon{
+  position: sticky;
 height: 100%;
 border: none;
 width: 8vw;
+right:0px;
 background: #21c28c;
 border-top-right-radius: 1rem;
 border-bottom-right-radius: 1rem;
 font-size: 1.5rem;
 font-weight: 700;
+}
+
+.btnsticktoright{
+  position: absolute;
+  height: 144px;
+  right: 47px;
 }
 
 @media only screen and (min-width: 320px) and (max-width: 480px) {

@@ -1,4 +1,4 @@
 echo off
 git add .
-git commit -m "Front End Updated"
+git commit -m "updated btn in hireinprogress page & works_in_progress"
 git push
