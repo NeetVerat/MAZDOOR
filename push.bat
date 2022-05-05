@@ -1,4 +1,4 @@
 echo off
 git add .
-git commit -m "Removed how it works btn from every page"
+git commit -m "Added how it works video"
 git push
