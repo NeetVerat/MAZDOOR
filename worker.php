@@ -2,43 +2,42 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="css/worker.css" />
-  <title>MAZDOOR - USER DASHBOARD</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/worker.css" />
+    <title>MAZDOOR - USER DASHBOARD</title>
 </head>
 
 <body>
-  <div class="main-container">
-    <!-- -------------- Start of Navbar ---------------- -->
-    <nav class="navbar">
-      <div class="logo">
-        <a class="logo_link" href="index.php">MAZDOOR</a>
-        <ul>
-          <li><a href="how_it_works.html">How it Works</a></li>
-          <li><a href="client_dashboard.php">Dashboard</a></li>
-        </ul>
-      </div>
+    <div class="main-container">
+        <!-- -------------- Start of Navbar ---------------- -->
+        <nav class="navbar">
+            <div class="logo">
+                <a class="logo_link" href="index.php">MAZDOOR</a>
+                <ul>
+                    <li><a href="client_dashboard.php">Dashboard</a></li>
+                </ul>
+            </div>
 
-    </nav>
+        </nav>
 
-    <!-- -------------- End of Navbar ---------------- -->
+        <!-- -------------- End of Navbar ---------------- -->
 
-    <div class="main-container2">
-      <!-- -------------------- Search box Container ------------------ -->
-      <!-- <div class="search-container">
+        <div class="main-container2">
+            <!-- -------------------- Search box Container ------------------ -->
+            <!-- <div class="search-container">
         <form action="/action_page.php">
           <input type="text" placeholder="Search.." name="search" />
           <button type="submit">Search</button>
         </form>
       </div> -->
 
-      <!-- ------------------------ Filter Conatiner--------------------- -->
+            <!-- ------------------------ Filter Conatiner--------------------- -->
 
-      <!-- <div class="filter-container"> -->
-      <!-- -------- Category -------------- -->
-      <!-- <select class="filter-category">
+            <!-- <div class="filter-container"> -->
+            <!-- -------- Category -------------- -->
+            <!-- <select class="filter-category">
           <option value="0">Category</option>
           <option value="1">Plumbing</option>
           <option value="2">Electrical</option>
@@ -52,10 +51,10 @@
         </select>
       </div> -->
 
-      <!-- ------------------- card section ------------------------->
-      <div class="card-exterior">
-        <div class="cards">
-          <?php
+            <!-- ------------------- card section ------------------------->
+            <div class="card-exterior">
+                <div class="cards">
+                    <?php
           require 'config.php';
 
           $query = "SELECT * FROM requesthire";
@@ -67,27 +66,28 @@
                 
               
           ?>
-          <div class="card-1">
-            <img src="uploads/upload5/<?php echo $row['descimg1']; ?>" alt="SeD" />
-            <div class="card1_text">
-              <h1> <?php echo $row['holdername']; ?> </h1>
-              <h2>Budget</h2>
-              <h2>&#8377;<?php echo $row['maxtotal']; ?> </h2>
-            </div>
-            <a href="bidding_page_worker.php/?token=<?php echo $row['requesthireid']; ?>" target="_blank">Hire</a>
-          </div>
+                    <div class="card-1">
+                        <img src="uploads/upload5/<?php echo $row['descimg1']; ?>" alt="SeD" />
+                        <div class="card1_text">
+                            <h1> <?php echo $row['holdername']; ?> </h1>
+                            <h2>Budget</h2>
+                            <h2>&#8377;<?php echo $row['maxtotal']; ?> </h2>
+                        </div>
+                        <a href="bidding_page_worker.php/?token=<?php echo $row['requesthireid']; ?>"
+                            target="_blank">Hire</a>
+                    </div>
 
-          <?php
+                    <?php
             }}
           } else {
             echo "SeD!!! no one here";
           }
           ?>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
-  </div>
+    </div>
 </body>
 
 </html>

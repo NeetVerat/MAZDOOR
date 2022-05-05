@@ -22,7 +22,6 @@ include "config.php";
             <div class="logo">
                 <a href="index.php" class="logo_link">MAZDOOR</a>
                 <ul>
-                    <li><a href="how_it_works.html">How it Works</a></li>
                     <li><a href=" client_dashboard.php">Dashboard</a></li>
                 </ul>
             </div>

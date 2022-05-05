@@ -48,94 +48,91 @@ if ($result4 = mysqli_query($conn, $sql4)) {
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="css/client_dashboard.css" />
-  <title>Client Dashboard</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/client_dashboard.css" />
+    <title>Client Dashboard</title>
 </head>
 
 <body>
-  <div class="container">
-    <!-- -------------- Start of Navbar ---------------- -->
-    <nav class="navbar">
-      <div class="logo">
-        <a href="index.php" class="logo_link">MAZDOOR</a>
-        <ul>
-          <li><a href="../how_it_works.html">How it Works</a></li>
-        </ul>
-      </div>
-      <div class="welcome-client">
-        <?php echo "<h1>" . $_SESSION['clientusername'] . "</h1>"; ?>
-        <a href="logout.php">Logout</a>
-      </div>
-    </nav>
+    <div class="container">
+        <!-- -------------- Start of Navbar ---------------- -->
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.php" class="logo_link">MAZDOOR</a>
+            </div>
+            <div class="welcome-client">
+                <?php echo "<h1>" . $_SESSION['clientusername'] . "</h1>"; ?>
+                <a href="logout.php">Logout</a>
+            </div>
+        </nav>
 
-    <!-- -------------- End of Navbar ---------------- -->
+        <!-- -------------- End of Navbar ---------------- -->
 
 
-    <!-- ----------------- Start of Statistics ---------------------- -->
+        <!-- ----------------- Start of Statistics ---------------------- -->
 
-    <div class="row">
-      <a href="works_assigned_done.php">
-        <div class="works_done">
-          <p><?php echo $rowcount1; ?></p>
-          <h2>Works Assigned done</h2>
+        <div class="row">
+            <a href="works_assigned_done.php">
+                <div class="works_done">
+                    <p><?php echo $rowcount1; ?></p>
+                    <h2>Works Assigned done</h2>
+                </div>
+            </a>
+            <a href="works_in_progress.php">
+                <div class="Loyalty_Badge">
+                    <p><?php echo $rowcount2; ?></p>
+                    <h2>Work in progress</h2>
+                </div>
+            </a>
+            <a href="works_listed.php">
+                <div class="dislike">
+                    <p><?php echo $rowcount; ?></p>
+                    <h2>work listed</h2>
+                </div>
+            </a>
+
         </div>
-      </a>
-      <a href="works_in_progress.php">
-        <div class="Loyalty_Badge">
-          <p><?php echo $rowcount2; ?></p>
-          <h2>Work in progress</h2>
-        </div>
-      </a>
-      <a href="works_listed.php">
-        <div class="dislike">
-          <p><?php echo $rowcount; ?></p>
-          <h2>work listed</h2>
-        </div>
-      </a>
 
+        <div class="row">
+            <a href="hire_assigned_done.php">
+                <div class="works_done" style="background: linear-gradient(to bottom right, #56CCF2, #2F80ED);">
+                    <p><?php echo $rowcount4; ?></p>
+                    <h2>Hired Work Done</h2>
+                </div>
+            </a>
+            <a href="hireinprogress.php">
+                <div class="Loyalty_Badge" style="background: linear-gradient(to bottom right, #F2C94C, #F2994A);">
+                    <p><?php echo $rowcount3; ?></p>
+                    <h2>Hired Workers</h2>
+                </div>
+            </a>
+        </div>
+
+        <div class="contain">
+            <a class="postprojbtn" href="postaproject.php">
+                <div class="postdiv">
+                    <img src="images/new-post.png" alt="">
+                    <div class="row1">
+                        <h2>Post Project</h2>
+                        <p>Here client can list their project & upload requirement for the project.</p>
+                    </div>
+                </div>
+            </a>
+
+
+            <a class="postprojbtn" href="worker.php">
+                <div class="hirediv">
+                    <img src="images/headhunter.png" alt="">
+                    <div class="row1">
+                        <h2>Hire Worker</h2>
+                        <p>Here client can select a worker they fill suitable for there daily wage work.</p>
+                    </div>
+                </div>
+            </a>
+        </div>
     </div>
-
-    <div class="row">
-      <a href="hire_assigned_done.php">
-        <div class="works_done" style="background: linear-gradient(to bottom right, #56CCF2, #2F80ED);">
-          <p><?php echo $rowcount4; ?></p>
-          <h2>Hired Work Done</h2>
-        </div>
-      </a>
-      <a href="hireinprogress.php">
-        <div class="Loyalty_Badge" style="background: linear-gradient(to bottom right, #F2C94C, #F2994A);">
-          <p><?php echo $rowcount3; ?></p>
-          <h2>Hired Workers</h2>
-        </div>
-      </a>
-    </div>
-
-    <div class="contain">
-      <a class="postprojbtn" href="postaproject.php">
-        <div class="postdiv">
-          <img src="images/new-post.png" alt="">
-          <div class="row1">
-            <h2>Post Project</h2>
-            <p>Here client can list their project & upload requirement for the project.</p>
-          </div>
-        </div>
-      </a>
-
-
-      <a class="postprojbtn" href="worker.php">
-        <div class="hirediv">
-          <img src="images/headhunter.png" alt="">
-          <div class="row1">
-            <h2>Hire Worker</h2>
-            <p>Here client can select a worker they fill suitable for there daily wage work.</p>
-          </div>
-        </div>
-      </a>
-    </div>
-  </div>
 </body>
 
 </html>

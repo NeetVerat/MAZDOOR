@@ -214,6 +214,38 @@ section {
   border-bottom-left-radius: 1rem;
 }
 
+.accept_btn{
+  position: absolute;
+  bottom: 10px;
+  width: 49%;
+  padding: 1.5rem 0;
+  background: #00cc44;
+  font-size: 1.5rem;
+  font-weight: 550;
+  border: none;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+
+.btn_div{
+  display: flex;
+}
+.btn_div a{
+  position: absolute;
+  bottom: 86.5px;
+  right: 17px;
+  width: 49%;
+  padding: 1.5rem 0;
+  color: #000000;
+  background: #ffb700;
+  font-size: 1.5rem;
+  font-weight: 900;
+  border: none;
+  text-align: center;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
 /* --------------------------------- Scrollbar ----------------------------------------- */
 
 /* width */
