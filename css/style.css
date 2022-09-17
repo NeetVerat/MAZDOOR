@@ -269,7 +269,6 @@ a {
   color: #fff;
   justify-content: space-between;
   padding-top: 5rem;
-  box-shadow: 4px 5px orangered;
 }
 
 lottie-player {
@@ -556,6 +555,10 @@ lottie-player {
 
 @media only screen and (min-width: 320px) and (max-width: 480px) {
   /* <!-- -------------- Start of Navbar ---------------- --> */
+  *{
+    box-sizing: unset;
+  }
+  
   .container {
     height: 33vh;
   }
@@ -581,6 +584,8 @@ lottie-player {
     width: 100vw;
     background: black;
   }
+
+ 
 
   /* <!-- -------------- Start of Landing Page ---------------- --> */
 
@@ -608,7 +613,7 @@ lottie-player {
   .video_back_rect {
     width: 100vw;
     height: 40vh;
-    background: #ffa034;
+    background: #000000;
     transform: translateY(-7rem);
   }
 
@@ -619,7 +624,7 @@ lottie-player {
   .landing-tint {
     width: 100vw;
     height: 30.5vh;
-    transform: translateY(-2.3rem);
+    transform: translateY(-1.6000000000000008rem);
     background-image: linear-gradient(#ffffff00, #ffa03460, #ffa034);
   }
 
@@ -636,6 +641,8 @@ lottie-player {
     padding: 0.3rem;
     font-size: 0.8rem;
   }
+
+
 
   /* -------------- Start of Need something done ---------------- */
 
@@ -710,6 +717,26 @@ lottie-player {
     text-align: center;
   }
 
+  .b lottie-player{
+    height: 45vh;
+  }
+
+  .testing_features{
+    flex-direction: column-reverse;
+  }
+
+  .circle-behind,
+  .circle-behind1,
+  .circle-behind2{
+    height: 10vh;
+    width: 20vw;
+  }
+
+  .circle-behind{
+    transform: translate(1rem, -19rem);
+  }
+
+
   /* <!-- -------------- Start of Hire a Worker ---------------- --> */
 
   .container-3 {
@@ -762,8 +789,25 @@ lottie-player {
   }
 
   .testing_features {
-    padding-left: 25rem;
+    padding-left: 0.5rem;
   }
+
+  .a{
+    margin-left: 0;
+  }
+
+  .a1{
+    margin-left: 0;
+  }
+
+  .a2{
+    margin-left: 0;
+  }
+
+lottie-player{
+  background: none;
+}
+
 
   /* <!-- -------------- Start of Earn Money Working ---------------- --> */
 

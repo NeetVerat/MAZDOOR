@@ -1,4 +1,4 @@
 echo off
 git add .
-git commit -m "Added how it works pages"
+git commit -m "made video section of landing page mobile responsive"
 git push
